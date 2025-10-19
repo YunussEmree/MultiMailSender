@@ -1,121 +1,211 @@
 <div class="container py-4">
-
-  <h2 class="mb-4 gradient-text fade-down text-center">Multi Mail Sender</h2>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="m-0 gradient-text fade-down">Multi Mail Sender</h2>
+    <div class="toolbar d-flex">
+      <!-- Import/Export toolbar -->
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-animate me-2"
+        title="Import JSON"
+        (click)="importInput.click()"
+      >
+        <i class="bi bi-download"></i> Import
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary btn-animate"
+        title="Export JSON"
+        (click)="exportJson()"
+      >
+        <i class="bi bi-upload"></i> Export
+      </button>
+      <input
+        #importInput
+        type="file"
+        accept="application/json,.json"
+        class="d-none"
+        (change)="onImportFileChange($event)"
+      />
+    </div>
+  </div>
 
   <div class="mb-3 d-flex align-items-center">
     <label class="me-2 w-25">Email (Username)</label>
-    <input type="email"
-           class="form-control form-control-custom flex-grow-1"
-           [(ngModel)]="request.username"
-           placeholder="example@gmail.com" />
-    <i class="bi bi-exclamation-circle-fill text-primary ms-2 info-icon"
-       ngbTooltip="Your Gmail address. This is used to send emails."
-       placement="right"></i>
+    <input
+      type="email"
+      class="form-control form-control-custom flex-grow-1"
+      [(ngModel)]="request.username"
+      placeholder="example@gmail.com"
+    />
+    <i
+      class="bi bi-exclamation-circle-fill text-primary ms-2 info-icon"
+      ngbTooltip="Your Gmail address. This is used to send emails."
+      placement="right"
+    ></i>
   </div>
 
   <div class="mb-3 d-flex align-items-center">
     <label class="me-2 w-25">App Password</label>
-    <input type="password"
-           class="form-control form-control-custom flex-grow-1"
-           [(ngModel)]="request.password"
-           placeholder="App Password" />
-    <i class="bi bi-exclamation-circle-fill text-primary ms-2 info-icon"
-       ngbTooltip="You need to create an App Password in your Google Account settings. 
-                    This is different from your regular password."
-       placement="right"></i>
+    <input
+      type="password"
+      class="form-control form-control-custom flex-grow-1"
+      [(ngModel)]="request.password"
+      placeholder="App Password"
+    />
+    <i
+      class="bi bi-exclamation-circle-fill text-primary ms-2 info-icon"
+      ngbTooltip="Create an App Password in your Google Account. It is different from your normal password."
+      placement="right"
+    ></i>
   </div>
 
   <div class="mb-3 d-flex align-items-center">
     <label class="me-2 w-25">Subject</label>
-    <input type="text"
-           class="form-control form-control-custom flex-grow-1"
-           [(ngModel)]="request.subject" 
-           placeholder="Mail Subject" />
-    <i class="bi bi-exclamation-circle-fill text-primary ms-2 info-icon"
-       ngbTooltip="E-mail subject."
-       placement="right"></i>
+    <input
+      type="text"
+      class="form-control form-control-custom flex-grow-1"
+      [(ngModel)]="request.subject"
+      placeholder="Mail Subject"
+    />
+    <i
+      class="bi bi-exclamation-circle-fill text-primary ms-2 info-icon"
+      ngbTooltip="E-mail subject."
+      placement="right"
+    ></i>
   </div>
 
   <div class="mb-3 position-relative">
-    <div class="d-flex align-items-start">
-      <label class="w-25">Body Draft</label>
-      <textarea rows="5"
-                class="form-control form-control-custom flex-grow-1"
-                [(ngModel)]="request.bodydraft"
-                placeholder="Dear {{ '{' }}companyName{{ '}' }}, ..."></textarea>
-                
+    <div class="d-flex align-items-start gap-3 flex-wrap">
+      <label class="w-25" style="min-width: 200px">Body Draft</label>
+      <textarea
+        rows="5"
+        class="form-control form-control-custom flex-grow-1"
+        [(ngModel)]="request.bodydraft"
+        placeholder="Dear {companyName}, ..."
+      ></textarea>
     </div>
-    <i class="bi bi-exclamation-circle-fill text-primary info-icon-textarea"
-       ngbTooltip="Mail body draft. You can use placeholders like {{ '{' }}companyName{{ '}' }} etc. to personalize the emails. 
-                    The placeholders will be replaced with the actual values from the placeholders."
-       placement="right"></i>
+    <i
+      class="bi bi-exclamation-circle-fill text-primary info-icon-textarea"
+      ngbTooltip="Use placeholders like {companyName} and {companyNumber}. They will be replaced with actual values."
+      placement="left"
+    ></i>
   </div>
-  
-      
-  <h5>Companies <i class="bi bi-exclamation-circle-fill text-secondary info-icon-textarea"
-       ngbTooltip="You can add your mail here for testing"
-       placement="right"></i></h5> 
-  <div *ngFor="let company of request.companyData; let i = index"
-       class="card mb-3 animated-card">
-    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-      Company {{ (i | addOne) }}
-      <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="removeCompany(i)"></button>
+
+  <div class="d-flex justify-content-between align-items-center">
+    <h5 class="mt-2 mb-2">Companies</h5>
+    <button
+      class="btn btn-outline-primary btn-sm btn-animate"
+      (click)="addCompany()"
+    >
+      <i class="bi bi-plus"></i> Add new company
+    </button>
+  </div>
+
+  <div
+    *ngFor="let c of request.companyData; let i = index; trackBy: trackByIndex"
+    class="card mb-3 animated-card"
+  >
+    <div
+      class="card-header bg-primary text-white d-flex justify-content-between align-items-center"
+    >
+      <div>Company {{ i | addOne }}</div>
+      <button
+        type="button"
+        class="btn-close btn-close-white"
+        aria-label="Close"
+        (click)="removeCompany(i)"
+      ></button>
     </div>
     <div class="card-body">
       <div class="mb-2">
-        <label>Company Mail</label>
-        <input type="email"
-               class="form-control form-control-custom"
-               [(ngModel)]="company.companyMail" />
+        <label class="form-label">Company Mail</label>
+        <input
+          type="email"
+          class="form-control form-control-custom"
+          [(ngModel)]="c.companyMail"
+          placeholder="company@example.com"
+        />
       </div>
-       <div *ngFor="let key of getParameterKeys(company); let idx = index"
-      class="d-flex align-items-center mb-2">
-   <label class="me-2">{{ key }}</label>
-   <input type="text"
-          class="form-control me-2 form-control-custom"
-          [(ngModel)]="company.parameters[key]"
-          placeholder="Parameter value" />
-   <button type="button"
-           class="btn btn-danger btn-sm btn-animate"
-           (click)="removeParameter(company, key)">Delete</button>
- </div>
 
-      <button type="button" class="btn btn-secondary btn-sm btn-animate"
-              (click)="addParameter(company)">+ New parameter</button>
+      <div
+        class="mb-2"
+        *ngFor="
+          let entry of c.parameters | keyvalue;
+          trackBy: trackByParamKey;
+          let pi = index
+        "
+      >
+        <div class="d-flex align-items-center gap-2">
+          <label class="me-2" style="min-width: 120px">{{ entry.key }}</label>
+          <input
+            type="text"
+            class="form-control form-control-custom"
+            [(ngModel)]="c.parameters[entry.key]"
+            placeholder="Parameter value"
+          />
+          <button
+            type="button"
+            class="btn btn-danger btn-sm btn-animate"
+            (click)="removeParameter(c, entry.key)"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-secondary btn-sm btn-animate"
+        (click)="addParameter(c)"
+      >
+        <i class="bi bi-plus"></i> New parameter
+      </button>
     </div>
   </div>
 
-  <button class="btn btn-outline-primary mb-3 btn-animate"
-          (click)="addCompany()">+ Add new company</button>
-
   <div class="mb-3">
-    <label>PDF Attachment</label>
-    <input type="file"
-           class="form-control form-control-custom"
-           (change)="onFileSelected($event)" multiple />
+    <label class="form-label">PDF Attachment</label>
+    <input
+      type="file"
+      class="form-control form-control-custom"
+      (change)="onFileSelected($event)"
+      multiple
+    />
+    <div class="form-text">
+      Attachments are not included in JSON export/import. Credentials (email &
+      app password) are also excluded from Export.
+    </div>
   </div>
 
   <div class="mb-4">
     <button class="btn btn-success w-100 btn-animate" (click)="sendMails()">
       Send Mails
-    </button> 
-  </div> 
-
-  <div *ngIf="responseMessage" class="alert mt-3"
-       [ngClass]="{'alert-success': isSuccess==1, 'alert-danger': isSuccess==-1, 'alert-info': isSuccess==0}">
-    {{ responseMessage }} <!-- ! Required files will be edited-->
+    </button>
   </div>
+
+  <ngb-alert
+    *ngIf="responseMessage"
+    [type]="isSuccess === 1 ? 'success' : isSuccess === -1 ? 'danger' : 'info'"
+  >
+    {{ responseMessage }}
+  </ngb-alert>
 
   <div class="fixed-bottom d-flex align-items-center p-3 bg-light border-top">
     <div>
       <strong>Server Status:</strong>
-      <span [ngClass]="serverStatus==='Server is running' ? 'text-success' : 'text-danger'">
+      <span
+        [ngClass]="
+          serverStatus === 'Server is running' ? 'text-success' : 'text-danger'
+        "
+      >
         {{ serverStatus }}
       </span>
     </div>
-    <button class="btn mx-3 btn-outline-info btn-animate" (click)="checkServer()">
+    <button
+      class="btn mx-3 btn-outline-info btn-animate"
+      (click)="checkServer()"
+    >
       Check Server Status
     </button>
-
   </div>
 </div>
