@@ -1,0 +1,188 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@kaktusyazilim.com",
+      "parameters": {
+        "companyName": "Kaktüs Yazılım",
+        "companyNumber": "+905077334319",
+        "companyWebsite": "https://www.kaktusyazilim.com"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@elsyazilim.com.tr",
+      "parameters": {
+        "companyName": "ELS Yazılım ve Bilişim Hizmetleri",
+        "companyNumber": "+902323323228",
+        "companyWebsite": "https://www.elsyazilim.com.tr"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@corebytetech.com",
+      "parameters": {
+        "companyName": "CoreByte Teknoloji",
+        "companyNumber": "+908503606789",
+        "companyWebsite": "https://www.corebytetech.com"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@privart.com.tr",
+      "parameters": {
+        "companyName": "Privart Software House",
+        "companyNumber": "+902323324499",
+        "companyWebsite": "https://privart.com.tr"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@mevki.com",
+      "parameters": {
+        "companyName": "Mevki Yazılım",
+        "companyNumber": "+902324468664",
+        "companyWebsite": "https://www.mevki.com"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@burofi.com",
+      "parameters": {
+        "companyName": "Burofi Bilişim",
+        "companyNumber": "+905539741734",
+        "companyWebsite": "https://www.burofi.com"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@adesso.com.tr",
+      "parameters": {
+        "companyName": "Adesso Turkey",
+        "companyNumber": "+902123462002",
+        "companyWebsite": "https://www.adesso.com.tr"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@pulsefin.tech",
+      "parameters": {
+        "companyName": "Pulse Finansal Teknolojiler",
+        "companyNumber": "+902323323675",
+        "companyWebsite": "https://www.pulsefin.tech"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@go2innovate.com",
+      "parameters": {
+        "companyName": "Go2Innovate Bilgi Teknolojileri",
+        "companyNumber": "+905317816981",
+        "companyWebsite": "https://www.go2innovate.com"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "info@armain.com.tr",
+      "parameters": {
+        "companyName": "Armain Teknoloji",
+        "companyNumber": "+908503043525",
+        "companyWebsite": "https://www.kobimaster.com.tr"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@bg.com.tr",
+      "parameters": {
+        "companyName": "Bilgi Grubu Yazılım Ar-Ge ve Danışmanlık Ltd. Şti.",
+        "companyNumber": "+902325039372",
+        "companyWebsite": "https://www.bg.com.tr"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@ecoconnect.com.tr",
+      "parameters": {
+        "companyName": "Analiz Ar-Ge San. Tic. Ltd. Şti.",
+        "companyNumber": "+905325544103",
+        "companyWebsite": "http://www.ecoconnect.com.tr"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "info@appcent.com.tr",
+      "parameters": {
+        "companyName": "Appcent Yazılım ve Bilişim A.Ş.",
+        "companyNumber": "+902320000000",
+        "companyWebsite": "https://www.appcent.com.tr"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@labrys.global",
+      "parameters": {
+        "companyName": "Labrys Digital",
+        "companyNumber": "+902320001122",
+        "companyWebsite": "https://labrys.global"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "info@netkey.com.tr",
+      "parameters": {
+        "companyName": "NetKey Yazılım Teknolojileri",
+        "companyNumber": "+902324648080",
+        "companyWebsite": "https://www.netkey.com.tr"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@veripark.com",
+      "parameters": {
+        "companyName": "VeriPark İzmir Ofisi",
+        "companyNumber": "+902323320000",
+        "companyWebsite": "https://www.veripark.com"
+      }
+    },
+    {
+      "id": 16,
+      "companyMail": "info@wecodeyazilim.com",
+      "parameters": {
+        "companyName": "WeCode Yazılım",
+        "companyNumber": "+905536640505",
+        "companyWebsite": "https://www.wecodeyazilim.com"
+      }
+    },
+    {
+      "id": 17,
+      "companyMail": "info@detaysoft.com",
+      "parameters": {
+        "companyName": "Detaysoft Ege Ofisi",
+        "companyNumber": "+902325030111",
+        "companyWebsite": "https://www.detaysoft.com"
+      }
+    },
+    {
+      "id": 18,
+      "companyMail": "info@qumpara.com",
+      "parameters": {
+        "companyName": "Qumpara İzmir Ofisi",
+        "companyNumber": "+902329993344",
+        "companyWebsite": "https://www.qumpara.com"
+      }
+    },
+    {
+      "id": 19,
+      "companyMail": "info@figensoft.com",
+      "parameters": {
+        "companyName": "Figensoft Yazılım",
+        "companyNumber": "+902325033131",
+        "companyWebsite": "https://www.figensoft.com"
+      }
+    }
+  ]
+}
