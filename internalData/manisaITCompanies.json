@@ -1,0 +1,136 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@inovenus.com",
+      "parameters": {
+        "companyName": "INOVENUS Yazılım Teknoloji Ltd. Şti.",
+        "companyNumber": "05536610668"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "iletisim@turktrust.com.tr",
+      "parameters": {
+        "companyName": "TÜRKTRUST Bilgi İletişim ve Bilişim Güvenliği Hizmetleri A.Ş. – Manisa Şubesi",
+        "companyNumber": "05458777017"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@promasterbilisim.com.tr",
+      "parameters": {
+        "companyName": "PROMASTER Bilişim ve Danışmanlık",
+        "companyNumber": "02362311087"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@alfanetyazilim.com",
+      "parameters": {
+        "companyName": "Alfanet Yazılım Şirketi",
+        "companyNumber": "05056088826"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@vsarge.com.tr",
+      "parameters": {
+        "companyName": "VS Yazılım Arge A.Ş.",
+        "companyNumber": "08503032813"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@evoset.com.tr",
+      "parameters": {
+        "companyName": "Evoset Bilgi Teknolojileri ve Yazılım Hizmetleri",
+        "companyNumber": ""
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@enmdigital.com",
+      "parameters": {
+        "companyName": "ENM Digital",
+        "companyNumber": ""
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@2ag.com.tr",
+      "parameters": {
+        "companyName": "2AG Yazılım Hizmetleri Ltd. Şti.",
+        "companyNumber": "02362390898"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@aktif-net.com",
+      "parameters": {
+        "companyName": "AKTİF Yazılım Bilgisayar",
+        "companyNumber": ""
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "info@tumeva.com",
+      "parameters": {
+        "companyName": "TUMEVA Bilişim (TUMEVA Reklam ve Bilişim Hizmetleri)",
+        "companyNumber": ""
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@aykasoft.com.tr",
+      "parameters": {
+        "companyName": "AYKASOFT Yazılım ve Bilişim Teknolojileri",
+        "companyNumber": "08505321876"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@mesebilisim.com",
+      "parameters": {
+        "companyName": "Meşe Bilişim Yazılım Mekatronik Eğitim İthalat İhracat Sanayi ve Ticaret Ltd.Şti.",
+        "companyNumber": "05530808608"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "info@lumiyazilim.com",
+      "parameters": {
+        "companyName": "Lumi Yazılım",
+        "companyNumber": ""
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@genarge.com.tr",
+      "parameters": {
+        "companyName": "Gen Arge San ve Tic A.Ş.",
+        "companyNumber": "08508115121"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "info@mtbteknik.com.tr",
+      "parameters": {
+        "companyName": "MTB Teknik – Manisa Teknik Bilgisayar",
+        "companyNumber": "02362320997"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@manisabilgisayar.com",
+      "parameters": {
+        "companyName": "Manisa Bilgisayar ve İnternet Hizmetleri",
+        "companyNumber": "05558968076"
+      }
+    }
+  ]
+}
