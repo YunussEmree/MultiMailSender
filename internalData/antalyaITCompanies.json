@@ -1,0 +1,449 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@santsg.com",
+      "parameters": {
+        "companyName": "SAN Bilgisayar (SAN TSG)",
+        "companyNumber": "08507770726",
+        "companyWebsite": "https://www.santsg.com"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@paximum.com",
+      "parameters": {
+        "companyName": "Paximum Bilişim Yazılım Hizmetleri A.Ş.",
+        "companyNumber": "08507770729",
+        "companyWebsite": "https://www.paximum.com"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "contact@dtcloudnow.com",
+      "parameters": {
+        "companyName": "DT İletişim Hizmetleri A.Ş. (DT Cloud)",
+        "companyNumber": "08503333375",
+        "companyWebsite": "https://dtcloudnow.com"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@talyabilisim.com.tr",
+      "parameters": {
+        "companyName": "Talya Bilişim (Elektra Otel Sistemleri)",
+        "companyNumber": "02422279100",
+        "companyWebsite": "https://talyabilisim.com.tr"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@elektraweb.com",
+      "parameters": {
+        "companyName": "Elektraweb",
+        "companyNumber": "08507770444",
+        "companyWebsite": "https://www.elektraweb.com"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "kurumsal@softalya.com",
+      "parameters": {
+        "companyName": "Softalya Yazılım Ltd. Şti.",
+        "companyNumber": "02422550250",
+        "companyWebsite": "https://softalya.com"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "support@pribas.com",
+      "parameters": {
+        "companyName": "Pribas Yazılım Ar-Ge Ltd. Şti.",
+        "companyNumber": "02422276625",
+        "companyWebsite": "https://www.pribas.com"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@b-infogis.com",
+      "parameters": {
+        "companyName": "B Mühendislik (b-infoGIS)",
+        "companyNumber": "02423162700",
+        "companyWebsite": "https://b-infogis.com"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@eticsoft.com",
+      "parameters": {
+        "companyName": "EticSoft Yazılım",
+        "companyNumber": "08508851007",
+        "companyWebsite": "https://eticsoft.com"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "contact@kod.com.tr",
+      "parameters": {
+        "companyName": "Kod Yazılım A.Ş.",
+        "companyNumber": "08507770111",
+        "companyWebsite": "https://kod.com.tr"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@uraltelekom.com",
+      "parameters": {
+        "companyName": "URAL Telekom",
+        "companyNumber": "905357666383",
+        "companyWebsite": "https://uraltelekom.com"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "akdeniz@sentez.com",
+      "parameters": {
+        "companyName": "Sentez Yazılım",
+        "companyNumber": "02422261565",
+        "companyWebsite": "https://sentez.com"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "uaydin@artinsystems.com",
+      "parameters": {
+        "companyName": "Art-In Systems",
+        "companyNumber": "02423171404",
+        "companyWebsite": "https://artinsystems.com"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@inthouse.co",
+      "parameters": {
+        "companyName": "Inthouse Bilişim Teknolojileri",
+        "companyNumber": "905452656407",
+        "companyWebsite": "https://inthouse.co"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "hello@goviva.com.tr",
+      "parameters": {
+        "companyName": "Goviva",
+        "companyNumber": "02426061446",
+        "companyWebsite": "https://goviva.com.tr"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@pratikofis.com.tr",
+      "parameters": {
+        "companyName": "Pratik Ofis Yazılım",
+        "companyNumber": "02422475335",
+        "companyWebsite": "https://pratikofis.com.tr"
+      }
+    },
+    {
+      "id": 16,
+      "companyMail": "contact@teknodev.biz",
+      "parameters": {
+        "companyName": "Teknodev Bilgisayar Sistemleri Yazılım Hizmetleri San. ve Tic. Ltd. Şti.",
+        "companyNumber": "02422272678",
+        "companyWebsite": "https://teknodev.biz"
+      }
+    },
+    {
+      "id": 17,
+      "companyMail": "info@strongpilot.com",
+      "parameters": {
+        "companyName": "UÇUŞDÜNYASI BİLİŞİM A.Ş. (Strongpilot)",
+        "companyNumber": "02423229707",
+        "companyWebsite": "https://strongpilot.com"
+      }
+    },
+    {
+      "id": 18,
+      "companyMail": "info@travelaps.com",
+      "parameters": {
+        "companyName": "ERS Yazılım İnternet Turizm Sanayi ve Ticaret A.Ş. (Travelaps)",
+        "companyNumber": "08507770377",
+        "companyWebsite": "https://travelaps.com"
+      }
+    },
+    {
+      "id": 19,
+      "companyMail": "info@hotech.systems",
+      "parameters": {
+        "companyName": "Hotech Yazılım A.Ş.",
+        "companyNumber": "08507770212",
+        "companyWebsite": "https://hotech.systems"
+      }
+    },
+    {
+      "id": 20,
+      "companyMail": "info@hsp-tec.com",
+      "parameters": {
+        "companyName": "HSP Hibrid Satış Platformu",
+        "companyNumber": "02422442475",
+        "companyWebsite": "https://hsp-tec.com"
+      }
+    },
+    {
+      "id": 21,
+      "companyMail": "info@nefayazilim.com.tr",
+      "parameters": {
+        "companyName": "Nefa Yazılım Mimarlık Mühendislik İnşaat Tic. Ltd. Şti.",
+        "companyNumber": "02422260602",
+        "companyWebsite": "https://nefayazilim.com.tr"
+      }
+    },
+    {
+      "id": 22,
+      "companyMail": "bilgi@tekviya.com",
+      "parameters": {
+        "companyName": "Tekviya Yazılım ve Bilgi Teknolojileri A.Ş. (Magenty)",
+        "companyNumber": "08504418966",
+        "companyWebsite": "https://tekviya.com"
+      }
+    },
+    {
+      "id": 23,
+      "companyMail": "info@dorukotomasyon.com",
+      "parameters": {
+        "companyName": "Doruk Otomasyon ve Yazılım Sanayi Ticaret A.Ş.",
+        "companyNumber": "02422262478",
+        "companyWebsite": "https://dorukotomasyon.com"
+      }
+    },
+    {
+      "id": 24,
+      "companyMail": "info@asyasoft.com.tr",
+      "parameters": {
+        "companyName": "Asyasoft Otel Yönetim Sistemleri",
+        "companyNumber": "08507770111",
+        "companyWebsite": "https://asyasoft.com.tr"
+      }
+    },
+    {
+      "id": 25,
+      "companyMail": "aktif@modhotel.com",
+      "parameters": {
+        "companyName": "Mod Hotel Software",
+        "companyNumber": "08508880663",
+        "companyWebsite": "https://modhotel.com"
+      }
+    },
+    {
+      "id": 26,
+      "companyMail": "info@noyasis.com.tr",
+      "parameters": {
+        "companyName": "Noyasis Otomasyon Yazılım Sistemleri A.Ş.",
+        "companyNumber": "08502441960",
+        "companyWebsite": "https://noyasis.com.tr"
+      }
+    },
+    {
+      "id": 27,
+      "companyMail": "info@oniva.com.tr",
+      "parameters": {
+        "companyName": "Oniva İnternet ve Yazılım",
+        "companyNumber": "08508404411",
+        "companyWebsite": "https://oniva.com.tr"
+      }
+    },
+    {
+      "id": 28,
+      "companyMail": "info@antsisyazilim.com",
+      "parameters": {
+        "companyName": "Antsis Yazılım Elektronik ve Bilgisayar Sistemleri",
+        "companyNumber": "02422262600",
+        "companyWebsite": "https://antsisyazilim.com"
+      }
+    },
+    {
+      "id": 29,
+      "companyMail": "info@quantumyazilim.com",
+      "parameters": {
+        "companyName": "Quantum Yazılım",
+        "companyNumber": "08504414782",
+        "companyWebsite": "https://quantumyazilim.com"
+      }
+    },
+    {
+      "id": 30,
+      "companyMail": "info@aw.tr",
+      "parameters": {
+        "companyName": "Ajansweb Internet Hizmetleri",
+        "companyNumber": "02423221354",
+        "companyWebsite": "https://aw.tr"
+      }
+    },
+    {
+      "id": 31,
+      "companyMail": "info@antbilgisayar.com",
+      "parameters": {
+        "companyName": "Ant Bilgisayar Hizmetleri",
+        "companyNumber": "08505228636",
+        "companyWebsite": "https://antbilgisayar.com"
+      }
+    },
+    {
+      "id": 32,
+      "companyMail": "info@fabilisim.com",
+      "parameters": {
+        "companyName": "FA Bilişim",
+        "companyNumber": "02422210708",
+        "companyWebsite": "https://fabilisim.com"
+      }
+    },
+    {
+      "id": 33,
+      "companyMail": "destek@netalya.com.tr",
+      "parameters": {
+        "companyName": "Netalya Bilişim ve Yazılım",
+        "companyNumber": "02423215003",
+        "companyWebsite": "https://netalya.com.tr"
+      }
+    },
+    {
+      "id": 34,
+      "companyMail": "info@pozitifbilgisayar.com",
+      "parameters": {
+        "companyName": "Pozitif Bilgisayar (Netsis Antalya Yetkili Bayi)",
+        "companyNumber": "05415659005",
+        "companyWebsite": "https://pozitifbilgisayar.com"
+      }
+    },
+    {
+      "id": 35,
+      "companyMail": "bilgi@weblikya.com",
+      "parameters": {
+        "companyName": "Weblikya Yazılım",
+        "companyNumber": "08508400712",
+        "companyWebsite": "https://weblikya.com"
+      }
+    },
+    {
+      "id": 36,
+      "companyMail": "iletisim@cesayazilim.com",
+      "parameters": {
+        "companyName": "CESA Yazılım",
+        "companyNumber": "08502255334",
+        "companyWebsite": "https://cesayazilim.com"
+      }
+    },
+    {
+      "id": 37,
+      "companyMail": "info@antalyawebajans.com",
+      "parameters": {
+        "companyName": "Antalya Web Ajans",
+        "companyNumber": "05326666392",
+        "companyWebsite": "https://antalyawebajans.com"
+      }
+    },
+    {
+      "id": 38,
+      "companyMail": "info@noxart.com.tr",
+      "parameters": {
+        "companyName": "Noxart Bilişim Sanayi ve Ticaret A.Ş. (Noxart Games)",
+        "companyNumber": "08508400807",
+        "companyWebsite": "https://noxart.com.tr"
+      }
+    },
+    {
+      "id": 39,
+      "companyMail": "info@cetrinbilisim.com",
+      "parameters": {
+        "companyName": "Cetrin Bilişim",
+        "companyNumber": "02423261217",
+        "companyWebsite": "https://cetrinbilisim.com"
+      }
+    },
+    {
+      "id": 40,
+      "companyMail": "info@nettalya.com.tr",
+      "parameters": {
+        "companyName": "NETTALYA Yazılım",
+        "companyNumber": "08502550688",
+        "companyWebsite": "https://nettalya.com.tr"
+      }
+    },
+    {
+      "id": 41,
+      "companyMail": "info@etacomp.com",
+      "parameters": {
+        "companyName": "ETAComp Bilişim Teknolojileri",
+        "companyNumber": "02426061150",
+        "companyWebsite": "https://etacomp.com"
+      }
+    },
+    {
+      "id": 42,
+      "companyMail": "info@antalyateknoloji.com",
+      "parameters": {
+        "companyName": "Antalya Teknoloji Bilişim Hizmetleri",
+        "companyNumber": "08503464475",
+        "companyWebsite": "https://antalyateknoloji.com"
+      }
+    },
+    {
+      "id": 43,
+      "companyMail": "info@dymkreatif.com",
+      "parameters": {
+        "companyName": "DYM Kreatif Bilişim ve Danışmanlık",
+        "companyNumber": "02428890187",
+        "companyWebsite": "https://dymkreatif.com"
+      }
+    },
+    {
+      "id": 44,
+      "companyMail": "info@maxantalya.com",
+      "parameters": {
+        "companyName": "MaxAntalya Web Yazılım",
+        "companyNumber": "08502094707",
+        "companyWebsite": "https://maxantalya.com"
+      }
+    },
+    {
+      "id": 45,
+      "companyMail": "info@webcil.com.tr",
+      "parameters": {
+        "companyName": "Webcil Yazılım & İnternet Hizmetleri",
+        "companyNumber": "08503045147",
+        "companyWebsite": "https://webcil.com.tr"
+      }
+    },
+    {
+      "id": 46,
+      "companyMail": "info@antalyadijital.com",
+      "parameters": {
+        "companyName": "Antalya Dijital",
+        "companyNumber": "05378230197",
+        "companyWebsite": "https://antalyadijital.com"
+      }
+    },
+    {
+      "id": 47,
+      "companyMail": "merhaba@gazioglu.com.tr",
+      "parameters": {
+        "companyName": "Gazioğlu (Dijital/BT Hizmetleri)",
+        "companyNumber": "4440947",
+        "companyWebsite": "https://gazioglu.com.tr"
+      }
+    },
+    {
+      "id": 48,
+      "companyMail": "satis@alataxbilisim.com",
+      "parameters": {
+        "companyName": "AlataX Bilişim",
+        "companyNumber": "05310285038",
+        "companyWebsite": "https://alataxbilisim.com"
+      }
+    }
+  ]
+}
