@@ -93,12 +93,20 @@
 
   <div class="d-flex justify-content-between align-items-center">
     <h5 class="mt-2 mb-2">Companies</h5>
-    <button
-      class="btn btn-outline-primary btn-sm btn-animate"
-      (click)="addCompany()"
-    >
-      <i class="bi bi-plus"></i> Add new company
-    </button>
+    <div class="d-flex gap-2">
+      <button
+        class="btn btn-outline-danger btn-sm btn-animate"
+        (click)="clearDatas()"
+      >
+        <i class="bi bi-trash"></i> Clear datas
+      </button>
+      <button
+        class="btn btn-outline-primary btn-sm btn-animate"
+        (click)="addCompany()"
+      >
+        <i class="bi bi-plus"></i> Add new company
+      </button>
+    </div>
   </div>
 
   <div
@@ -181,6 +189,31 @@
     <button class="btn btn-success w-100 btn-animate" (click)="sendMails()">
       Send Mails
     </button>
+  </div>
+
+  <div *ngIf="isSuccess === 0 && request.companyData.length" class="mb-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <strong>Estimated time:</strong>
+        ~{{ etaMinSeconds }} - {{ etaMaxSeconds }} seconds
+      </div>
+      <div><strong>Progress:</strong> {{ progress.length }}/{{ request.companyData.length }}</div>
+    </div>
+    <div class="progress mt-2" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+      <div
+        class="progress-bar"
+        [style.width]="(progress.length / request.companyData.length) * 100 + '%'"
+      ></div>
+    </div>
+    <ul class="list-group mt-3">
+      <li class="list-group-item" *ngFor="let p of progress">
+        <span class="badge me-2" [ngClass]="p.status === 'sent' ? 'bg-success' : 'bg-danger'">
+          {{ p.status }}
+        </span>
+        {{ p.companyMail }}
+        <span class="text-muted" *ngIf="p.message">- {{ p.message }}</span>
+      </li>
+    </ul>
   </div>
 
   <ngb-alert

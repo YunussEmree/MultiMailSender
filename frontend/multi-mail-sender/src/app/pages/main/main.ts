@@ -47,10 +47,19 @@ export class MainComponent {
   responseMessage = '';
   isSuccess = 0; // 0: sending, 1: success, -1: error
   serverStatus = 'Server Down';
+  progress: { index: number; companyMail: string; status: string; message: string }[] = [];
+  etaMinSeconds = 0;
+  etaMaxSeconds = 0;
+  private avgSendMs = 0;
+  private avgCooldownMs = 0;
+  private samples = 0;
+  private cfgMinMs = 0;
+  private cfgMaxMs = 0;
+  private currentEventSource: EventSource | null = null;
 
   private nextCompanyId = 1;
 
-  constructor(private mailService: MailSenderService) {}
+  constructor(private mailService: MailSenderService) { this.checkServer(); }
 
   trackByIndex(_i: number, _item: any) {
     return _i;
@@ -220,23 +229,117 @@ export class MainComponent {
     this.nextCompanyId = maxId + 1;
   }
 
-  sendMails() {
-    this.responseMessage = 'Mails are sending...';
+  clearDatas() {
+    const ok = window.confirm('Tüm verileri temizlemek istediğinize emin misiniz?');
+    if (!ok) {
+      return;
+    }
+    const keepUsername = this.request.username;
+    const keepPassword = this.request.password;
+    this.request.subject = '';
+    this.request.bodydraft = '';
+    this.request.companyData = [
+      { id: 0, companyMail: '', parameters: { companyName: '', companyNumber: '' } },
+    ];
+    this.nextCompanyId = 1;
+    this.files = [];
+    this.progress = [];
+    this.responseMessage = '';
     this.isSuccess = 0;
-    this.mailService
-      .sendMailsWithAttachment(this.request, this.files)
-      .subscribe({
-        next: (res) => {
-          this.responseMessage = res.message;
+    this.etaMinSeconds = 0;
+    this.etaMaxSeconds = 0;
+    this.avgSendMs = 0;
+    this.avgCooldownMs = 0;
+    this.samples = 0;
+    this.cfgMinMs = 0;
+    this.cfgMaxMs = 0;
+    if (this.currentEventSource) {
+      this.currentEventSource.close();
+      this.currentEventSource = null;
+    }
+    this.request.username = keepUsername;
+    this.request.password = keepPassword;
+  }
+
+  sendMails() {
+    if (this.currentEventSource) {
+      this.currentEventSource.close();
+      this.currentEventSource = null;
+    }
+    this.responseMessage = 'Sending mails...';
+    this.isSuccess = 0;
+    this.progress = [];
+    // ETA will be set on 'started' event using backend-configured cooldowns
+    const count = this.request.companyData.length;
+    this.etaMinSeconds = 0;
+    this.etaMaxSeconds = 0;
+
+    this.mailService.startMailJob(this.request, this.files).subscribe({
+      next: (res) => {
+        const jobId = String(res.data);
+        const es = this.mailService.openJobEventSource(jobId);
+        this.currentEventSource = es;
+
+        es.addEventListener('started', (evt: MessageEvent) => {
+          this.responseMessage = 'Job started...';
+          try {
+            const cfg = JSON.parse(evt.data || '{}');
+            const minMs = Number(cfg.minMs) || 0;
+            const maxMs = Number(cfg.maxMs) || 0;
+            const total = this.request.companyData.length;
+            this.cfgMinMs = minMs;
+            this.cfgMaxMs = maxMs;
+            this.etaMinSeconds = Math.round((total * minMs) / 1000);
+            this.etaMaxSeconds = Math.round((total * maxMs) / 1000);
+          } catch {}
+        });
+
+        es.addEventListener('progress', (evt: MessageEvent) => {
+          try {
+            const data = JSON.parse(evt.data);
+            this.progress = [
+              ...this.progress,
+              {
+                index: data.index,
+                companyMail: data.companyMail,
+                status: data.status,
+                message: data.message,
+              },
+            ];
+            // update running averages for dynamic ETA
+            const sMs = Number(data.sendMs) || 0;
+            const cMs = Number(data.cooldownMs) || 0;
+            this.samples += 1;
+            this.avgSendMs = this.avgSendMs + (sMs - this.avgSendMs) / this.samples;
+            this.avgCooldownMs = this.avgCooldownMs + (cMs - this.avgCooldownMs) / this.samples;
+            const remaining = Math.max(0, this.request.companyData.length - this.progress.length);
+            const minPerItem = this.avgSendMs + (this.cfgMinMs || 0);
+            const maxPerItem = this.avgSendMs + (this.cfgMaxMs || 0);
+            this.etaMinSeconds = Math.round((remaining * minPerItem) / 1000);
+            this.etaMaxSeconds = Math.round((remaining * maxPerItem) / 1000);
+          } catch {}
+        });
+
+        es.addEventListener('finished', () => {
+          this.responseMessage = 'Mails sent successfully';
           this.isSuccess = 1;
-        },
-        error: (err) => {
-          this.responseMessage =
-            (err?.error && err.error.message) ||
-            'An error occurred while sending emails.';
+          es.close();
+          this.currentEventSource = null;
+        });
+
+        es.addEventListener('error', (evt: MessageEvent) => {
+          this.responseMessage = (evt && (evt as any).data) || 'An error occurred while sending emails.';
           this.isSuccess = -1;
-        },
-      });
+          es.close();
+          this.currentEventSource = null;
+        });
+      },
+      error: (err) => {
+        this.responseMessage =
+          (err?.error && err.error.message) || 'Failed to start job.';
+        this.isSuccess = -1;
+      },
+    });
   }
 
   checkServer() {
