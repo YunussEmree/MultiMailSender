@@ -210,7 +210,7 @@
         <span class="badge me-2" [ngClass]="p.status === 'sent' ? 'bg-success' : 'bg-danger'">
           {{ p.status }}
         </span>
-        {{ p.companyMail }}
+        {{ p.companyMail || p.email }}
         <span class="text-muted" *ngIf="p.message">- {{ p.message }}</span>
       </li>
     </ul>

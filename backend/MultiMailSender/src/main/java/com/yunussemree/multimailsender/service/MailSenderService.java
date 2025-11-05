@@ -22,10 +22,10 @@ public class MailSenderService {
     Random randomGenerator = new Random();
 
     @Value("${mail.cooldown.minMs:2000}")
-    private int minCooldownMs;
+    public int minCooldownMs;
 
     @Value("${mail.cooldown.maxMs:12000}")
-    private int maxCooldownMs;
+    public int maxCooldownMs;
 
     private final JavaMailSenderImpl mailSender;
 

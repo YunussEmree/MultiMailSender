@@ -124,16 +124,12 @@ public class MailSenderController {
     // helpers to expose current cooldown config
     private int mailSenderServiceMin() {
         try {
-            var f = com.yunussemree.multimailsender.service.MailSenderService.class.getDeclaredField("minCooldownMs");
-            f.setAccessible(true);
-            return (int) f.get(mailSenderService);
+            return mailSenderService.minCooldownMs;
         } catch (Exception ignored) { return 2000; }
     }
     private int mailSenderServiceMax() {
         try {
-            var f = com.yunussemree.multimailsender.service.MailSenderService.class.getDeclaredField("maxCooldownMs");
-            f.setAccessible(true);
-            return (int) f.get(mailSenderService);
+            return mailSenderService.maxCooldownMs;
         } catch (Exception ignored) { return 12000; }
     }
 

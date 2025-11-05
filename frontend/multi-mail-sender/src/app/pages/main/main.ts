@@ -47,7 +47,7 @@ export class MainComponent {
   responseMessage = '';
   isSuccess = 0; // 0: sending, 1: success, -1: error
   serverStatus = 'Server Down';
-  progress: { index: number; companyMail: string; status: string; message: string }[] = [];
+  progress: { index: number; companyMail?: string; email?: string; status: string; message: string }[] = [];
   etaMinSeconds = 0;
   etaMaxSeconds = 0;
   private avgSendMs = 0;
@@ -301,14 +301,15 @@ export class MainComponent {
               ...this.progress,
               {
                 index: data.index,
-                companyMail: data.companyMail,
+                companyMail: data.companyMail || data.email,
+                email: data.email,
                 status: data.status,
                 message: data.message,
               },
             ];
             // update running averages for dynamic ETA
-            const sMs = Number(data.sendMs) || 0;
-            const cMs = Number(data.cooldownMs) || 0;
+            const sMs = Number(data.sendMs ?? data.durationMs) || 0;
+            const cMs = Number(data.cooldownMs ?? data.plannedCooldownMs) || 0;
             this.samples += 1;
             this.avgSendMs = this.avgSendMs + (sMs - this.avgSendMs) / this.samples;
             this.avgCooldownMs = this.avgCooldownMs + (cMs - this.avgCooldownMs) / this.samples;
