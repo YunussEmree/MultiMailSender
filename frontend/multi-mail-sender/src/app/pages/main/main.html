@@ -191,10 +191,10 @@
     </button>
   </div>
 
-  <div *ngIf="isSuccess === 0 && request.companyData.length" class="mb-3">
+  <div *ngIf="isSuccess === 0 && request.companyData.length && etaMaxSeconds" class="mb-3">
     <div class="d-flex justify-content-between align-items-center">
       <div>
-        <strong>Estimated time:</strong>
+        <strong>Estimated remaining:</strong>
         ~{{ etaMinSeconds }} - {{ etaMaxSeconds }} seconds
       </div>
       <div><strong>Progress:</strong> {{ progress.length }}/{{ request.companyData.length }}</div>
