@@ -108,7 +108,7 @@ Ardından tarayıcıda `http://localhost:4200` adresini açın.
 
 ## Konfigürasyon
 
-- `backend/MultiMailSender/src/main/resources/application.properties` içinde SMTP kullanıcı adı/parolanızı (App Password) ve diğer ayarları yapılandırın. Güvenlik nedeniyle gerçek parolaları doğrudan repoya koymayın; ortam değişkeni veya CI secret kullanın.
+- GUI içerisinde verilen username ve password(app password) bilgilerinizi girin. Başka ekstra bir konfigürasyona ihtiyaç duyulmamaktadır. 
 
 ## Katkıda Bulunma
 
