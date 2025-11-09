@@ -1,0 +1,718 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "companyMail": "info@ankaref.com",
+      "parameters": {
+        "companyName": "Ankaref İnovasyon ve Teknoloji A.Ş.",
+        "companyNumber": "903122992164",
+        "companyWebsite": "https://www.ankaref.com/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 0
+    },
+    {
+      "companyMail": "ik@argela.com.tr",
+      "parameters": {
+        "companyName": "ARGELA Yazılım ve Bilişim Teknolojileri A.Ş. (Ankara Ofis)",
+        "companyNumber": "903129129200",
+        "companyWebsite": "https://www.argela.com.tr",
+        "companyMobil": ""
+      },
+      "id": 1
+    },
+    {
+      "companyMail": "info@argusteknoloji.com",
+      "parameters": {
+        "companyName": "Argus Teknoloji A.Ş.",
+        "companyNumber": "908508406536",
+        "companyWebsite": "https://www.argusteknoloji.com",
+        "companyMobil": ""
+      },
+      "id": 2
+    },
+    {
+      "companyMail": "aselsan.ir@aselsan.com",
+      "parameters": {
+        "companyName": "ASELSAN Elektronik Sanayi ve Ticaret A.Ş. (Yatırımcı İlişkileri)",
+        "companyNumber": "903125926000",
+        "companyWebsite": "https://www.aselsan.com",
+        "companyMobil": ""
+      },
+      "id": 3
+    },
+    {
+      "companyMail": "bilgi@barikat.com.tr",
+      "parameters": {
+        "companyName": "Barikat Siber Güvenlik",
+        "companyNumber": "903122354441",
+        "companyWebsite": "https://www.barikat.com.tr",
+        "companyMobil": ""
+      },
+      "id": 4
+    },
+    {
+      "companyMail": "bites@bites.com.tr",
+      "parameters": {
+        "companyName": "BİTES Savunma Havacılık ve Uzay Teknolojileri A.Ş.",
+        "companyNumber": "03122101256",
+        "companyWebsite": "https://www.bites.com.tr",
+        "companyMobil": ""
+      },
+      "id": 5
+    },
+    {
+      "companyMail": "info@blueyazilim.com.tr",
+      "parameters": {
+        "companyName": "Blue Yazılım",
+        "companyNumber": "905435712882",
+        "companyWebsite": "https://www.blueyazilim.com.tr/iletisim",
+        "companyMobil": "905435712882"
+      },
+      "id": 6
+    },
+    {
+      "companyMail": "compro@compro.com.tr",
+      "parameters": {
+        "companyName": "ComPro",
+        "companyNumber": "903124262851",
+        "companyWebsite": "https://www.compro.com.tr/iletisim",
+        "companyMobil": ""
+      },
+      "id": 7
+    },
+    {
+      "companyMail": "info@ekinokssoftware.com",
+      "parameters": {
+        "companyName": "Ekinoks Yazılım Donanım A.Ş.",
+        "companyNumber": "903122650162",
+        "companyWebsite": "https://ekinokssoftware.com",
+        "companyMobil": ""
+      },
+      "id": 8
+    },
+    {
+      "companyMail": "info@electraic.com",
+      "parameters": {
+        "companyName": "ElectraIC",
+        "companyNumber": "903124290067",
+        "companyWebsite": "https://www.electraic.com",
+        "companyMobil": ""
+      },
+      "id": 9
+    },
+    {
+      "companyMail": "hello@enhencer.com",
+      "parameters": {
+        "companyName": "Enhencer",
+        "companyNumber": "12135718503",
+        "companyWebsite": "https://enhencer.com",
+        "companyMobil": ""
+      },
+      "id": 10
+    },
+    {
+      "companyMail": "info@enovas.com.tr",
+      "parameters": {
+        "companyName": "ENOVAS",
+        "companyNumber": "03122101152",
+        "companyWebsite": "https://enovas.com.tr",
+        "companyMobil": ""
+      },
+      "id": 11
+    },
+    {
+      "companyMail": "info@esensi.com.tr",
+      "parameters": {
+        "companyName": "ESEN Sistem Entegrasyon",
+        "companyNumber": "903122201488",
+        "companyWebsite": "https://www.esensi.com.tr",
+        "companyMobil": ""
+      },
+      "id": 12
+    },
+    {
+      "companyMail": "pazarlama@esri.com.tr",
+      "parameters": {
+        "companyName": "Esri Türkiye",
+        "companyNumber": "903129990005",
+        "companyWebsite": "https://www.esri.com.tr",
+        "companyMobil": ""
+      },
+      "id": 13
+    },
+    {
+      "companyMail": "info@evreka.co",
+      "parameters": {
+        "companyName": "Evreka",
+        "companyNumber": "903129880306",
+        "companyWebsite": "https://evreka.co",
+        "companyMobil": ""
+      },
+      "id": 14
+    },
+    {
+      "companyMail": "info@eyesoft.com.tr",
+      "parameters": {
+        "companyName": "EYESOFT Yazılım",
+        "companyNumber": "05523937638",
+        "companyWebsite": "https://eyesoft.com.tr",
+        "companyMobil": "05523937638"
+      },
+      "id": 15
+    },
+    {
+      "companyMail": "fev-turkey@fev.com",
+      "parameters": {
+        "companyName": "FEV Türkiye",
+        "companyNumber": "03122876090",
+        "companyWebsite": "https://www.fev.com",
+        "companyMobil": ""
+      },
+      "id": 16
+    },
+    {
+      "companyMail": "gate@gateelektronik.com.tr",
+      "parameters": {
+        "companyName": "Gate Elektronik A.Ş.",
+        "companyNumber": "903122570737",
+        "companyWebsite": "http://www.gateelektronik.com.tr",
+        "companyMobil": ""
+      },
+      "id": 17
+    },
+    {
+      "companyMail": "info@gclabmuhendislik.com",
+      "parameters": {
+        "companyName": "GCLAB Mühendislik A.Ş.",
+        "companyNumber": "905364524625",
+        "companyWebsite": "https://gclabmuhendislik.com",
+        "companyMobil": "905364524625"
+      },
+      "id": 18
+    },
+    {
+      "companyMail": "geodestek@rocscience.com",
+      "parameters": {
+        "companyName": "GeoDestek Ltd. Şti.",
+        "companyNumber": "05523501399",
+        "companyWebsite": "https://www.geodestek.com",
+        "companyMobil": "05523501399"
+      },
+      "id": 19
+    },
+    {
+      "companyMail": "info@geosys.com.tr",
+      "parameters": {
+        "companyName": "GEOSYS Bilişim Sistemleri A.Ş.",
+        "companyNumber": "03122101720",
+        "companyWebsite": "https://www.geosys.com.tr",
+        "companyMobil": ""
+      },
+      "id": 20
+    },
+    {
+      "companyMail": "gfds@gfds-inc.com",
+      "parameters": {
+        "companyName": "GFDS 3D Animasyon Yazılım A.Ş.",
+        "companyNumber": "03122852520",
+        "companyWebsite": "https://www.gfds-inc.com",
+        "companyMobil": ""
+      },
+      "id": 21
+    },
+    {
+      "companyMail": "space@gsatcom.com",
+      "parameters": {
+        "companyName": "GSATCOM Space Technologies",
+        "companyNumber": "903124860330",
+        "companyWebsite": "https://www.gsatcom.com",
+        "companyMobil": ""
+      },
+      "id": 22
+    },
+    {
+      "companyMail": "gte@gte.com.tr",
+      "parameters": {
+        "companyName": "GTE",
+        "companyNumber": "903125146363",
+        "companyWebsite": "https://gte.com.tr",
+        "companyMobil": ""
+      },
+      "id": 23
+    },
+    {
+      "companyMail": "bilgi@gui.com.tr",
+      "parameters": {
+        "companyName": "GUİ Bilişim Danışmanlık ve Eğitim Ltd. Şti.",
+        "companyNumber": "03122101608",
+        "companyWebsite": "https://www.gui.com.tr",
+        "companyMobil": ""
+      },
+      "id": 24
+    },
+    {
+      "companyMail": "guvenfuture@guvenfuture.com",
+      "parameters": {
+        "companyName": "Güven Future",
+        "companyNumber": "03129060106",
+        "companyWebsite": "https://www.guvenfuture.com",
+        "companyMobil": ""
+      },
+      "id": 25
+    },
+    {
+      "companyMail": "iletisim@halici.com.tr",
+      "parameters": {
+        "companyName": "HALICI Bilgi İşlem A.Ş.",
+        "companyNumber": "903122100020",
+        "companyWebsite": "https://www.halici.com.tr",
+        "companyMobil": ""
+      },
+      "id": 26
+    },
+    {
+      "companyMail": "htr@htr.com.tr",
+      "parameters": {
+        "companyName": "Havelsan Teknoloji Radar A.Ş. (HTR)",
+        "companyNumber": "03128475130",
+        "companyWebsite": "https://www.htr.com.tr",
+        "companyMobil": ""
+      },
+      "id": 27
+    },
+    {
+      "companyMail": "info@hemosoft.com",
+      "parameters": {
+        "companyName": "HEMOSOFT Bilişim Eğitim Hizmetleri A.Ş.",
+        "companyNumber": "03122992314",
+        "companyWebsite": "https://www.hemosoft.com",
+        "companyMobil": ""
+      },
+      "id": 28
+    },
+    {
+      "companyMail": "info@heyteknoloji.com",
+      "parameters": {
+        "companyName": "HEY Teknoloji",
+        "companyNumber": "08503052181",
+        "companyWebsite": "https://heyteknoloji.com",
+        "companyMobil": ""
+      },
+      "id": 29
+    },
+    {
+      "companyMail": "info@icterra.com",
+      "parameters": {
+        "companyName": "ICterra Information and Communication Technologies",
+        "companyNumber": "903122925000",
+        "companyWebsite": "https://www.icterra.com",
+        "companyMobil": ""
+      },
+      "id": 30
+    },
+    {
+      "companyMail": "info@infodif.com",
+      "parameters": {
+        "companyName": "InfoDif",
+        "companyNumber": "00903122992297",
+        "companyWebsite": "https://www.infodif.com",
+        "companyMobil": ""
+      },
+      "id": 31
+    },
+    {
+      "companyMail": "info@infomed.com.tr",
+      "parameters": {
+        "companyName": "Infomed",
+        "companyNumber": "903123594989",
+        "companyWebsite": "https://infomed.com.tr/TR/Contact",
+        "companyMobil": ""
+      },
+      "id": 32
+    },
+    {
+      "companyMail": "info@infotron.com.tr",
+      "parameters": {
+        "companyName": "infoTRON",
+        "companyNumber": "908504415000",
+        "companyWebsite": "https://infotron.com.tr",
+        "companyMobil": ""
+      },
+      "id": 33
+    },
+    {
+      "companyMail": "info@inofab.health",
+      "parameters": {
+        "companyName": "Inofab Health",
+        "companyNumber": "903129880308",
+        "companyWebsite": "https://www.inofab.health",
+        "companyMobil": ""
+      },
+      "id": 34
+    },
+    {
+      "companyMail": "info@issd.com.tr",
+      "parameters": {
+        "companyName": "ISSD Bilişim",
+        "companyNumber": "903122100015",
+        "companyWebsite": "https://www.issd.com.tr",
+        "companyMobil": ""
+      },
+      "id": 35
+    },
+    {
+      "companyMail": "iletisim@i4.com.tr",
+      "parameters": {
+        "companyName": "İ4 İnşaat Yazılım Enerji Eğitim Danışmanlık Ar-Ge Ltd. Şti.",
+        "companyNumber": "05337313796",
+        "companyWebsite": "https://i4.com.tr",
+        "companyMobil": "05337313796"
+      },
+      "id": 36
+    },
+    {
+      "companyMail": "bilgi@ihalepro.com",
+      "parameters": {
+        "companyName": "İhale Teknolojileri A.Ş. (ihalepro)",
+        "companyNumber": "03122876556",
+        "companyWebsite": "https://ihalepro.com",
+        "companyMobil": ""
+      },
+      "id": 37
+    },
+    {
+      "companyMail": "info@ileriarge.com.tr",
+      "parameters": {
+        "companyName": "İleri Arge Teknolojileri Müh. Yaz. Eğitim Dan. San. ve Tic. Ltd. Şti.",
+        "companyNumber": "03122871790",
+        "companyWebsite": "https://ileriarge.com.tr",
+        "companyMobil": ""
+      },
+      "id": 38
+    },
+    {
+      "companyMail": "info@impark.com.tr",
+      "parameters": {
+        "companyName": "İm Park Eğitim Bilişim Ltd. Şti.",
+        "companyNumber": "03122312010",
+        "companyWebsite": "https://www.impark.com.tr",
+        "companyMobil": ""
+      },
+      "id": 39
+    },
+    {
+      "companyMail": "bilgi@infosoft.com.tr",
+      "parameters": {
+        "companyName": "İnfosoft Bilgi Sistemleri Müh. ve Danışmanlık Ltd. Şti.",
+        "companyNumber": "03124189415",
+        "companyWebsite": "https://www.infosoft.com.tr",
+        "companyMobil": ""
+      },
+      "id": 40
+    },
+    {
+      "companyMail": "info@innova.com.tr",
+      "parameters": {
+        "companyName": "İnnova Bilişim Çözümleri A.Ş.",
+        "companyNumber": "03122017000",
+        "companyWebsite": "https://www.innova.com.tr",
+        "companyMobil": ""
+      },
+      "id": 41
+    },
+    {
+      "companyMail": "info@isteknoloji.com.tr",
+      "parameters": {
+        "companyName": "İS Teknoloji",
+        "companyNumber": "903124791444",
+        "companyWebsite": "https://www.isteknoloji.com.tr",
+        "companyMobil": ""
+      },
+      "id": 42
+    },
+    {
+      "companyMail": "info@jeoit.com",
+      "parameters": {
+        "companyName": "JeoIT",
+        "companyNumber": "03124848739",
+        "companyWebsite": "https://jeoit.com",
+        "companyMobil": ""
+      },
+      "id": 43
+    },
+    {
+      "companyMail": "mhb@karel.com.tr",
+      "parameters": {
+        "companyName": "Karel",
+        "companyNumber": "903122650290",
+        "companyWebsite": "https://www.karel.com.tr",
+        "companyMobil": ""
+      },
+      "id": 44
+    },
+    {
+      "companyMail": "info@kindinetworks.com",
+      "parameters": {
+        "companyName": "Kindi Networks",
+        "companyNumber": "03123975454",
+        "companyWebsite": "https://www.kindinetworks.com",
+        "companyMobil": ""
+      },
+      "id": 45
+    },
+    {
+      "companyMail": "info@kontrolyazilim.com.tr",
+      "parameters": {
+        "companyName": "Kontrol Yazılım (Logo Ankara Bayi)",
+        "companyNumber": "903124387222",
+        "companyWebsite": "https://www.kontrolyazilim.com.tr/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 46
+    },
+    {
+      "companyMail": "info@kocsistem.com.tr",
+      "parameters": {
+        "companyName": "KoçSistem Bilgi ve İletişim Hizmetleri A.Ş. (Ankara Ofis)",
+        "companyNumber": "03122188700",
+        "companyWebsite": "https://www.kocsistem.com.tr/iletisim",
+        "companyMobil": ""
+      },
+      "id": 47
+    },
+    {
+      "companyMail": "info@leonardocompany.com.tr",
+      "parameters": {
+        "companyName": "Leonardo Turkey Havacılık Savunma ve Güvenlik Sistemleri A.Ş.",
+        "companyNumber": "903124845181",
+        "companyWebsite": "https://leonardocompany.com.tr",
+        "companyMobil": ""
+      },
+      "id": 48
+    },
+    {
+      "companyMail": "info@meteksan.com",
+      "parameters": {
+        "companyName": "Meteksan Savunma Sanayii A.Ş.",
+        "companyNumber": "903122661520",
+        "companyWebsite": "https://www.meteksan.com",
+        "companyMobil": ""
+      },
+      "id": 49
+    },
+    {
+      "companyMail": "info@mikro-tasarim.com.tr",
+      "parameters": {
+        "companyName": "Mikro-Tasarım Elektronik San. ve Tic. A.Ş.",
+        "companyNumber": "903122860103",
+        "companyWebsite": "https://www.mikro-tasarim.com.tr",
+        "companyMobil": ""
+      },
+      "id": 50
+    },
+    {
+      "companyMail": "milsoft@milsoft.com.tr",
+      "parameters": {
+        "companyName": "MilSOFT Yazılım Teknolojileri A.Ş.",
+        "companyNumber": "903122923000",
+        "companyWebsite": "https://www.milsoft.com.tr",
+        "companyMobil": ""
+      },
+      "id": 51
+    },
+    {
+      "companyMail": "bilgi@netcad.com",
+      "parameters": {
+        "companyName": "NETCAD Yazılım A.Ş.",
+        "companyNumber": "903122650510",
+        "companyWebsite": "https://www.netcad.com",
+        "companyMobil": ""
+      },
+      "id": 52
+    },
+    {
+      "companyMail": "info@obsteknoloji.com.tr",
+      "parameters": {
+        "companyName": "OBS Teknoloji",
+        "companyNumber": "03122195601",
+        "companyWebsite": "https://www.obsteknoloji.com.tr",
+        "companyMobil": ""
+      },
+      "id": 53
+    },
+    {
+      "companyMail": "hr@obss.com.tr",
+      "parameters": {
+        "companyName": "OBSS Teknoloji A.Ş. (Ankara Ofis)",
+        "companyNumber": "903122650708",
+        "companyWebsite": "https://obss.tech",
+        "companyMobil": ""
+      },
+      "id": 54
+    },
+    {
+      "companyMail": "info@odakarge.com",
+      "parameters": {
+        "companyName": "ODAK Arge Merkezi",
+        "companyNumber": "903122446325",
+        "companyWebsite": "https://www.odakarge.com",
+        "companyMobil": ""
+      },
+      "id": 55
+    },
+    {
+      "companyMail": "info@pixofun.com",
+      "parameters": {
+        "companyName": "Pixofun (GDP Piksel Yazılım)",
+        "companyNumber": "905325743941",
+        "companyWebsite": "https://www.pixofun.com",
+        "companyMobil": "905325743941"
+      },
+      "id": 56
+    },
+    {
+      "companyMail": "info@pro-line.com.tr",
+      "parameters": {
+        "companyName": "Proline Bilişim Sistemleri A.Ş. (Ankara Bölge)",
+        "companyNumber": "903122650700",
+        "companyWebsite": "https://pro-line.com.tr",
+        "companyMobil": ""
+      },
+      "id": 57
+    },
+    {
+      "companyMail": "info@roketsan.com.tr",
+      "parameters": {
+        "companyName": "ROKETSAN Roket Sanayi ve Ticaret A.Ş.",
+        "companyNumber": "903128605500",
+        "companyWebsite": "https://www.roketsan.com.tr",
+        "companyMobil": ""
+      },
+      "id": 58
+    },
+    {
+      "companyMail": "info@rovenma.com",
+      "parameters": {
+        "companyName": "Rovenma Elektronik Sanayi ve Ticaret A.Ş.",
+        "companyNumber": "903123975454",
+        "companyWebsite": "https://www.rovenma.com",
+        "companyMobil": ""
+      },
+      "id": 59
+    },
+    {
+      "companyMail": "info@sdt.com.tr",
+      "parameters": {
+        "companyName": "SDT Uzay ve Savunma Teknolojileri A.Ş.",
+        "companyNumber": "903122101015",
+        "companyWebsite": "https://www.sdt.com.tr",
+        "companyMobil": ""
+      },
+      "id": 60
+    },
+    {
+      "companyMail": "info@sebit.com.tr",
+      "parameters": {
+        "companyName": "SEBİT Eğitim ve Bilgi Teknolojileri A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://www.sebit.com.tr/iletisim.html",
+        "companyMobil": ""
+      },
+      "id": 61
+    },
+    {
+      "companyMail": "info@simbt.com.tr",
+      "parameters": {
+        "companyName": "SimBT Simülasyon Bilim ve Teknolojileri Ltd. Şti.",
+        "companyNumber": "903122859257",
+        "companyWebsite": "https://www.simbt.com.tr",
+        "companyMobil": ""
+      },
+      "id": 62
+    },
+    {
+      "companyMail": "info@simsoft.com.tr",
+      "parameters": {
+        "companyName": "Simsoft Bilgisayar Teknolojileri Ltd. Şti.",
+        "companyNumber": "908508400046",
+        "companyWebsite": "https://www.simsoft.com.tr",
+        "companyMobil": ""
+      },
+      "id": 63
+    },
+    {
+      "companyMail": "sisoft@sisoft.com.tr",
+      "parameters": {
+        "companyName": "Sisoft Sağlık Bilgi Sistemleri",
+        "companyNumber": "903122101920",
+        "companyWebsite": "https://sisoft.com.tr",
+        "companyMobil": ""
+      },
+      "id": 64
+    },
+    {
+      "companyMail": "marketing@stm.com.tr",
+      "parameters": {
+        "companyName": "STM Savunma Teknolojileri Müh. ve Tic. A.Ş.",
+        "companyNumber": "903122663550",
+        "companyWebsite": "https://www.stm.com.tr",
+        "companyMobil": ""
+      },
+      "id": 65
+    },
+    {
+      "companyMail": "info@turtekyazilim.com.tr",
+      "parameters": {
+        "companyName": "Turtek Yazılım",
+        "companyNumber": "03123581358",
+        "companyWebsite": "https://turtekyazilim.com.tr/Contact",
+        "companyMobil": ""
+      },
+      "id": 66
+    },
+    {
+      "companyMail": "info@ulakhaberlesme.com.tr",
+      "parameters": {
+        "companyName": "ULAK Haberleşme A.Ş. (Ankara Ofis)",
+        "companyNumber": "903122869487",
+        "companyWebsite": "https://www.ulakhaberlesme.com.tr",
+        "companyMobil": ""
+      },
+      "id": 67
+    },
+    {
+      "companyMail": "info@visratek.com",
+      "parameters": {
+        "companyName": "Visratek Savunma ve Bilişim Teknolojileri Ltd. Şti.",
+        "companyNumber": "903129633970",
+        "companyWebsite": "https://www.visratek.com",
+        "companyMobil": ""
+      },
+      "id": 68
+    },
+    {
+      "companyMail": "info@webigem.com.tr",
+      "parameters": {
+        "companyName": "Webigem",
+        "companyNumber": "905528481609",
+        "companyWebsite": "https://www.webigem.com.tr/Default/iletisim",
+        "companyMobil": "905528481609"
+      },
+      "id": 69
+    },
+    {
+      "companyMail": "bilgi@ozguryazilim.com.tr",
+      "parameters": {
+        "companyName": "Özgür Yazılım A.Ş. (Ankara Ofis)",
+        "companyNumber": "903124240133",
+        "companyWebsite": "https://www.ozguryazilim.com.tr/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 70
+    }
+  ]
+}
