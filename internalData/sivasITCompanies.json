@@ -1,0 +1,143 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@semruk.tech",
+      "parameters": {
+        "companyName": "Semruk Teknoloji A.Ş.",
+        "companyNumber": "+90 346 217 18 83",
+        "companyWebsite": "https://semruk.tech"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@malcolm.tech",
+      "parameters": {
+        "companyName": "Malcolm Technology",
+        "companyNumber": "+90 552 002 23 63",
+        "companyWebsite": "https://www.malcolm.tech"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@rgsyazilim.com",
+      "parameters": {
+        "companyName": "RGS Yazılım",
+        "companyNumber": "0850 885 44 04",
+        "companyWebsite": "https://www.rgsyazilim.com"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "fineo@fineo.com.tr",
+      "parameters": {
+        "companyName": "Fineo Dijital Dönüşüm A.Ş.",
+        "companyNumber": "0346 224 60 58",
+        "companyWebsite": "https://www.fineo.com.tr"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@cyberneet.com",
+      "parameters": {
+        "companyName": "CyberNeet",
+        "companyNumber": "+90 346 217 16 78",
+        "companyWebsite": "https://cyberneet.com"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@xoryazilim.com.tr",
+      "parameters": {
+        "companyName": "XOR Yazılım",
+        "companyNumber": "0346 223 60 30",
+        "companyWebsite": "https://xoryazilim.com.tr"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@althraicyazilim.com",
+      "parameters": {
+        "companyName": "Althraic Yazılım ve Teknoloji",
+        "companyNumber": "+90 505 780 78 88",
+        "companyWebsite": "https://althraicyazilim.com"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "iletisim@arvas.com.tr",
+      "parameters": {
+        "companyName": "Arvas Bilgi Teknolojileri",
+        "companyNumber": "0850 333 52 73",
+        "companyWebsite": "https://www.arvas.com.tr"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@webmaxi.com.tr",
+      "parameters": {
+        "companyName": "Webmaxi",
+        "companyNumber": "+90 546 452 19 89",
+        "companyWebsite": "https://www.webmaxi.com.tr"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "ofosoft@hotmail.com",
+      "parameters": {
+        "companyName": "OfoSoft Yazılım",
+        "companyNumber": "0546 918 89 69",
+        "companyWebsite": "https://www.ofosoft.com.tr"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "sivas@varolyazilim.com",
+      "parameters": {
+        "companyName": "Varol Yazılım (Sivas)",
+        "companyNumber": "0850 532 80 70",
+        "companyWebsite": "https://varolyazilim.com"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@ozsoft.com.tr",
+      "parameters": {
+        "companyName": "ÖzSoft Bilgisayar",
+        "companyNumber": "0850 500 53 00",
+        "companyWebsite": "https://www.ozsoft.com.tr"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "hakan@sivastasarim.com",
+      "parameters": {
+        "companyName": "Sivas Tasarım Bilişim",
+        "companyNumber": "0850 433 33 58",
+        "companyWebsite": "https://www.sivastasarim.com"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@pozitifofis.com.tr",
+      "parameters": {
+        "companyName": "Pozitif Ofis Yazılım",
+        "companyNumber": "0850 377 00 58",
+        "companyWebsite": "https://pozitifofis.com.tr"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "info@ofisline.com.tr",
+      "parameters": {
+        "companyName": "Ofis Line",
+        "companyNumber": "0552 298 92 69",
+        "companyWebsite": "https://ofisline.com.tr"
+      }
+    }
+  ]
+}
