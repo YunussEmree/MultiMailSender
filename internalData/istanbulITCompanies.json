@@ -1,0 +1,518 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "companyMail": "info@softtech.com.tr",
+      "parameters": {
+        "companyName": "Softtech Yazılım Teknolojileri A.Ş. (İş Bankası IT)",
+        "companyNumber": "908502906000",
+        "companyWebsite": "https://softtech.com.tr/en/contact",
+        "companyMobil": ""
+      },
+      "id": 0
+    },
+    {
+      "companyMail": "iletisim@logo.com.tr",
+      "parameters": {
+        "companyName": "Logo Yazılım San. ve Tic. A.Ş.",
+        "companyNumber": "902626798000",
+        "companyWebsite": "https://www.logo.com.tr/en/contact",
+        "companyMobil": ""
+      },
+      "id": 1
+    },
+    {
+      "companyMail": "info@iyzico.com",
+      "parameters": {
+        "companyName": "iyzico Ödeme Hizmetleri A.Ş.",
+        "companyNumber": "902165990100",
+        "companyWebsite": "https://www.iyzico.com/en/contact",
+        "companyMobil": ""
+      },
+      "id": 2
+    },
+    {
+      "companyMail": "support@trendyol.com",
+      "parameters": {
+        "companyName": "Trendyol Group (Trendyol Tech)",
+        "companyNumber": "902123310200",
+        "companyWebsite": "https://www.trendyol.com/iletisim",
+        "companyMobil": ""
+      },
+      "id": 3
+    },
+    {
+      "companyMail": "bilgi@hepsiburada.com",
+      "parameters": {
+        "companyName": "D-Market Elektronik Hizmetler ve Ticaret A.Ş. (Hepsiburada)",
+        "companyNumber": "908502524000",
+        "companyWebsite": "https://kurumsal.hepsiburada.com/tr/iletisim",
+        "companyMobil": ""
+      },
+      "id": 4
+    },
+    {
+      "companyMail": "contact@dreamgames.com",
+      "parameters": {
+        "companyName": "Dream Games Dijital Teknolojiler A.Ş.",
+        "companyNumber": "905377212721",
+        "companyWebsite": "https://www.dreamgames.com/about-us",
+        "companyMobil": "905377212721"
+      },
+      "id": 5
+    },
+    {
+      "companyMail": "info@intertech.com.tr",
+      "parameters": {
+        "companyName": "Intertech Bilgi İşlem ve Pazarlama Ticaret A.Ş.",
+        "companyNumber": "902166642000",
+        "companyWebsite": "https://www.intertech.com.tr/contact.html",
+        "companyMobil": ""
+      },
+      "id": 6
+    },
+    {
+      "companyMail": "info@garantibbvateknoloji.com.tr",
+      "parameters": {
+        "companyName": "Garanti BBVA Teknoloji A.Ş.",
+        "companyNumber": "902166621000",
+        "companyWebsite": "https://www.garantibbvateknoloji.com.tr/iletisim",
+        "companyMobil": ""
+      },
+      "id": 7
+    },
+    {
+      "companyMail": "info@commencis.com",
+      "parameters": {
+        "companyName": "Commencis Teknoloji A.Ş.",
+        "companyNumber": "902122761040",
+        "companyWebsite": "https://www.commencis.com/contact/",
+        "companyMobil": ""
+      },
+      "id": 8
+    },
+    {
+      "companyMail": "hr@obss.com.tr",
+      "parameters": {
+        "companyName": "OBSS Teknoloji A.Ş. (İstanbul Ofis)",
+        "companyNumber": "902164642000",
+        "companyWebsite": "https://obss.tech/en/about-us/",
+        "companyMobil": ""
+      },
+      "id": 9
+    },
+    {
+      "companyMail": "turkcell-kurumsal-iletisim@turkcell.com.tr",
+      "parameters": {
+        "companyName": "Turkcell Teknoloji Araştırma ve Geliştirme A.Ş.",
+        "companyNumber": "902164581000",
+        "companyWebsite": "http://www.turkcellteknoloji.com.tr",
+        "companyMobil": ""
+      },
+      "id": 10
+    },
+    {
+      "companyMail": "info@netas.com.tr",
+      "parameters": {
+        "companyName": "Netaş Telekomünikasyon A.Ş.",
+        "companyNumber": "902165222000",
+        "companyWebsite": "https://netas.com.tr/contact",
+        "companyMobil": ""
+      },
+      "id": 11
+    },
+    {
+      "companyMail": "info@priviasecurity.com",
+      "parameters": {
+        "companyName": "Privia Security Bilişim ve Danışmanlık A.Ş.",
+        "companyNumber": "902165147214",
+        "companyWebsite": "https://www.priviasecurity.com/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 12
+    },
+    {
+      "companyMail": "info@etiya.com",
+      "parameters": {
+        "companyName": "Etiya Bilgi Teknolojileri Yazılım San. Tic. A.Ş.",
+        "companyNumber": "902124837101",
+        "companyWebsite": "https://www.etiya.com/tr/iletisim",
+        "companyMobil": ""
+      },
+      "id": 13
+    },
+    {
+      "companyMail": "info@insiderone.com",
+      "parameters": {
+        "companyName": "Insider (Türkiye Yapay Zeka Pazarlama Platformu)",
+        "companyNumber": "902122234700",
+        "companyWebsite": "https://insiderone.com/contact/",
+        "companyMobil": ""
+      },
+      "id": 14
+    },
+    {
+      "companyMail": "yaziliiletisim@sahibinden.com",
+      "parameters": {
+        "companyName": "Sahibinden.com Pazarlama A.Ş.",
+        "companyNumber": "908502224444",
+        "companyWebsite": "https://www.sahibinden.com/kurumsal/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 15
+    },
+    {
+      "companyMail": "info@kocsistem.com.tr",
+      "parameters": {
+        "companyName": "KoçSistem Bilgi ve İletişim Hizmetleri A.Ş.",
+        "companyNumber": "902165561100",
+        "companyWebsite": "https://www.kocsistem.com.tr/en/contact",
+        "companyMobil": ""
+      },
+      "id": 16
+    },
+    {
+      "companyMail": "info@moka.com",
+      "parameters": {
+        "companyName": "Moka United Ödeme Hizmetleri A.Ş.",
+        "companyNumber": "908503339899",
+        "companyWebsite": "https://www.mokaunited.com/",
+        "companyMobil": ""
+      },
+      "id": 17
+    },
+    {
+      "companyMail": "destek@papara.com",
+      "parameters": {
+        "companyName": "Papara Elektronik Para A.Ş.",
+        "companyNumber": "908503400340",
+        "companyWebsite": "https://www.papara.com",
+        "companyMobil": ""
+      },
+      "id": 18
+    },
+    {
+      "companyMail": "info@logsign.com",
+      "parameters": {
+        "companyName": "Logsign Bilgi Güvenliği Teknolojileri A.Ş.",
+        "companyNumber": "902162903737",
+        "companyWebsite": "https://www.logsign.com/contact-us/",
+        "companyMobil": ""
+      },
+      "id": 19
+    },
+    {
+      "companyMail": "info@akinon.com",
+      "parameters": {
+        "companyName": "Akinon Internet Yatırım ve Proje Geliştirme A.Ş.",
+        "companyNumber": "902122121010",
+        "companyWebsite": "https://akinon.com/contact-us/",
+        "companyMobil": ""
+      },
+      "id": 20
+    },
+    {
+      "companyMail": "info@bilgeadam.com",
+      "parameters": {
+        "companyName": "BilgeAdam Teknoloji A.Ş.",
+        "companyNumber": "902122863748",
+        "companyWebsite": "https://www.bilgeadam.com",
+        "companyMobil": ""
+      },
+      "id": 21
+    },
+    {
+      "companyMail": "iletisim@kariyer.net",
+      "parameters": {
+        "companyName": "Kariyer.net Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş.",
+        "companyNumber": "902123157000",
+        "companyWebsite": "https://www.kariyer.net",
+        "companyMobil": ""
+      },
+      "id": 22
+    },
+    {
+      "companyMail": "info@spykegames.com",
+      "parameters": {
+        "companyName": "Spyke Games Bilişim ve Teknoloji A.Ş.",
+        "companyNumber": "902122123456",
+        "companyWebsite": "https://spykegames.com/",
+        "companyMobil": ""
+      },
+      "id": 23
+    },
+    {
+      "companyMail": "info@acegames.io",
+      "parameters": {
+        "companyName": "Ace Games Teknoloji A.Ş.",
+        "companyNumber": "902122000000",
+        "companyWebsite": "https://www.acegames.io/",
+        "companyMobil": ""
+      },
+      "id": 24
+    },
+    {
+      "companyMail": "info@biggergames.com",
+      "parameters": {
+        "companyName": "Bigger Games Teknoloji A.Ş.",
+        "companyNumber": "902123000000",
+        "companyWebsite": "https://biggergames.com/",
+        "companyMobil": ""
+      },
+      "id": 25
+    },
+    {
+      "companyMail": "info@masomo.com",
+      "parameters": {
+        "companyName": "Masomo Oyun Teknolojileri A.Ş. (Head Ball 2)",
+        "companyNumber": "902162000000",
+        "companyWebsite": "https://www.masomo.com/",
+        "companyMobil": ""
+      },
+      "id": 26
+    },
+    {
+      "companyMail": "info@rollicgames.com",
+      "parameters": {
+        "companyName": "Rollic Games Mobil Oyun Teknolojileri A.Ş.",
+        "companyNumber": "902124000000",
+        "companyWebsite": "https://rollicgames.com/",
+        "companyMobil": ""
+      },
+      "id": 27
+    },
+    {
+      "companyMail": "info@btcturk.com",
+      "parameters": {
+        "companyName": "BtcTurk Pro Kripto Para Alım Satım Platformu A.Ş.",
+        "companyNumber": "902124350400",
+        "companyWebsite": "https://www.btcturk.com",
+        "companyMobil": ""
+      },
+      "id": 28
+    },
+    {
+      "companyMail": "info@paribu.com",
+      "parameters": {
+        "companyName": "Paribu Teknoloji A.Ş.",
+        "companyNumber": "902163160606",
+        "companyWebsite": "https://www.paribu.com",
+        "companyMobil": ""
+      },
+      "id": 29
+    },
+    {
+      "companyMail": "info@armut.com",
+      "parameters": {
+        "companyName": "Armut Teknoloji A.Ş.",
+        "companyNumber": "902123636060",
+        "companyWebsite": "https://armut.com",
+        "companyMobil": ""
+      },
+      "id": 30
+    },
+    {
+      "companyMail": "info@colendi.com",
+      "parameters": {
+        "companyName": "Colendi Teknoloji A.Ş.",
+        "companyNumber": "902122765100",
+        "companyWebsite": "https://colendi.com",
+        "companyMobil": ""
+      },
+      "id": 31
+    },
+    {
+      "companyMail": "info@craftgate.io",
+      "parameters": {
+        "companyName": "Craftgate Ödeme Teknolojileri A.Ş.",
+        "companyNumber": "902122120130",
+        "companyWebsite": "https://craftgate.io",
+        "companyMobil": ""
+      },
+      "id": 32
+    },
+    {
+      "companyMail": "info@labrisnetworks.com",
+      "parameters": {
+        "companyName": "Labris Networks Bilgi Güvenliği A.Ş.",
+        "companyNumber": "902166628630",
+        "companyWebsite": "https://www.labrisnetworks.com",
+        "companyMobil": ""
+      },
+      "id": 33
+    },
+    {
+      "companyMail": "info@infinitumit.com.tr",
+      "parameters": {
+        "companyName": "InfinitumIT Bilgi Teknolojileri A.Ş.",
+        "companyNumber": "902166461661",
+        "companyWebsite": "https://www.infinitumit.com.tr",
+        "companyMobil": ""
+      },
+      "id": 34
+    },
+    {
+      "companyMail": "info@sparta.com.tr",
+      "parameters": {
+        "companyName": "Sparta Siber Güvenlik A.Ş.",
+        "companyNumber": "902122819090",
+        "companyWebsite": "https://sparta.com.tr/en/",
+        "companyMobil": ""
+      },
+      "id": 35
+    },
+    {
+      "companyMail": "info@param.com.tr",
+      "parameters": {
+        "companyName": "Param Elektronik Para ve Ödeme Hizmetleri A.Ş.",
+        "companyNumber": "908504741224",
+        "companyWebsite": "https://www.param.com.tr",
+        "companyMobil": ""
+      },
+      "id": 36
+    },
+    {
+      "companyMail": "info@paytr.com",
+      "parameters": {
+        "companyName": "PayTR Ödeme Hizmetleri ve Elektronik Para A.Ş.",
+        "companyNumber": "908503090390",
+        "companyWebsite": "https://www.paytr.com",
+        "companyMobil": ""
+      },
+      "id": 37
+    },
+    {
+      "companyMail": "info@getir.com",
+      "parameters": {
+        "companyName": "Getir Perakende Lojistik A.Ş.",
+        "companyNumber": "902129000000",
+        "companyWebsite": "https://getir.com",
+        "companyMobil": ""
+      },
+      "id": 38
+    },
+    {
+      "companyMail": "info@bugbounter.com",
+      "parameters": {
+        "companyName": "BugBounter Bilgi Güvenliği A.Ş.",
+        "companyNumber": "902122290045",
+        "companyWebsite": "https://bugbounter.com",
+        "companyMobil": ""
+      },
+      "id": 39
+    },
+    {
+      "companyMail": "info@coda.com",
+      "parameters": {
+        "companyName": "Coda Payment Türkiye (Coda Global)",
+        "companyNumber": "902126500100",
+        "companyWebsite": "https://www.codaglobal.com",
+        "companyMobil": ""
+      },
+      "id": 40
+    },
+    {
+      "companyMail": "info@monitise.com.tr",
+      "parameters": {
+        "companyName": "Monitise Türkiye Mobil Bankacılık Çözümleri A.Ş.",
+        "companyNumber": "902126500200",
+        "companyWebsite": "https://www.monitise.com",
+        "companyMobil": ""
+      },
+      "id": 41
+    },
+    {
+      "companyMail": "info@smartiks.com.tr",
+      "parameters": {
+        "companyName": "Smartiks Yazılım A.Ş.",
+        "companyNumber": "902124837430",
+        "companyWebsite": "https://www.smartiks.com.tr",
+        "companyMobil": ""
+      },
+      "id": 42
+    },
+    {
+      "companyMail": "info@appcircle.io",
+      "parameters": {
+        "companyName": "Appcircle Bilgi Teknolojileri A.Ş.",
+        "companyNumber": "902126500300",
+        "companyWebsite": "https://appcircle.io",
+        "companyMobil": ""
+      },
+      "id": 43
+    },
+    {
+      "companyMail": "info@procademy.com.tr",
+      "parameters": {
+        "companyName": "Procademy Eğitim Teknolojileri A.Ş.",
+        "companyNumber": "902122126200",
+        "companyWebsite": "https://procademy.com.tr",
+        "companyMobil": ""
+      },
+      "id": 44
+    },
+    {
+      "companyMail": "info@veripark.com",
+      "parameters": {
+        "companyName": "VeriPark Yazılım Hizmetleri A.Ş.",
+        "companyNumber": "902122909090",
+        "companyWebsite": "https://www.veripark.com",
+        "companyMobil": ""
+      },
+      "id": 45
+    },
+    {
+      "companyMail": "info@protel.net",
+      "parameters": {
+        "companyName": "Protel Telekomünikasyon A.Ş.",
+        "companyNumber": "902122960000",
+        "companyWebsite": "https://www.protel.net",
+        "companyMobil": ""
+      },
+      "id": 46
+    },
+    {
+      "companyMail": "info@datamarket.com.tr",
+      "parameters": {
+        "companyName": "Datamarket Bilgi Hizmetleri A.Ş.",
+        "companyNumber": "902122850085",
+        "companyWebsite": "https://www.datamarket.com.tr",
+        "companyMobil": ""
+      },
+      "id": 47
+    },
+    {
+      "companyMail": "info@epias.com.tr",
+      "parameters": {
+        "companyName": "EPİAŞ Enerji Piyasaları İşletme A.Ş.",
+        "companyNumber": "902123160400",
+        "companyWebsite": "https://www.epias.com.tr",
+        "companyMobil": ""
+      },
+      "id": 48
+    },
+    {
+      "companyMail": "info@plusclouds.com",
+      "parameters": {
+        "companyName": "PlusClouds Bulut Teknolojileri A.Ş.",
+        "companyNumber": "908503163000",
+        "companyWebsite": "https://plusclouds.com",
+        "companyMobil": ""
+      },
+      "id": 49
+    },
+    {
+      "companyMail": "info@doganholding.com.tr",
+      "parameters": {
+        "companyName": "Doğan Dijital (Doğan Holding IT Bölümü)",
+        "companyNumber": "902122570000",
+        "companyWebsite": "https://www.doganholding.com.tr",
+        "companyMobil": ""
+      },
+      "id": 50
+    }
+  ]
+}
