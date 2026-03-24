@@ -1,22 +1,28 @@
 package com.yunussemree.multimailsender.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yunussemree.multimailsender.model.ApiResponse;
-import com.yunussemree.multimailsender.model.ProgressEvent;
-import com.yunussemree.multimailsender.model.Request;
-import com.yunussemree.multimailsender.service.MailSenderService;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
-
 import java.io.IOException;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yunussemree.multimailsender.model.ApiResponse;
+import com.yunussemree.multimailsender.model.InMemoryMultipartFile;
+import com.yunussemree.multimailsender.model.ProgressEvent;
+import com.yunussemree.multimailsender.model.Request;
+import com.yunussemree.multimailsender.service.MailSenderService;
 
 @RestController
 public class MailSenderController {
@@ -57,9 +63,17 @@ public class MailSenderController {
     public ResponseEntity<ApiResponse> startJob(
             @RequestPart("request") Request request,
             @RequestPart(value = "files", required = false) MultipartFile[] files
-    ) {
+    ) throws IOException {
+        MultipartFile[] filesCopy = null;
+        if (files != null && files.length > 0) {
+            filesCopy = new MultipartFile[files.length];
+            for (int i = 0; i < files.length; i++) {
+                filesCopy[i] = new InMemoryMultipartFile(files[i]);
+            }
+        }
         String jobId = UUID.randomUUID().toString();
-        executor.submit(() -> runJobWhenEmitterAvailable(jobId, request, files));
+        final MultipartFile[] finalFiles = filesCopy;
+        executor.submit(() -> runJobWhenEmitterAvailable(jobId, request, finalFiles));
         return ResponseEntity.ok(new ApiResponse("Job started", jobId));
     }
 
