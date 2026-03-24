@@ -513,6 +513,306 @@
         "companyMobil": ""
       },
       "id": 50
+    },
+    {
+      "companyMail": "info@lostar.com.tr",
+      "parameters": {
+        "companyName": "Lostar Bilgi Güvenliği A.Ş.",
+        "companyNumber": "902166060276",
+        "companyWebsite": "https://www.lostar.com.tr/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 51
+    },
+    {
+      "companyMail": "info@globalbilgi.com.tr",
+      "parameters": {
+        "companyName": "Turkcell Global Bilgi A.Ş.",
+        "companyNumber": "902166331111",
+        "companyWebsite": "https://globalbilgi.com.tr/en/contact/",
+        "companyMobil": ""
+      },
+      "id": 52
+    },
+    {
+      "companyMail": "info@accenture.com.tr",
+      "parameters": {
+        "companyName": "Accenture Danışmanlık Ltd. Şti.",
+        "companyNumber": "902123355000",
+        "companyWebsite": "https://www.accenture.com/tr-tr",
+        "companyMobil": ""
+      },
+      "id": 53
+    },
+    {
+      "companyMail": "info@detaysoft.com",
+      "parameters": {
+        "companyName": "Detaysoft Bilgi Teknolojileri A.Ş.",
+        "companyNumber": "902164847070",
+        "companyWebsite": "https://detaysoft.com/tr-TR/iletisim-pg-7",
+        "companyMobil": ""
+      },
+      "id": 54
+    },
+    {
+      "companyMail": "info@bimser.com.tr",
+      "parameters": {
+        "companyName": "Bimser Çözüm Yazılım Tic. A.Ş.",
+        "companyNumber": "902623414314",
+        "companyWebsite": "https://bimser.com/tr/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 55
+    },
+    {
+      "companyMail": "iletisim@arabam.com",
+      "parameters": {
+        "companyName": "Arabam.com İnternet ve Bilgi Hizmetleri A.Ş.",
+        "companyNumber": "908507599000",
+        "companyWebsite": "https://www.arabam.com/hakkimizda/iletisim",
+        "companyMobil": ""
+      },
+      "id": 56
+    },
+    {
+      "companyMail": "info@emlakjet.com",
+      "parameters": {
+        "companyName": "Emlakjet Gayrimenkul A.Ş.",
+        "companyNumber": "908503127373",
+        "companyWebsite": "https://www.emlakjet.com/iletisim",
+        "companyMobil": ""
+      },
+      "id": 57
+    },
+    {
+      "companyMail": "info@hangikredi.com",
+      "parameters": {
+        "companyName": "HangiKredi Finansal Danışmanlık A.Ş.",
+        "companyNumber": "902163600900",
+        "companyWebsite": "https://www.hangikredi.com/hakkimizda/iletisim",
+        "companyMobil": ""
+      },
+      "id": 58
+    },
+    {
+      "companyMail": "info@d-teknoloji.com.tr",
+      "parameters": {
+        "companyName": "Doğuş Bilgi İşlem ve Teknoloji Hizmetleri A.Ş.",
+        "companyNumber": "902164668600",
+        "companyWebsite": "https://www.d-teknoloji.com.tr/tr/iletisim",
+        "companyMobil": ""
+      },
+      "id": 59
+    },
+    {
+      "companyMail": "turkey@sap.com",
+      "parameters": {
+        "companyName": "SAP Türkiye Yazılım ve Hizmetleri Ltd. Şti.",
+        "companyNumber": "902123420340",
+        "companyWebsite": "https://www.sap.com/turkey/about/company/office-locations.html",
+        "companyMobil": ""
+      },
+      "id": 60
+    },
+    {
+      "companyMail": "sigortam@sigortam.net",
+      "parameters": {
+        "companyName": "Sigortam.net Sigorta ve Reasürans Brokerlik Hizm. A.Ş.",
+        "companyNumber": "904442400",
+        "companyWebsite": "https://www.sigortam.net",
+        "companyMobil": ""
+      },
+      "id": 61
+    },
+    {
+      "companyMail": "info@yemeksepeti.com",
+      "parameters": {
+        "companyName": "Yemeksepeti Elektronik İletişim Perakende Gıda Lojistik A.Ş.",
+        "companyNumber": "902124440909",
+        "companyWebsite": "https://www.yemeksepeti.com",
+        "companyMobil": ""
+      },
+      "id": 62
+    },
+    {
+      "companyMail": "info@bitaksi.com",
+      "parameters": {
+        "companyName": "BiTaksi Akıllı Ulaşım Teknolojileri A.Ş.",
+        "companyNumber": "902124440100",
+        "companyWebsite": "https://www.bitaksi.com",
+        "companyMobil": ""
+      },
+      "id": 63
+    },
+    {
+      "companyMail": "info@marti.tech",
+      "parameters": {
+        "companyName": "Martı Teknoloji İletişim A.Ş.",
+        "companyNumber": "902165050505",
+        "companyWebsite": "https://marti.tech",
+        "companyMobil": ""
+      },
+      "id": 64
+    },
+    {
+      "companyMail": "info@hopi.com.tr",
+      "parameters": {
+        "companyName": "Hopi Dijital Sadakat A.Ş.",
+        "companyNumber": "902124440200",
+        "companyWebsite": "https://www.hopi.com.tr",
+        "companyMobil": ""
+      },
+      "id": 65
+    },
+    {
+      "companyMail": "info@smartmessage.com",
+      "parameters": {
+        "companyName": "SmartMessage Yazılım A.Ş.",
+        "companyNumber": "902124837450",
+        "companyWebsite": "https://www.smartmessage.com",
+        "companyMobil": ""
+      },
+      "id": 66
+    },
+    {
+      "companyMail": "turkey@nokia.com",
+      "parameters": {
+        "companyName": "Nokia Solutions and Networks İletişim A.Ş.",
+        "companyNumber": "902165222500",
+        "companyWebsite": "https://www.nokia.com/tr_int/",
+        "companyMobil": ""
+      },
+      "id": 67
+    },
+    {
+      "companyMail": "info.turkey@ericsson.com",
+      "parameters": {
+        "companyName": "Ericsson Telekomunikasyon A.Ş.",
+        "companyNumber": "902123366000",
+        "companyWebsite": "https://www.ericsson.com/tr/kontakt",
+        "companyMobil": ""
+      },
+      "id": 68
+    },
+    {
+      "companyMail": "info@huawei.com.tr",
+      "parameters": {
+        "companyName": "Huawei Telekomünikasyon Dış Ticaret Ltd. Şti.",
+        "companyNumber": "902166338800",
+        "companyWebsite": "https://www.huawei.com/tr/contact-us",
+        "companyMobil": ""
+      },
+      "id": 69
+    },
+    {
+      "companyMail": "info@param.com.tr",
+      "parameters": {
+        "companyName": "ING Bank Türkiye Ödeme Teknolojileri (Param)",
+        "companyNumber": "908504741224",
+        "companyWebsite": "https://www.param.com.tr/iletisim",
+        "companyMobil": ""
+      },
+      "id": 70
+    },
+    {
+      "companyMail": "info@neredekal.com",
+      "parameters": {
+        "companyName": "Neredekal.com Turizm Teknolojileri A.Ş.",
+        "companyNumber": "902163557070",
+        "companyWebsite": "https://www.neredekal.com",
+        "companyMobil": ""
+      },
+      "id": 71
+    },
+    {
+      "companyMail": "info@cimri.com",
+      "parameters": {
+        "companyName": "Cimri.com Fiyat Karşılaştırma A.Ş.",
+        "companyNumber": "902123600900",
+        "companyWebsite": "https://www.cimri.com",
+        "companyMobil": ""
+      },
+      "id": 72
+    },
+    {
+      "companyMail": "info@doping.com.tr",
+      "parameters": {
+        "companyName": "Doping Hafıza Eğitim Teknolojileri A.Ş.",
+        "companyNumber": "902126000000",
+        "companyWebsite": "https://www.dopingtech.com",
+        "companyMobil": ""
+      },
+      "id": 73
+    },
+    {
+      "companyMail": "info@ikas.com",
+      "parameters": {
+        "companyName": "İkas Teknoloji A.Ş.",
+        "companyNumber": "908503462000",
+        "companyWebsite": "https://ikas.com/iletisim",
+        "companyMobil": ""
+      },
+      "id": 74
+    },
+    {
+      "companyMail": "info@figopara.com",
+      "parameters": {
+        "companyName": "Figopara Ödeme Hizmetleri ve Elektronik Para A.Ş.",
+        "companyNumber": "902125000000",
+        "companyWebsite": "https://www.figopara.com",
+        "companyMobil": ""
+      },
+      "id": 75
+    },
+    {
+      "companyMail": "info@paycore.com",
+      "parameters": {
+        "companyName": "PayCore Ödeme Sistemleri A.Ş.",
+        "companyNumber": "902124440300",
+        "companyWebsite": "https://paycore.com",
+        "companyMobil": ""
+      },
+      "id": 76
+    },
+    {
+      "companyMail": "info@isbankasi.com.tr",
+      "parameters": {
+        "companyName": "Türkiye İş Bankası Yazılım A.Ş. (İşbankası Teknoloji)",
+        "companyNumber": "908504001200",
+        "companyWebsite": "https://www.isbank.com.tr",
+        "companyMobil": ""
+      },
+      "id": 77
+    },
+    {
+      "companyMail": "info@foriba.com",
+      "parameters": {
+        "companyName": "Foriba Yazılım ve Danışmanlık A.Ş.",
+        "companyNumber": "902123550909",
+        "companyWebsite": "https://www.foriba.com/iletisim",
+        "companyMobil": ""
+      },
+      "id": 78
+    },
+    {
+      "companyMail": "info@simya.com.tr",
+      "parameters": {
+        "companyName": "Simya Dijital Pazarlama Teknolojileri A.Ş.",
+        "companyNumber": "902122760100",
+        "companyWebsite": "https://simya.com.tr",
+        "companyMobil": ""
+      },
+      "id": 79
+    },
+    {
+      "companyMail": "info@mobiroller.com",
+      "parameters": {
+        "companyName": "Mobiroller Mobil Uygulama Geliştirme A.Ş.",
+        "companyNumber": "908502221010",
+        "companyWebsite": "https://mobiroller.com",
+        "companyMobil": ""
+      },
+      "id": 80
     }
   ]
 }
