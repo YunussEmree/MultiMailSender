@@ -1063,6 +1063,276 @@
         "companyMobil": ""
       },
       "id": 105
+    },
+    {
+      "companyMail": "info@mobven.com",
+      "parameters": {
+        "companyName": "Mobven Teknoloji A.Ş.",
+        "companyNumber": "902122750270",
+        "companyWebsite": "https://mobven.com/contact/",
+        "companyMobil": ""
+      },
+      "id": 106
+    },
+    {
+      "companyMail": "info@smartpulse.io",
+      "parameters": {
+        "companyName": "Smartpulse Teknoloji A.Ş.",
+        "companyNumber": "905333268001",
+        "companyWebsite": "https://www.smartpulse.io/contact-us/",
+        "companyMobil": ""
+      },
+      "id": 107
+    },
+    {
+      "companyMail": "info@codeway.co",
+      "parameters": {
+        "companyName": "Codeway Yazılım A.Ş.",
+        "companyNumber": "902123390394",
+        "companyWebsite": "https://www.codeway.co/contact-us",
+        "companyMobil": ""
+      },
+      "id": 108
+    },
+    {
+      "companyMail": "info@teknasyon.com",
+      "parameters": {
+        "companyName": "Teknasyon Yazılım San. ve Tic. A.Ş.",
+        "companyNumber": "902129631550",
+        "companyWebsite": "https://teknasyon.com/en/contact-us/",
+        "companyMobil": ""
+      },
+      "id": 109
+    },
+    {
+      "companyMail": "ik@kafein.com.tr",
+      "parameters": {
+        "companyName": "Kafein Teknoloji Çözümleri A.Ş.",
+        "companyNumber": "902123810000",
+        "companyWebsite": "https://www.kafein.com.tr/iletisim",
+        "companyMobil": ""
+      },
+      "id": 110
+    },
+    {
+      "companyMail": "info@getmidas.com",
+      "parameters": {
+        "companyName": "Midas Finansal Teknolojiler A.Ş.",
+        "companyNumber": "908502412241",
+        "companyWebsite": "https://www.getmidas.com",
+        "companyMobil": ""
+      },
+      "id": 111
+    },
+    {
+      "companyMail": "info@jetlexa.com",
+      "parameters": {
+        "companyName": "Jetlexa Teknoloji A.Ş.",
+        "companyNumber": "902122900000",
+        "companyWebsite": "https://www.jetlexa.com",
+        "companyMobil": ""
+      },
+      "id": 112
+    },
+    {
+      "companyMail": "info@dataroid.com",
+      "parameters": {
+        "companyName": "Dataroid Teknoloji A.Ş.",
+        "companyNumber": "902122860000",
+        "companyWebsite": "https://www.dataroid.com/dataroid-company/",
+        "companyMobil": ""
+      },
+      "id": 113
+    },
+    {
+      "companyMail": "info@sertifier.com",
+      "parameters": {
+        "companyName": "Sertifier Inc. (Türkiye Ofisi)",
+        "companyNumber": "902122900001",
+        "companyWebsite": "https://sertifier.com/contact-us",
+        "companyMobil": ""
+      },
+      "id": 114
+    },
+    {
+      "companyMail": "info@finedinemenu.com",
+      "parameters": {
+        "companyName": "FineDine Dijital Menü Teknolojileri A.Ş.",
+        "companyNumber": "908508850269",
+        "companyWebsite": "https://www.finedinemenu.com/en/",
+        "companyMobil": ""
+      },
+      "id": 115
+    },
+    {
+      "companyMail": "info@mukellef.co",
+      "parameters": {
+        "companyName": "Mükellef Teknoloji A.Ş.",
+        "companyNumber": "908502550826",
+        "companyWebsite": "https://mukellef.co",
+        "companyMobil": ""
+      },
+      "id": 116
+    },
+    {
+      "companyMail": "info@themindsite.com",
+      "parameters": {
+        "companyName": "Mindsite Yazılım ve Teknoloji A.Ş.",
+        "companyNumber": "902123813537",
+        "companyWebsite": "https://www.themindsite.com/company",
+        "companyMobil": ""
+      },
+      "id": 117
+    },
+    {
+      "companyMail": "info@newmind.ai",
+      "parameters": {
+        "companyName": "New Mind Bilgi Yönetim Sistemleri A.Ş.",
+        "companyNumber": "902122900002",
+        "companyWebsite": "https://www.newmind.ai/",
+        "companyMobil": ""
+      },
+      "id": 118
+    },
+    {
+      "companyMail": "uyumsoft@uyumsoft.com",
+      "parameters": {
+        "companyName": "Uyumsoft Bilgi Sistemleri A.Ş.",
+        "companyNumber": "902124673333",
+        "companyWebsite": "https://en.uyumsoft.com/contact-us/",
+        "companyMobil": ""
+      },
+      "id": 119
+    },
+    {
+      "companyMail": "iletisim@parasut.com",
+      "parameters": {
+        "companyName": "Paraşüt Yazılım Teknolojileri A.Ş.",
+        "companyNumber": "902129630020",
+        "companyWebsite": "https://www.parasut.com/iletisim",
+        "companyMobil": ""
+      },
+      "id": 120
+    },
+    {
+      "companyMail": "info@kolayik.com",
+      "parameters": {
+        "companyName": "Kolay İK Yazılım A.Ş.",
+        "companyNumber": "902129510661",
+        "companyWebsite": "https://en.kolayik.com/about-us",
+        "companyMobil": ""
+      },
+      "id": 121
+    },
+    {
+      "companyMail": "info@inveon.com",
+      "parameters": {
+        "companyName": "İnveon Bilişim Teknolojileri A.Ş.",
+        "companyNumber": "902122700546",
+        "companyWebsite": "https://inveon.com/contact",
+        "companyMobil": ""
+      },
+      "id": 122
+    },
+    {
+      "companyMail": "marketing@inventanalytics.com",
+      "parameters": {
+        "companyName": "Invent Analytics Teknoloji A.Ş.",
+        "companyNumber": "902122861025",
+        "companyWebsite": "https://www.inventanalytics.com/contact-us/",
+        "companyMobil": ""
+      },
+      "id": 123
+    },
+    {
+      "companyMail": "info@colendi.com",
+      "parameters": {
+        "companyName": "Colendi Dijital Teknoloji ve Finansal Hizmetler A.Ş.",
+        "companyNumber": "902163300000",
+        "companyWebsite": "https://www.colendi.com/company",
+        "companyMobil": ""
+      },
+      "id": 124
+    },
+    {
+      "companyMail": "info@prisync.com",
+      "parameters": {
+        "companyName": "Prisync Yazılım A.Ş.",
+        "companyNumber": "909176364483",
+        "companyWebsite": "https://prisync.com/contact-us/",
+        "companyMobil": ""
+      },
+      "id": 125
+    },
+    {
+      "companyMail": "info@wellbees.co",
+      "parameters": {
+        "companyName": "Wellbees Dijital Sağlık Teknolojileri A.Ş.",
+        "companyNumber": "902122873040",
+        "companyWebsite": "https://www.wellbees.com/contact",
+        "companyMobil": ""
+      },
+      "id": 126
+    },
+    {
+      "companyMail": "info@tapu.com",
+      "parameters": {
+        "companyName": "Tapu.com Gayrimenkul Teknolojileri A.Ş.",
+        "companyNumber": "908505328278",
+        "companyWebsite": "https://www.tapu.com",
+        "companyMobil": ""
+      },
+      "id": 127
+    },
+    {
+      "companyMail": "info@craftgate.io",
+      "parameters": {
+        "companyName": "Craftgate Teknoloji A.Ş.",
+        "companyNumber": "902123900000",
+        "companyWebsite": "https://craftgate.io/en/contact",
+        "companyMobil": ""
+      },
+      "id": 128
+    },
+    {
+      "companyMail": "info@storyly.io",
+      "parameters": {
+        "companyName": "Storyly Teknoloji A.Ş.",
+        "companyNumber": "902122900003",
+        "companyWebsite": "https://www.storyly.io/contact-us/",
+        "companyMobil": ""
+      },
+      "id": 129
+    },
+    {
+      "companyMail": "info@vngrs.com",
+      "parameters": {
+        "companyName": "VNGRS Yazılım ve Teknoloji A.Ş.",
+        "companyNumber": "902123280290",
+        "companyWebsite": "https://vngrs.com/contact/",
+        "companyMobil": ""
+      },
+      "id": 130
+    },
+    {
+      "companyMail": "info@eteration.com",
+      "parameters": {
+        "companyName": "Eteration Bilişim A.Ş.",
+        "companyNumber": "902123280825",
+        "companyWebsite": "https://www.eteration.com/contactus",
+        "companyMobil": ""
+      },
+      "id": 131
+    },
+    {
+      "companyMail": "info@ideasoft.com.tr",
+      "parameters": {
+        "companyName": "IdeaSoft Yazılım A.Ş.",
+        "companyNumber": "908508115060",
+        "companyWebsite": "https://www.ideasoft.com.tr/sayfa/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 132
     }
   ]
 }
