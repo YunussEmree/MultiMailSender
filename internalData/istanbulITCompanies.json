@@ -813,6 +813,256 @@
         "companyMobil": ""
       },
       "id": 80
+    },
+    {
+      "companyMail": "info@testinium.com",
+      "parameters": {
+        "companyName": "Testinium Teknoloji Yazılım A.Ş.",
+        "companyNumber": "902165045655",
+        "companyWebsite": "https://testinium.com/",
+        "companyMobil": ""
+      },
+      "id": 81
+    },
+    {
+      "companyMail": "iletisim@parasut.com",
+      "parameters": {
+        "companyName": "Paraşüt Yazılım A.Ş.",
+        "companyNumber": "902129630020",
+        "companyWebsite": "https://www.parasut.com/iletisim",
+        "companyMobil": ""
+      },
+      "id": 82
+    },
+    {
+      "companyMail": "contact@kolayik.com",
+      "parameters": {
+        "companyName": "Kolay İK İnsan Kaynakları Yazılım A.Ş.",
+        "companyNumber": "902163517070",
+        "companyWebsite": "https://en.kolayik.com/contact-us",
+        "companyMobil": ""
+      },
+      "id": 83
+    },
+    {
+      "companyMail": "destek@apsiyon.com",
+      "parameters": {
+        "companyName": "Apsiyon Teknoloji A.Ş.",
+        "companyNumber": "902169118777",
+        "companyWebsite": "https://www.apsiyon.com/en/contact-us",
+        "companyMobil": ""
+      },
+      "id": 84
+    },
+    {
+      "companyMail": "info@codeventure.co",
+      "parameters": {
+        "companyName": "Codeventure Bilişim A.Ş.",
+        "companyNumber": "902162900190",
+        "companyWebsite": "https://www.codeventure.com.tr/",
+        "companyMobil": ""
+      },
+      "id": 85
+    },
+    {
+      "companyMail": "info@heybooster.ai",
+      "parameters": {
+        "companyName": "Heybooster Yazılım A.Ş.",
+        "companyNumber": "902123570001",
+        "companyWebsite": "https://www.heybooster.ai/",
+        "companyMobil": ""
+      },
+      "id": 86
+    },
+    {
+      "companyMail": "info@lyretech.com",
+      "parameters": {
+        "companyName": "Lyrebird Studio Teknoloji Ltd. Şti.",
+        "companyNumber": "902163340033",
+        "companyWebsite": "https://lyretech.com/",
+        "companyMobil": ""
+      },
+      "id": 87
+    },
+    {
+      "companyMail": "info@sipay.com.tr",
+      "parameters": {
+        "companyName": "Sipay Elektronik Para ve Ödeme Hizmetleri A.Ş.",
+        "companyNumber": "902164740044",
+        "companyWebsite": "https://sipay.com.tr/en/contact/",
+        "companyMobil": ""
+      },
+      "id": 88
+    },
+    {
+      "companyMail": "info@navlungo.com",
+      "parameters": {
+        "companyName": "Navlungo Uluslararası Nakliye Teknolojileri A.Ş.",
+        "companyNumber": "902164642055",
+        "companyWebsite": "https://www.navlungo.com",
+        "companyMobil": ""
+      },
+      "id": 89
+    },
+    {
+      "companyMail": "info@kartaca.com",
+      "parameters": {
+        "companyName": "Kartaca Yazılım A.Ş.",
+        "companyNumber": "902126382020",
+        "companyWebsite": "https://kartaca.com/en/contact-us/",
+        "companyMobil": ""
+      },
+      "id": 90
+    },
+    {
+      "companyMail": "info@segmentify.com",
+      "parameters": {
+        "companyName": "Segmentify Kişiselleştirme Teknolojileri A.Ş.",
+        "companyNumber": "902122900090",
+        "companyWebsite": "https://segmentify.com/contact/",
+        "companyMobil": ""
+      },
+      "id": 91
+    },
+    {
+      "companyMail": "info@prisync.com",
+      "parameters": {
+        "companyName": "Prisync Fiyat İzleme Yazılım A.Ş.",
+        "companyNumber": "902162830011",
+        "companyWebsite": "https://prisync.com/contact/",
+        "companyMobil": ""
+      },
+      "id": 92
+    },
+    {
+      "companyMail": "info@peoplise.com",
+      "parameters": {
+        "companyName": "Peoplise İnsan Kaynakları Teknoloji A.Ş.",
+        "companyNumber": "902122762020",
+        "companyWebsite": "https://www.peoplise.com/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 93
+    },
+    {
+      "companyMail": "info@juphy.com",
+      "parameters": {
+        "companyName": "Juphy Müşteri Destek Yazılım A.Ş.",
+        "companyNumber": "902122900011",
+        "companyWebsite": "https://juphy.com/contact-us",
+        "companyMobil": ""
+      },
+      "id": 94
+    },
+    {
+      "companyMail": "info@userguiding.com",
+      "parameters": {
+        "companyName": "UserGuiding Ürün Benimseme Yazılım A.Ş.",
+        "companyNumber": "902122900022",
+        "companyWebsite": "https://userguiding.com/",
+        "companyMobil": ""
+      },
+      "id": 95
+    },
+    {
+      "companyMail": "info@dopigo.com",
+      "parameters": {
+        "companyName": "Dopigo E-Ticaret Yazılım A.Ş.",
+        "companyNumber": "902122120044",
+        "companyWebsite": "https://dopigo.com/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 96
+    },
+    {
+      "companyMail": "info@faprika.com",
+      "parameters": {
+        "companyName": "Faprika E-Ticaret Çözümleri A.Ş.",
+        "companyNumber": "902162940040",
+        "companyWebsite": "https://www.faprika.com/iletisim",
+        "companyMobil": ""
+      },
+      "id": 97
+    },
+    {
+      "companyMail": "info@perzonalization.com",
+      "parameters": {
+        "companyName": "Perzonalization Yapay Zeka Kişiselleştirme A.Ş.",
+        "companyNumber": "902122900033",
+        "companyWebsite": "https://www.perzonalization.com/contact/",
+        "companyMobil": ""
+      },
+      "id": 98
+    },
+    {
+      "companyMail": "info@alotech.com.tr",
+      "parameters": {
+        "companyName": "Alotech Bulut Telefon Çözümleri A.Ş.",
+        "companyNumber": "902126060161",
+        "companyWebsite": "https://www.alotech.com.tr/iletisim",
+        "companyMobil": ""
+      },
+      "id": 99
+    },
+    {
+      "companyMail": "info@inomera.com",
+      "parameters": {
+        "companyName": "Inomera Research Yapay Zeka ve Yazılım A.Ş.",
+        "companyNumber": "902122826161",
+        "companyWebsite": "https://www.inomera.com/iletisim/",
+        "companyMobil": ""
+      },
+      "id": 100
+    },
+    {
+      "companyMail": "info@agito.com.tr",
+      "parameters": {
+        "companyName": "Agito Yazılım ve Danışmanlık A.Ş.",
+        "companyNumber": "902122122100",
+        "companyWebsite": "https://www.agito.com.tr/contact",
+        "companyMobil": ""
+      },
+      "id": 101
+    },
+    {
+      "companyMail": "info@botanalytics.co",
+      "parameters": {
+        "companyName": "Botanalytics Konuşma Analitik A.Ş.",
+        "companyNumber": "902122900044",
+        "companyWebsite": "https://botanalytics.co",
+        "companyMobil": ""
+      },
+      "id": 102
+    },
+    {
+      "companyMail": "info@knowlook.com",
+      "parameters": {
+        "companyName": "Knowlook Veri Analitik Yazılım A.Ş.",
+        "companyNumber": "902122000011",
+        "companyWebsite": "https://knowlook.com",
+        "companyMobil": ""
+      },
+      "id": 103
+    },
+    {
+      "companyMail": "info@sendloop.com",
+      "parameters": {
+        "companyName": "Sendloop E-posta Pazarlama Yazılım A.Ş.",
+        "companyNumber": "902122900055",
+        "companyWebsite": "https://sendloop.com/contact",
+        "companyMobil": ""
+      },
+      "id": 104
+    },
+    {
+      "companyMail": "info@growthx.io",
+      "parameters": {
+        "companyName": "GrowthX Dijital Büyüme Teknolojileri A.Ş.",
+        "companyNumber": "902122901100",
+        "companyWebsite": "https://growthx.io",
+        "companyMobil": ""
+      },
+      "id": 105
     }
   ]
 }
