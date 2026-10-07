@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend/MultiMailSender
+    environment:
+      MAIL_DATA_DIR: /data
+    volumes:
+      - mms-data:/data
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend/multi-mail-sender
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  mms-data:

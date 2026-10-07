@@ -1,31 +1,28 @@
 package com.yunussemree.multimailsender.model;
 
-import jakarta.validation.constraints.*;
-import lombok.Data;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
-import java.util.HashMap;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
 
 @Data
 public class CompanyData {
 
     @Min(0)
-    @NotNull
     private int id;
 
-    @NotNull
+    @NotBlank
     @Email
     private String companyMail;
 
-    private HashMap<String, String> parameters;
-}
+    private Map<String, String> parameters = new LinkedHashMap<>();
 
-/*
-{
-            "id": 1,
-            "companyMail": "company1@gmail.com",
-            "parameters": {
-                "companyName": "company1",
-                "companyNumber": "0987654321"
-            }
-        }
- */
+    public String param(String key) {
+        if (parameters == null) return "";
+        String v = parameters.get(key);
+        return v == null ? "" : v;
+    }
+}

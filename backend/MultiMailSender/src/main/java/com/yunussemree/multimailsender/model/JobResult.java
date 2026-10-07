@@ -1,23 +1,23 @@
 package com.yunussemree.multimailsender.model;
 
+import java.time.Instant;
+import java.util.Map;
+
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/** A single mail progress update pushed to the frontend over SSE. */
+/** Outcome for one recipient of a job. Status: pending | sent | error | skipped. */
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProgressEvent {
-
+public class JobResult {
     private int index;
     private String companyMail;
     private String companyName;
-    /** sent | error | skipped */
+    private Map<String, String> parameters;
     private String status;
     private String message;
+    private Instant processedAt;
     private Long sendMs;
-    private Long plannedCooldownMs;
 }

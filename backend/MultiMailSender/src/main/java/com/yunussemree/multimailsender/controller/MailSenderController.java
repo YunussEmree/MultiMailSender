@@ -1,12 +1,14 @@
 package com.yunussemree.multimailsender.controller;
 
 import java.io.IOException;
-import java.util.Map;
-import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.nio.charset.StandardCharsets;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 
+import org.springframework.http.ContentDisposition;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,141 +19,93 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yunussemree.multimailsender.model.ApiResponse;
-import com.yunussemree.multimailsender.model.InMemoryMultipartFile;
-import com.yunussemree.multimailsender.model.ProgressEvent;
+import com.yunussemree.multimailsender.model.MailJob;
 import com.yunussemree.multimailsender.model.Request;
+import com.yunussemree.multimailsender.service.ExcelExportService;
 import com.yunussemree.multimailsender.service.MailSenderService;
+
+import jakarta.validation.Valid;
 
 @RestController
 public class MailSenderController {
 
+    private static final MediaType XLSX =
+            MediaType.parseMediaType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+
     private final MailSenderService mailSenderService;
+    private final ExcelExportService excelExportService;
 
-    // SSE job infra under the same controller
-    private final Map<String, SseEmitter> emitters = new ConcurrentHashMap<>();
-    private final ExecutorService executor = Executors.newCachedThreadPool();
-    private final ObjectMapper mapper = new ObjectMapper();
-
-    public MailSenderController(MailSenderService mailSenderService) {
+    public MailSenderController(MailSenderService mailSenderService, ExcelExportService excelExportService) {
         this.mailSenderService = mailSenderService;
-    }
-    
-     /**     * Endpoint to send multiple emails with attachments based on the provided request.
-     *
-     * @param request The request containing email details and company data.
-     * @param files   The files to be attached to the emails.
-     * @return ResponseEntity with a message indicating success or failure.
-     */
-    @PostMapping(value = "/send-mails-with-attachment", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<ApiResponse> sendMails(
-            @RequestPart("request") Request request,
-            @RequestPart(value = "files", required = false) MultipartFile[] files
-    ) {
-        try {
-            mailSenderService.sendEmailsWithAttachments(request, files);
-            return ResponseEntity.ok(new ApiResponse("Mails sent successfully", null));
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body(new ApiResponse("Error expected", e.getMessage()));
-        }
-
+        this.excelExportService = excelExportService;
     }
 
-    // SSE job-based flow using the same base path
+    /** Starts a background job and returns its id; follow it via the SSE stream endpoint. */
     @PostMapping(value = "/send-mails-with-attachment/start", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<ApiResponse> startJob(
-            @RequestPart("request") Request request,
-            @RequestPart(value = "files", required = false) MultipartFile[] files
-    ) throws IOException {
-        MultipartFile[] filesCopy = null;
-        if (files != null && files.length > 0) {
-            filesCopy = new MultipartFile[files.length];
-            for (int i = 0; i < files.length; i++) {
-                filesCopy[i] = new InMemoryMultipartFile(files[i]);
-            }
-        }
-        String jobId = UUID.randomUUID().toString();
-        final MultipartFile[] finalFiles = filesCopy;
-        executor.submit(() -> runJobWhenEmitterAvailable(jobId, request, finalFiles));
-        return ResponseEntity.ok(new ApiResponse("Job started", jobId));
+            @RequestPart("request") @Valid Request request,
+            @RequestPart(value = "files", required = false) MultipartFile[] files) throws IOException {
+        MailJob job = mailSenderService.start(request, files);
+        return ResponseEntity.ok(new ApiResponse("Job started", job.getId()));
     }
 
+    /** Replays everything that already happened and then streams live progress. */
     @GetMapping(value = "/send-mails-with-attachment/stream/{jobId}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public SseEmitter stream(@PathVariable String jobId) {
-        SseEmitter emitter = new SseEmitter(0L);
-        emitters.put(jobId, emitter);
-        emitter.onCompletion(() -> emitters.remove(jobId));
-        emitter.onTimeout(() -> emitters.remove(jobId));
-        try {
-            // send a structured started event including cooldown and total companies for accurate ETA on frontend
-            var payload = String.format("{\"minMs\":%d,\"maxMs\":%d}",
-                    mailSenderServiceMin(), mailSenderServiceMax());
-            emitter.send(SseEmitter.event().name("started").data(payload));
-        } catch (IOException ignored) { }
-        return emitter;
+    public ResponseEntity<SseEmitter> stream(@PathVariable String jobId) {
+        return mailSenderService.subscribe(jobId)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    private void runJobWhenEmitterAvailable(String jobId, Request request, MultipartFile[] files) {
-        int retries = 0;
-        while (!emitters.containsKey(jobId) && retries < 50) {
-            try { Thread.sleep(100); } catch (InterruptedException ignored) {}
-            retries++;
+    @PostMapping("/jobs/{jobId}/cancel")
+    public ResponseEntity<ApiResponse> cancel(@PathVariable String jobId) {
+        if (mailSenderService.cancel(jobId)) {
+            return ResponseEntity.ok(new ApiResponse("Cancellation requested", jobId));
         }
-        SseEmitter emitter = emitters.get(jobId);
-        if (emitter == null) return;
-        try {
-            // send started again here with totals once connected just in case
-            try {
-                var payload = String.format("{\"minMs\":%d,\"maxMs\":%d,\"total\":%d}",
-                        mailSenderServiceMin(), mailSenderServiceMax(),
-                        request.getCompanyData() != null ? request.getCompanyData().size() : 0);
-                emitter.send(SseEmitter.event().name("started").data(payload));
-            } catch (IOException ignored) {}
-            mailSenderService.sendEmailsWithAttachmentsWithCallback(request, files, (idx, evt) -> {
-                try {
-                    emitter.send(SseEmitter.event().name("progress").data(toJson(evt)));
-                } catch (IOException e) {
-                }
-            });
-            try {
-                emitter.send(SseEmitter.event().name("finished").data("done"));
-            } catch (IOException ignored) {}
-        } catch (Exception e) {
-            try {
-                emitter.send(SseEmitter.event().name("error").data(e.getMessage()));
-            } catch (IOException ignored) {}
-        } finally {
-            emitter.complete();
-            emitters.remove(jobId);
-        }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(new ApiResponse("Job not found or already finished", jobId));
     }
 
-    private String toJson(ProgressEvent evt) {
-        try {
-            return mapper.writeValueAsString(evt);
-        } catch (Exception e) {
-            return "{}";
-        }
+    @GetMapping("/jobs")
+    public List<MailJob> jobs() {
+        // list view without the per-recipient rows
+        return mailSenderService.list().stream().map(j -> {
+            MailJob copy = new MailJob();
+            copy.setId(j.getId());
+            copy.setSender(j.getSender());
+            copy.setSubject(j.getSubject());
+            copy.setCreatedAt(j.getCreatedAt());
+            copy.setFinishedAt(j.getFinishedAt());
+            copy.setStatus(j.getStatus());
+            copy.setError(j.getError());
+            copy.setTotal(j.getTotal());
+            copy.setSent(j.getSent());
+            copy.setFailed(j.getFailed());
+            copy.setSkipped(j.getSkipped());
+            return copy;
+        }).toList();
     }
 
-    // helpers to expose current cooldown config
-    private int mailSenderServiceMin() {
-        try {
-            return mailSenderService.minCooldownMs;
-        } catch (Exception ignored) { return 2000; }
-    }
-    private int mailSenderServiceMax() {
-        try {
-            return mailSenderService.maxCooldownMs;
-        } catch (Exception ignored) { return 12000; }
+    @GetMapping("/jobs/{jobId}")
+    public ResponseEntity<MailJob> job(@PathVariable String jobId) {
+        return mailSenderService.find(jobId).map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    /**
-     * Health check endpoint to verify if the service is running.
-     *
-     * @return ResponseEntity with a message indicating the service status.
-     */
+    @GetMapping("/jobs/{jobId}/export.xlsx")
+    public ResponseEntity<byte[]> export(@PathVariable String jobId) throws IOException {
+        MailJob job = mailSenderService.find(jobId).orElse(null);
+        if (job == null) return ResponseEntity.notFound().build();
+        String stamp = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss")
+                .withZone(ZoneId.systemDefault()).format(job.getCreatedAt());
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(XLSX);
+        headers.setContentDisposition(ContentDisposition.attachment()
+                .filename("gonderim-raporu-" + stamp + ".xlsx", StandardCharsets.UTF_8).build());
+        return ResponseEntity.ok().headers(headers).body(excelExportService.export(job));
+    }
+
     @GetMapping("/health")
     public ResponseEntity<ApiResponse> healthCheck() {
         return ResponseEntity.ok(new ApiResponse("Server is running", null));
