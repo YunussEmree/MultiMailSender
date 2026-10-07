@@ -1,107 +1,221 @@
 # MultiMailSender
 
-MultiMailSender is an open-source bulk email sending application with a modern Angular-based frontend and a robust Spring Boot backend. It allows you to send personalized emails to multiple recipients, each with custom parameters and optional attachments.
+Şirketlere **kişiselleştirilmiş toplu e-posta** (staj / iş başvurusu, tanıtım vb.) göndermek için açık kaynak bir uygulama. Gmail uygulama şifresiyle çalışır, her alıcı için şablondaki `{alanlar}` kendi değeriyle doldurulur, gönderim canlı izlenir ve sonunda **Excel raporu** alınır.
 
-## Features
+![Genel görünüm](docs/screenshots/01-overview.png)
 
-- Bulk email sending with per-recipient personalization
-- Supports PDF and other file attachments
-- Secure authentication using Gmail App Password
-- User-friendly, modern, and well-documented interface
-- Server health check endpoint
-- Easy deployment with Docker support
+## İçindekiler
 
-## Technologies Used
+- [Hızlı kurulum (Windows)](#hızlı-kurulum-windows)
+- [Özellikler ve ekran görüntüleri](#özellikler-ve-ekran-görüntüleri)
+- [Gmail uygulama şifresi nasıl alınır?](#gmail-uygulama-şifresi-nasıl-alınır)
+- [Elle kurulum / Docker](#elle-kurulum--docker)
+- [Hazır şirket listeleri](#hazır-şirket-listeleri-internaldata)
+- [API](#api)
+- [Yapılandırma](#yapılandırma)
+- [Geliştirme ve test](#geliştirme-ve-test)
+- [Sorun giderme](#sorun-giderme)
 
-- **Backend:** Java 17, Spring Boot 3, Spring Mail, Maven, Lombok
-# MultiMailSender
+## Hızlı kurulum (Windows)
 
-MultiMailSender, Angular tabanlı modern bir ön yüz ve Spring Boot tabanlı sağlam bir arka yüz ile çoklu kişilere kişiselleştirilmiş e-posta göndermenizi sağlayan bir açık kaynak uygulamadır. Her alıcı için farklı parametreler kullanabilir, ek dosyalar (PDF vb.) gönderebilir ve gönderim ilerlemesini gerçek zamanlı olarak takip edebilirsiniz.
+1. Repoyu indirin (`Code → Download ZIP` ya da `git clone`).
+2. **`start.bat`** dosyasına çift tıklayın.
 
-![Uygulama Ekran Görüntüsü](docs/image.png)
+Betik sırayla şunları yapar:
 
-## Özellikler
+| Adım | Ne yapar |
+|---|---|
+| 1 | Java 17+ (JDK) arar; yoksa `winget` ile Temurin 17 kurar |
+| 2 | Node.js 18+ arar; yoksa `winget` ile Node LTS kurar |
+| 3 | Backend'i derler (ilk seferde Maven bağımlılıklarını indirir) |
+| 4 | Frontend bağımlılıklarını (`npm install`) yükler |
+| 5 | Backend (`:8080`) ve frontend'i (`:4200`) ayrı pencerelerde başlatır, hazır olunca tarayıcıda **http://localhost:4200** adresini açar |
 
-- Kitle (bulk) e-posta gönderimi
-- Her alıcıya özel kişiselleştirilmiş şablon alanları (ör. {companyName})
-- Dosya ekleri desteği (PDF, dokümanlar)
-- Gmail App Password ile güvenli SMTP gönderimi
-- Gönderim ilerleme bildirimleri ve durum takibi
-- Docker ile kolay dağıtım opsiyonu
+İlk kurulum internet hızına göre birkaç dakika sürer, sonraki açılışlar birkaç saniyedir. Kapatmak için **`stop.bat`** çalıştırın (ya da "MMS Backend" / "MMS Frontend" pencerelerini kapatın).
 
-## Teknolojiler
+> `winget` yoksa (eski Windows 10) betik hangi adresten ne kuracağınızı söyler.
 
-- Backend: Java 17, Spring Boot, Spring Mail, Maven
-- Frontend: Angular, Bootstrap, RxJS
-- Diğer: Docker (opsiyonel)
+## Özellikler ve ekran görüntüleri
 
-## Hızlı Başlangıç (Windows)
+### 1. Gönderici hesabı
 
-Öncelikle repoyu klonlayın ve proje dizinine gidin:
+Gmail adresiniz, uygulama şifreniz ve isteğe bağlı **gönderen adı**. Şifre sadece gönderim sırasında sunucuya iletilir, hiçbir yere kaydedilmez ve loglanmaz.
 
-1) Backend (Spring Boot)
+![Hesap](docs/screenshots/02-account.png)
 
-- Gereksinimler: Java 17+ ve Maven
-- Proje dizinine gidin ve çalıştırın:
+### 2. Mesaj, alan ekleme ve önizleme
+
+- Konu ve metinde `{companyName}`, `{companyNumber}` gibi alanlar kullanılır. Üstteki **çiplere** tıklayınca imlecin olduğu yere eklenir.
+- **Önizleme** bölümü seçtiğiniz alıcı için konunun ve metnin nasıl görüneceğini gösterir (alıcılar arasında gezebilirsiniz).
+- **HTML olarak gönder** ile metinde HTML kullanabilirsiniz (alan değerleri güvenli şekilde kaçışlanır).
+- **Daha önce gönderilenleri atla**: aynı hesaptan aynı adrese ikinci kez mail gitmez.
+- Ek dosyalar (CV, PDF vb.) her maile eklenir.
+
+![Mesaj ve önizleme](docs/screenshots/03-message-preview.png)
+
+### 3. Alıcılar tablosu
+
+Şirketleri elle ekleyebilir ya da **JSON / CSV** dosyasından içe aktarabilirsiniz (`İçe aktar`). Hücreler doğrudan düzenlenir, `Alan ekle` ile yeni sütun açılır, `JSON dışa aktar` ile listeyi kaydedersiniz.
+
+- Mesajda kullanılan bir alan bir alıcıda **boşsa** hücre kırmızı olur ve uyarı çıkar; bu alıcılar gönderimde **atlanır** (yarım kalmış mail gitmez).
+- `Tekrar edenleri sil` / `Geçersiz adresleri sil` ile liste temizlenir.
+- CSV için ilk satır başlıktır: `companyMail,companyName,companyNumber`.
+
+![Alıcılar](docs/screenshots/04-recipients.png)
+
+Üstteki arama kutusu şirket adı, e-posta ya da herhangi bir alanda filtreler:
+
+![Arama](docs/screenshots/05-recipients-search.png)
+
+### 4. Canlı gönderim takibi
+
+**Gönder** dedikten sonra tablodaki her satırın durumu canlı güncellenir (Gönderildi / Hata / Atlandı / Bekliyor). Sayaçlar, ilerleme çubuğu ve tahmini kalan süre görünür; **Durdur** ile işlem iptal edilir.
+
+![Canlı durum](docs/screenshots/06-live-status-table.png)
+![Gönderim ilerlemesi](docs/screenshots/07-sending-progress.png)
+
+Sayfa yenilense ya da bağlantı kopsa bile gönderim sunucuda devam eder; rapor kaybolmaz.
+
+### 5. Excel raporu
+
+Gönderim bitince **Excel raporunu indir** butonu çıkar.
+
+![Bitti](docs/screenshots/08-finished-excel-button.png)
+
+Rapor şunları içerir: şirket adı, e-posta, telefon, website, **durum** (Gönderildi / Hata / Atlandı / Beklemede), hata ya da atlama nedeni, işlem zamanı ve gönderim süresi. Durum hücreleri renklidir, ikinci sayfada özet vardır.
+
+![Excel raporu](docs/screenshots/13-excel-report.png)
+
+### 6. Geçmiş gönderimler
+
+Önceki tüm gönderimler listelenir ve her birinin raporu istediğiniz zaman tekrar indirilebilir (sunucu yeniden başlasa da kaybolmaz).
+
+![Geçmiş](docs/screenshots/09-history.png)
+
+### Karanlık tema ve mobil
+
+Tarayıcı/sistem temasına göre açık ya da koyu görünür; mobilde de kullanılabilir.
+
+| Karanlık tema | Mobil |
+|---|---|
+| ![Karanlık](docs/screenshots/11-dark-theme.png) | ![Mobil](docs/screenshots/12-mobile.png) |
+
+### Güvenlik ve güvenilirlik özeti
+
+- Gönderim başına ayrı SMTP bağlantısı; aynı anda başka hesapla çalışan gönderimler birbirine karışmaz. Aynı hesap için ikinci gönderim reddedilir.
+- Gmail şifresi yanlışsa gönderim hemen durur, her alıcı için tekrar denenmez.
+- Geçici hata alan mail bir kez daha denenir; bir alıcının hatası diğerlerini durdurmaz.
+- Günlük limit (varsayılan 450) Gmail'in ~500 sınırına takılmayı önler.
+- Mailler arasında rastgele bekleme uygulanır (varsayılan 1–5 sn).
+
+## Gmail uygulama şifresi nasıl alınır?
+
+Normal Gmail şifreniz **çalışmaz**. Google hesabınızda 2 adımlı doğrulamayı açın, sonra <https://myaccount.google.com/apppasswords> adresinden bir **uygulama şifresi** (16 karakter) oluşturup arayüze yapıştırın.
+
+## Elle kurulum / Docker
+
+Gereksinimler: Java 17+ (JDK), Node.js 18+.
 
 ```powershell
+# Backend
 cd backend\MultiMailSender
-.\mvnw clean install
 .\mvnw spring-boot:run
-```
 
-Alternatif olarak sisteminizde Maven varsa:
-
-```powershell
-mvn clean install
-mvn spring-boot:run
-```
-
-2) Frontend (Angular)
-
-- Gereksinimler: Node.js (18+), npm
-- Frontend dizinine gidin ve bağımlılıkları kurup çalıştırın:
-
-```powershell
+# Frontend (ayrı terminal)
 cd frontend\multi-mail-sender
 npm install
-npm start   # /api isteklerini localhost:8080'e yönlendirir (proxy.conf.json)
+npm start
 ```
 
-Ardından tarayıcıda `http://localhost:4200` adresini açın.
+Tarayıcıda <http://localhost:4200>. Geliştirme sunucusu `/api` isteklerini `localhost:8080`'e yönlendirir (`proxy.conf.json`).
 
-## API Kullanımı
-
-| Endpoint | Açıklama |
-|---|---|
-| `POST /send-mails-with-attachment/start` | `multipart/form-data` (`request` JSON + opsiyonel `files`). Arka planda gönderim başlatır, `data` alanında job id döner. |
-| `GET /send-mails-with-attachment/stream/{jobId}` | SSE: `started`, `progress`, `finished` olayları. Bağlantı koparsa yeniden bağlanınca geçmiş olaylar tekrar oynatılır. |
-| `POST /jobs/{jobId}/cancel` | Çalışan gönderimi durdurur. |
-| `GET /jobs`, `GET /jobs/{jobId}` | Geçmiş gönderimler ve alıcı bazlı sonuçlar. |
-| `GET /jobs/{jobId}/export.xlsx` | Excel raporu: şirket adı, e-posta, telefon, website, durum, hata detayı, zaman. |
-| `GET /health` | Sağlık kontrolü. |
-
-`request` alanları: `username`, `password`, `fromName` (ops.), `subject`, `bodydraft`, `html` (ops.), `skipAlreadySent` (ops.), `companyData[]`
-(örnek: `backend/MultiMailSender/src/main/resources/exampleRequest.json`). Şablonda kullanılan `{alan}` bir alıcıda boşsa o alıcı **atlanır**.
-
-Gönderim raporları ve gönderilenler listesi `MAIL_DATA_DIR` (varsayılan `data/`) altında saklanır. Günlük limit `MAIL_DAILY_LIMIT` (varsayılan 450) ile ayarlanır.
-
-## Docker
+**Docker:**
 
 ```bash
 docker compose up --build   # arayüz: http://localhost:4200
 ```
 
-## Veri (`internalData/`)
+Gönderim raporları ve gönderilenler listesi `mms-data` volume'unda saklanır.
 
-Şehir bazlı şirket listeleri. Bakım için: `python tools/refresh_data.py` (rapor) veya `--write` (uygula; `--harvest` ile Hacettepe Teknokent'ten yeni Ankara firmaları ekler). Ayrıntı: `internalData/REPORT.md`.
+## Hazır şirket listeleri (`internalData/`)
 
-## Konfigürasyon
+Şehir bazlı IT şirketi listeleri (Ankara, İstanbul, İzmir, Antalya, Manisa, Sivas, Kocaeli …). Arayüzde **İçe aktar** ile yüklenir. Her kayıtta e-posta, şirket adı, telefon, website ve **doğrulanma tarihi** (`verifiedAt`) bulunur.
 
-- GUI içerisinde verilen username ve password(app password) bilgilerinizi girin. Başka ekstra bir konfigürasyona ihtiyaç duyulmamaktadır. 
+Listeler `tools/refresh_data.py` ile bakım görür:
 
-## Katkıda Bulunma
+```bash
+python tools/refresh_data.py                 # sadece rapor (dosyaları değiştirmez)
+python tools/refresh_data.py --write         # temizle: tekrarları ve ölü domain'leri sil, biçimi düzelt
+python tools/refresh_data.py --write --harvest                 # Ankara: Hacettepe, OSTİM, Bilkent Cyberpark
+python tools/refresh_data.py --write --parks sivas,istanbul,antalya,kocaeli   # diğer teknokentler
+```
 
-1. Repo'yu fork'layın
-2. Yeni bir branch açın
-3. Değişikliklerinizi test edin ve PR gönderin
+Araç; e-posta adresinin MX/DNS kaydını doğrular, tekrarları siler, telefonları `+90 312 000 00 00` biçimine getirir ve firmaların kendi sitelerinden `info@` / `hr@` benzeri genel adresleri bulur (kişi adlı adresleri almaz). Son çalıştırmanın ayrıntısı `internalData/REPORT.md` dosyasındadır.
+
+> Listeler otomatik toplanır; gönderimden önce örneklem kontrolü yapmanız önerilir. Sitesi yalnızca ada göre tahmin edilen firmalarda yanlış eşleşme olabilir.
+
+## API
+
+| Endpoint | Açıklama |
+|---|---|
+| `POST /send-mails-with-attachment/start` | `multipart/form-data` (`request` JSON + opsiyonel `files`). Arka planda gönderim başlatır, `data` alanında job id döner. |
+| `GET /send-mails-with-attachment/stream/{jobId}` | SSE: `started`, `progress`, `finished`. Bağlantı koparsa yeniden bağlanınca geçmiş olaylar tekrar oynatılır. |
+| `POST /jobs/{jobId}/cancel` | Çalışan gönderimi durdurur. |
+| `GET /jobs`, `GET /jobs/{jobId}` | Geçmiş gönderimler ve alıcı bazlı sonuçlar. |
+| `GET /jobs/{jobId}/export.xlsx` | Excel raporu. |
+| `GET /health` | Sağlık kontrolü. |
+
+`request` alanları: `username`, `password`, `fromName` (ops.), `subject`, `bodydraft`, `html` (ops.), `skipAlreadySent` (ops.), `companyData[]`. Örnek: [`exampleRequest.json`](backend/MultiMailSender/src/main/resources/exampleRequest.json).
+
+```json
+{
+  "username": "ornek@gmail.com",
+  "password": "uygulama-sifresi",
+  "subject": "Staj Başvurusu - {companyName}",
+  "bodydraft": "Merhaba {companyName} ekibi, ...",
+  "companyData": [
+    { "id": 0, "companyMail": "info@ornek.com", "parameters": { "companyName": "Örnek A.Ş." } }
+  ]
+}
+```
+
+## Yapılandırma
+
+Ortam değişkenleri ile (varsayılanlar parantez içinde):
+
+| Değişken | Anlamı |
+|---|---|
+| `MAIL_COOLDOWN_MIN_MS` / `MAIL_COOLDOWN_MAX_MS` | Mailler arası rastgele bekleme (1000 / 5000) |
+| `MAIL_DAILY_LIMIT` | Hesap başına günlük başarılı mail sınırı (450, `0` = kapalı) |
+| `MAIL_DATA_DIR` | Rapor ve gönderim kayıtlarının klasörü (`data`) |
+| `MAIL_SMTP_HOST` / `MAIL_SMTP_PORT` | SMTP sunucusu (`smtp.gmail.com` / `587`) |
+| `MAIL_CORS_ORIGINS` | İzinli arayüz adresleri (`http://localhost:4200`) |
+
+## Geliştirme ve test
+
+```powershell
+cd backend\MultiMailSender ; .\mvnw verify        # backend testleri
+cd frontend\multi-mail-sender ; npm test           # frontend testleri (Chrome gerekir)
+```
+
+GitHub Actions (`.github/workflows/ci.yml`) her push'ta ikisini de çalıştırır.
+
+## Sorun giderme
+
+| Belirti | Çözüm |
+|---|---|
+| `8080` / `4200` portu kullanımda | `stop.bat` çalıştırın veya o portu kullanan programı kapatın |
+| "Sunucuya ulaşılamıyor" | "MMS Backend" penceresindeki hata mesajına bakın; Java 17+ gerekir |
+| Gmail kimlik doğrulaması başarısız | Normal şifre değil **uygulama şifresi** kullanın, 2 adımlı doğrulama açık olmalı |
+| Alıcı "Atlandı – Eksik parametre" | Mesajda kullanılan alan o şirkette boş; tabloda kırmızı hücreyi doldurun ya da alanı mesajdan çıkarın |
+| Mailler spam'e düşüyor | Gönderen adı ekleyin, az sayıda ve kişiselleştirilmiş gönderin, bekleme süresini artırın |
+
+## Katkıda bulunma
+
+1. Repo'yu fork'layın, yeni bir branch açın.
+2. Değişikliklerinizi test edin (`mvnw verify`, `npm test`).
+3. PR gönderin.
+
+## Lisans
+
+[MIT](LICENSE)
