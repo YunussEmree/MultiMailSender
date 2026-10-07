@@ -493,6 +493,366 @@
         "companyWebsite": "https://alataxbilisim.com",
         "verifiedAt": "2026-10-07"
       }
+    },
+    {
+      "id": 49,
+      "companyMail": "info@bestnet.com.tr",
+      "parameters": {
+        "companyName": "Bestnet Greensoft Teknoloji Ltd.şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://bestnet.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 50,
+      "companyMail": "bilgi@anttech.com.tr",
+      "parameters": {
+        "companyName": "Anttech Bilişim Ve Akaryakıt Anonim Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://anttech.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 51,
+      "companyMail": "info@enqura.com",
+      "parameters": {
+        "companyName": "Enqura Bilgi Teknolojileri A.Ş.",
+        "companyNumber": "+447586557903",
+        "companyWebsite": "https://enqura.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 52,
+      "companyMail": "info@bilnex.com.tr",
+      "parameters": {
+        "companyName": "Bilnex Yazılım Çözümleri Ve Bilişim Teknolojileri Sanayi Ticaret Limited Şirketi",
+        "companyNumber": "+90 850 441 05 15",
+        "companyWebsite": "https://bilnex.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 53,
+      "companyMail": "info@arg.com.tr",
+      "parameters": {
+        "companyName": "Arg Bilişim Yazılım Ar-Ge Ticaret Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://arg.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 54,
+      "companyMail": "info@globus.com.tr",
+      "parameters": {
+        "companyName": "Globus Yazılım Turizm",
+        "companyNumber": "",
+        "companyWebsite": "https://globus.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 55,
+      "companyMail": "info@visirobo.com",
+      "parameters": {
+        "companyName": "Visirobo Ar-Ge Yazılım",
+        "companyNumber": "",
+        "companyWebsite": "https://visirobo.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 56,
+      "companyMail": "hello@kobil.com",
+      "parameters": {
+        "companyName": "Kobil Teknoloji Limited Şirketi",
+        "companyNumber": "+49624130040",
+        "companyWebsite": "https://kobil.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 57,
+      "companyMail": "info@firat.com",
+      "parameters": {
+        "companyName": "Fırat Kocaoğlu - Edda Network",
+        "companyNumber": "+90 800 219 80 20",
+        "companyWebsite": "https://firat.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 58,
+      "companyMail": "info@ugur.com",
+      "parameters": {
+        "companyName": "Uğur GÖLGEDAR - Rh Yazılım",
+        "companyNumber": "+90 256 316 10 00",
+        "companyWebsite": "https://ugur.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 59,
+      "companyMail": "info@linarit.com",
+      "parameters": {
+        "companyName": "Linarit Bilgi Teknolojileri Sanayi ve Ticaret Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://linarit.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 60,
+      "companyMail": "info@olbia.com.tr",
+      "parameters": {
+        "companyName": "Olbia Bilişim Teknolojileri San. Tic. Ltd. Şti.",
+        "companyNumber": "+90 850 777 03 13",
+        "companyWebsite": "https://olbia.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 61,
+      "companyMail": "contact@talya.app",
+      "parameters": {
+        "companyName": "Talya Bilişim Ticaret Sanayi A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://talya.app",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 62,
+      "companyMail": "info@nativeteknoloji.com",
+      "parameters": {
+        "companyName": "Native Teknoloji Ve Bilişim Hizmetleri Limited Şirketi",
+        "companyNumber": "+11111111111",
+        "companyWebsite": "https://nativeteknoloji.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 63,
+      "companyMail": "hello@goktigin.com",
+      "parameters": {
+        "companyName": "Göktigin Bilişim Teknoloji Ltd.şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://goktigin.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 64,
+      "companyMail": "info@clitech.com.tr",
+      "parameters": {
+        "companyName": "Clıtech Bilişim Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://clitech.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 65,
+      "companyMail": "info@appflows.co",
+      "parameters": {
+        "companyName": "Appflows Teknoloji A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://appflows.co",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 66,
+      "companyMail": "info@baksoft.net",
+      "parameters": {
+        "companyName": "Baksoft Arge Yazılım Çözümleri Sanayi Ve Ticaret A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://baksoft.net",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 67,
+      "companyMail": "info@lunefer.com",
+      "parameters": {
+        "companyName": "Lunefer Teknoloji San.tic.ltd.şti.",
+        "companyNumber": "+90 531 718 35 06",
+        "companyWebsite": "https://lunefer.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 68,
+      "companyMail": "hello@soad.tech",
+      "parameters": {
+        "companyName": "Soad Yazılım Mühendislik Sanayi Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://soad.tech",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 69,
+      "companyMail": "contact@flexdatabases.com",
+      "parameters": {
+        "companyName": "Flex Databases Innovation Unit Yazılım Sanayi Ve Ticaret A.ş.",
+        "companyNumber": "+420 296 399 366",
+        "companyWebsite": "https://flexdatabases.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 70,
+      "companyMail": "info@metaneks.com",
+      "parameters": {
+        "companyName": "Metaneks Bilişim Teknolojileri Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://metaneks.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 71,
+      "companyMail": "info@aeternus.org",
+      "parameters": {
+        "companyName": "Aeternus Sol Biyoteknoloji İnovasyon Sanayi Ve Ticaret Ltd.şti.",
+        "companyNumber": "+491608318602",
+        "companyWebsite": "https://aeternus.org",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 72,
+      "companyMail": "info@ledbim.com",
+      "parameters": {
+        "companyName": "Ledbim Bilişim Danışmanlık Ve Ticaret A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://ledbim.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 73,
+      "companyMail": "info@aytbilisim.com",
+      "parameters": {
+        "companyName": "Ayt Bilişim Ticaret Anonim Şirketi",
+        "companyNumber": "+90 242 244 43 13",
+        "companyWebsite": "https://aytbilisim.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 74,
+      "companyMail": "contact@apollonis.net",
+      "parameters": {
+        "companyName": "Apollonis Yazılım Ltd.şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://apollonis.net",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 75,
+      "companyMail": "info@ilimera.com",
+      "parameters": {
+        "companyName": "İlimera Teknoloji Yazılım Ltd.şti.",
+        "companyNumber": "+90 542 549 85 27",
+        "companyWebsite": "https://ilimera.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 76,
+      "companyMail": "info@airtalya.com",
+      "parameters": {
+        "companyName": "Airtalya Yazılım Ve Teknoloji A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://airtalya.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 77,
+      "companyMail": "info@noventech.com",
+      "parameters": {
+        "companyName": "Noventech Çevre Teknolojileri Ar-Ge ve Danışmanlık Ltd.Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://noventech.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 78,
+      "companyMail": "info@odeontech.com",
+      "parameters": {
+        "companyName": "Odeon Yazılım Ve Teknoloji Anonim Şirketi",
+        "companyNumber": "+90 216 599 19 09",
+        "companyWebsite": "https://odeontech.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 79,
+      "companyMail": "info@beautifulmind.com.tr",
+      "parameters": {
+        "companyName": "Beautifulmind Yazılım Ar-Ge Sanayi ve Ticaret Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://beautifulmind.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 80,
+      "companyMail": "iletisim@saritay.com",
+      "parameters": {
+        "companyName": "Sarıtay Bilişim A.ş.",
+        "companyNumber": "+90 242 470 96 61",
+        "companyWebsite": "https://saritay.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 81,
+      "companyMail": "info@crscam.com",
+      "parameters": {
+        "companyName": "Crscam Teknoloji A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://crscam.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 82,
+      "companyMail": "info@cem.com",
+      "parameters": {
+        "companyName": "Cem Savunma Sanayi Ve Teknoloji Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://cem.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 83,
+      "companyMail": "info@alternatif.com.tr",
+      "parameters": {
+        "companyName": "Alternatif Otomasyon Sistemleri",
+        "companyNumber": "",
+        "companyWebsite": "https://alternatif.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 84,
+      "companyMail": "info@kiki.com.tr",
+      "parameters": {
+        "companyName": "Kiki Games Oyun Yazılım ve Paz. A.Ş.",
+        "companyNumber": "+90 212 243 53 73",
+        "companyWebsite": "https://kiki.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
     }
   ]
 }

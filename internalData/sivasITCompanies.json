@@ -143,6 +143,286 @@
         "companyWebsite": "https://ofisline.com.tr",
         "verifiedAt": "2026-10-07"
       }
+    },
+    {
+      "id": 14,
+      "companyMail": "info@moledro.com.tr",
+      "parameters": {
+        "companyName": "Moledro Yazılım Ticaret Sanayi A.Ş.",
+        "companyNumber": "+90 346 217 16 78",
+        "companyWebsite": "https://moledro.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@topfiyt.com",
+      "parameters": {
+        "companyName": "Topfiyt Dijital Platform A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://topfiyt.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 16,
+      "companyMail": "info@adaguzey.com",
+      "parameters": {
+        "companyName": "Ada Güzey Mühendislik Yazılım Mekatronik San. ve Tic. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://adaguzey.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 17,
+      "companyMail": "info@akin.com",
+      "parameters": {
+        "companyName": "Akın Çam Otomasyon Ve Yazılım",
+        "companyNumber": "",
+        "companyWebsite": "https://akin.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 18,
+      "companyMail": "info@antreklabs.com",
+      "parameters": {
+        "companyName": "Antreklabs Yazılım ve Bilgi Teknolojileri Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://antreklabs.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 19,
+      "companyMail": "info@arbu.com.tr",
+      "parameters": {
+        "companyName": "Arbu Akademik Yazılım, Danışmanlık, Eğitim ve Organizasyon Hizmetleri Ltd. Şti.",
+        "companyNumber": "+90 540 016 27 28",
+        "companyWebsite": "https://arbu.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 20,
+      "companyMail": "info@biquery.com.tr",
+      "parameters": {
+        "companyName": "Biquery Yazılım Danışmanlık Ltd. Şti.",
+        "companyNumber": "+90 539 888 77 77",
+        "companyWebsite": "https://biquery.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 21,
+      "companyMail": "iletisim@dijitek.com",
+      "parameters": {
+        "companyName": "Dijitek Bilgi Teknolojileri Bilgisayar Yazılım Eğitim ve Danışmanlık Hizmetleri San. ve Tic. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://dijitek.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 22,
+      "companyMail": "contact@enoca.com",
+      "parameters": {
+        "companyName": "Enoca Bilgi Teknolojileri ve Danışmanlık Ltd. Şti.",
+        "companyNumber": "+90 850 221 73 54",
+        "companyWebsite": "https://enoca.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 23,
+      "companyMail": "info@esila.com.tr",
+      "parameters": {
+        "companyName": "Esila Yazılım Teknolojileri Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://esila.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 24,
+      "companyMail": "info@geolifespirit.com",
+      "parameters": {
+        "companyName": "Geolifespirit Yazılım Elektronik A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://geolifespirit.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 25,
+      "companyMail": "info@harmetal.com",
+      "parameters": {
+        "companyName": "Harmetal Malzeme Teknolojileri A.Ş.",
+        "companyNumber": "+90 541 513 49 13",
+        "companyWebsite": "https://harmetal.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 26,
+      "companyMail": "info@inncrea.com.tr",
+      "parameters": {
+        "companyName": "Inncrea Yazılım Bilişim San. ve Tic. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://inncrea.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 27,
+      "companyMail": "info@innovamind.net",
+      "parameters": {
+        "companyName": "Innovamind Sağlık Teknolojileri Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://innovamind.net",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 28,
+      "companyMail": "info@izcosoft.com",
+      "parameters": {
+        "companyName": "İzcosoft Yazılım ve Bilişim Teknolojileri A.Ş.",
+        "companyNumber": "+90 346 606 06 25",
+        "companyWebsite": "https://izcosoft.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 29,
+      "companyMail": "bilgi@novarge.com.tr",
+      "parameters": {
+        "companyName": "Novarge Bilişim Reklam ve Eğitim Hizmetleri A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://novarge.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 30,
+      "companyMail": "info@papbil.com",
+      "parameters": {
+        "companyName": "Papbil Yazılım Teknolojileri A.Ş.",
+        "companyNumber": "+90 545 887 32 11",
+        "companyWebsite": "https://papbil.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 31,
+      "companyMail": "info@peakcontrol.net",
+      "parameters": {
+        "companyName": "Peakcontrol Teknoloji Elektronik A.Ş.",
+        "companyNumber": "+90 542 450 18 07",
+        "companyWebsite": "https://peakcontrol.net",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 32,
+      "companyMail": "info@peakcyber.com",
+      "parameters": {
+        "companyName": "Peakcyber Siber Güvenlik Teknolojileri A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://peakcyber.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 33,
+      "companyMail": "info@physiqdynamic.com",
+      "parameters": {
+        "companyName": "Physiq Dynamic Bilgi Teknolojileri A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://physiqdynamic.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 34,
+      "companyMail": "info@pik.com",
+      "parameters": {
+        "companyName": "Pik Online Yazılım Çözümleri Anonim Şirketi",
+        "companyNumber": "8 (800) 707-58-24",
+        "companyWebsite": "https://pik.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 35,
+      "companyMail": "info@priviasecurity.com",
+      "parameters": {
+        "companyName": "Privia Security Bilişim ve Danışmanlık Hizmetleri A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://priviasecurity.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 36,
+      "companyMail": "info@qkare.com",
+      "parameters": {
+        "companyName": "Qkare Bilgi Teknolojileri Danışmanlık ve Yazılım Sanayi Dış Ticaret Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://qkare.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 37,
+      "companyMail": "iletisim@semruk.com.tr",
+      "parameters": {
+        "companyName": "Semruk Yazılım Teknoloji A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://semruk.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 38,
+      "companyMail": "iletisim@sikayetvar.com",
+      "parameters": {
+        "companyName": "Şikayetvar Bilişim A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://sikayetvar.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 39,
+      "companyMail": "info@tetogames.com",
+      "parameters": {
+        "companyName": "Teto Games Bilişim Elektronik Spor A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://tetogames.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 40,
+      "companyMail": "info@voco.io",
+      "parameters": {
+        "companyName": "Voco Teknoloji A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://voco.io",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 41,
+      "companyMail": "contact@witmodel.com",
+      "parameters": {
+        "companyName": "Witmodel Yazılım Danışmanlık İletişim ve Ticaret A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://witmodel.com",
+        "verifiedAt": "2026-10-07"
+      }
     }
   ]
 }

@@ -1,0 +1,748 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@3eendustriyel.com.tr",
+      "parameters": {
+        "companyName": "3eendustriyel",
+        "companyNumber": "+90 850 840 00 33",
+        "companyWebsite": "http://www.3eendustriyel.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@5m.com.tr",
+      "parameters": {
+        "companyName": "5m",
+        "companyNumber": "",
+        "companyWebsite": "http://www.5m.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "hello@text2test.ai",
+      "parameters": {
+        "companyName": "Text2test",
+        "companyNumber": "",
+        "companyWebsite": "https://text2test.ai",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@aidcode.co",
+      "parameters": {
+        "companyName": "Aidcode",
+        "companyNumber": "+90 012 345 67 89",
+        "companyWebsite": "https://www.aidcode.co",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@analythinx.com",
+      "parameters": {
+        "companyName": "Analythinx",
+        "companyNumber": "",
+        "companyWebsite": "https://www.analythinx.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@andevos.com.tr",
+      "parameters": {
+        "companyName": "Andevos",
+        "companyNumber": "+90 212 295 22 30",
+        "companyWebsite": "http://www.andevos.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@ankasys.com",
+      "parameters": {
+        "companyName": "Ankasys",
+        "companyNumber": "+90 262 502 46 28",
+        "companyWebsite": "http://www.ankasys.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@artekya.com",
+      "parameters": {
+        "companyName": "Artekya Teknoloji",
+        "companyNumber": "",
+        "companyWebsite": "http://www.artekya.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@artisoft.com.tr",
+      "parameters": {
+        "companyName": "ArtıSoft",
+        "companyNumber": "",
+        "companyWebsite": "https://www.artisoft.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "info@berta.com.tr",
+      "parameters": {
+        "companyName": "Berta Otomasyon HKS A.Ş.",
+        "companyNumber": "+90 262 644 89 11",
+        "companyWebsite": "http://www.berta.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@bicentrix.com",
+      "parameters": {
+        "companyName": "Bicentrix",
+        "companyNumber": "",
+        "companyWebsite": "http://www.bicentrix.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@bilgias.com",
+      "parameters": {
+        "companyName": "Bilgi A. Ş.",
+        "companyNumber": "+90 544 711 08 70",
+        "companyWebsite": "https://bilgias.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "info@bioparkmedical.com",
+      "parameters": {
+        "companyName": "Biopark Medical",
+        "companyNumber": "",
+        "companyWebsite": "https://bioparkmedical.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@biosanas.com.tr",
+      "parameters": {
+        "companyName": "BiosanBio",
+        "companyNumber": "+90 262 503 25 10",
+        "companyWebsite": "https://www.biosanas.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "info@dinamo.plus",
+      "parameters": {
+        "companyName": "DinamoPlus",
+        "companyNumber": "+90 850 433 13 77",
+        "companyWebsite": "https://dinamo.plus",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@caniksoft.com",
+      "parameters": {
+        "companyName": "Caniksoft",
+        "companyNumber": "",
+        "companyWebsite": "http://www.caniksoft.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 16,
+      "companyMail": "info@cenomed.com.tr",
+      "parameters": {
+        "companyName": "Cenomed",
+        "companyNumber": "+90 212 293 86 81",
+        "companyWebsite": "http://www.cenomed.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 17,
+      "companyMail": "info@chemistis.com",
+      "parameters": {
+        "companyName": "Chemistis",
+        "companyNumber": "",
+        "companyWebsite": "http://www.chemistis.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 18,
+      "companyMail": "kariyer@martelektronik.com",
+      "parameters": {
+        "companyName": "Mart Elektronik",
+        "companyNumber": "",
+        "companyWebsite": "https://www.martelektronik.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 19,
+      "companyMail": "info@cosmokod.com",
+      "parameters": {
+        "companyName": "Cosmokod",
+        "companyNumber": "+90 533 225 15 69",
+        "companyWebsite": "https://www.cosmokod.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 20,
+      "companyMail": "info@ctpharma.com.tr",
+      "parameters": {
+        "companyName": "CT Pharma Research",
+        "companyNumber": "+90 262 642 04 21",
+        "companyWebsite": "https://www.ctpharma.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 21,
+      "companyMail": "info@cubetron.com.tr",
+      "parameters": {
+        "companyName": "Cubetron",
+        "companyNumber": "+90 216 651 86 67",
+        "companyWebsite": "http://www.cubetron.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 22,
+      "companyMail": "info@dinamikotomotiv.com.tr",
+      "parameters": {
+        "companyName": "Dinamikotomotiv",
+        "companyNumber": "",
+        "companyWebsite": "https://dinamikotomotiv.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 23,
+      "companyMail": "info@dtiimplant.com",
+      "parameters": {
+        "companyName": "Dti İmplant",
+        "companyNumber": "",
+        "companyWebsite": "http://www.dtiimplant.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 24,
+      "companyMail": "info@elendin.com",
+      "parameters": {
+        "companyName": "Elendin",
+        "companyNumber": "+90 541 784 47 45",
+        "companyWebsite": "http://elendin.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 25,
+      "companyMail": "info@episomebiotech.com",
+      "parameters": {
+        "companyName": "Paper Sludge to Biogas",
+        "companyNumber": "",
+        "companyWebsite": "http://www.episomebiotech.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 26,
+      "companyMail": "info@fluxionlab.com",
+      "parameters": {
+        "companyName": "Fluxion Lab",
+        "companyNumber": "",
+        "companyWebsite": "https://www.fluxionlab.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 27,
+      "companyMail": "info@river.com.tr",
+      "parameters": {
+        "companyName": "RiverAI",
+        "companyNumber": "+90 216 759 41 46",
+        "companyWebsite": "http://river.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 28,
+      "companyMail": "info@gesistek.com",
+      "parameters": {
+        "companyName": "Gesistek",
+        "companyNumber": "",
+        "companyWebsite": "http://www.gesistek.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 29,
+      "companyMail": "hello@genbil.com",
+      "parameters": {
+        "companyName": "Genbıl",
+        "companyNumber": "",
+        "companyWebsite": "http://www.genbil.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 30,
+      "companyMail": "info@globaltech.com.tr",
+      "parameters": {
+        "companyName": "GLB Tech",
+        "companyNumber": "+90 538 201 19 98",
+        "companyWebsite": "http://www.globaltech.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 31,
+      "companyMail": "info@greenjobs.com.tr",
+      "parameters": {
+        "companyName": "Greenjobs / Yeşil İşler",
+        "companyNumber": "+90 850 346 33 11",
+        "companyWebsite": "https://www.greenjobs.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 32,
+      "companyMail": "info@haver.com.tr",
+      "parameters": {
+        "companyName": "Haver Farma",
+        "companyNumber": "+90 216 324 38 38",
+        "companyWebsite": "https://www.haver.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 33,
+      "companyMail": "info@idilbiotech.com",
+      "parameters": {
+        "companyName": "İdil Biotech",
+        "companyNumber": "",
+        "companyWebsite": "http://www.idilbiotech.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 34,
+      "companyMail": "info@inovaplus.net",
+      "parameters": {
+        "companyName": "Inovaplus",
+        "companyNumber": "",
+        "companyWebsite": "https://inovaplus.net",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 35,
+      "companyMail": "info@interaktifgrup.com",
+      "parameters": {
+        "companyName": "Interaktifgrup",
+        "companyNumber": "",
+        "companyWebsite": "http://www.interaktifgrup.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 36,
+      "companyMail": "bilgi@isr.com.tr",
+      "parameters": {
+        "companyName": "ISR Bilgi Güvenliği",
+        "companyNumber": "",
+        "companyWebsite": "https://www.isr.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 37,
+      "companyMail": "info@kes-tech.com",
+      "parameters": {
+        "companyName": "Kes-tech",
+        "companyNumber": "+90 262 654 06 54",
+        "companyWebsite": "http://www.kes-tech.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 38,
+      "companyMail": "contact@kuberttechnology.com",
+      "parameters": {
+        "companyName": "Kubert Technology",
+        "companyNumber": "",
+        "companyWebsite": "https://kuberttechnology.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 39,
+      "companyMail": "info@lifeteam.com.tr",
+      "parameters": {
+        "companyName": "Life Team",
+        "companyNumber": "+90 532 692 83 85",
+        "companyWebsite": "http://www.lifeteam.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 40,
+      "companyMail": "bilgi@macerayazilim.com",
+      "parameters": {
+        "companyName": "Macera Yazılım",
+        "companyNumber": "+90 262 255 55 18",
+        "companyWebsite": "https://macerayazilim.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 41,
+      "companyMail": "merhaba@mavilikapi.com",
+      "parameters": {
+        "companyName": "%100 Doğal Cilt Bakım Ürünleri",
+        "companyNumber": "",
+        "companyWebsite": "https://mavilikapi.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 42,
+      "companyMail": "info@metasis.com.tr",
+      "parameters": {
+        "companyName": "Metasis Teknoloji",
+        "companyNumber": "+90 216 456 94 55",
+        "companyWebsite": "https://www.metasis.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 43,
+      "companyMail": "info@mikrofleks.com",
+      "parameters": {
+        "companyName": "Mikrofleks",
+        "companyNumber": "",
+        "companyWebsite": "https://mikrofleks.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 44,
+      "companyMail": "info@mingapp.co",
+      "parameters": {
+        "companyName": "Ming",
+        "companyNumber": "",
+        "companyWebsite": "http://mingapp.co",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 45,
+      "companyMail": "info@model-hr.com",
+      "parameters": {
+        "companyName": "Model HR",
+        "companyNumber": "",
+        "companyWebsite": "http://www.model-hr.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 46,
+      "companyMail": "info@naumteknoloji.com",
+      "parameters": {
+        "companyName": "NAUM Technology",
+        "companyNumber": "+971 58 554 4697",
+        "companyWebsite": "http://www.naumteknoloji.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 47,
+      "companyMail": "info@onkatec.com",
+      "parameters": {
+        "companyName": "Onkatec",
+        "companyNumber": "",
+        "companyWebsite": "http://www.onkatec.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 48,
+      "companyMail": "info@ossen.com.tr",
+      "parameters": {
+        "companyName": "Ossen",
+        "companyNumber": "",
+        "companyWebsite": "http://www.ossen.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 49,
+      "companyMail": "mail@pakarge.com",
+      "parameters": {
+        "companyName": "Pak Arge",
+        "companyNumber": "",
+        "companyWebsite": "http://www.pakarge.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 50,
+      "companyMail": "info@poyrai.com",
+      "parameters": {
+        "companyName": "Poyrai",
+        "companyNumber": "+90 850 309 50 74",
+        "companyWebsite": "http://www.poyrai.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 51,
+      "companyMail": "info@qoex.com.tr",
+      "parameters": {
+        "companyName": "Qoex Teknoloji",
+        "companyNumber": "+90 216 807 07 69",
+        "companyWebsite": "http://www.qoex.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 52,
+      "companyMail": "info@rut.com.tr",
+      "parameters": {
+        "companyName": "Rut Yazılım",
+        "companyNumber": "+90 530 333 29 58",
+        "companyWebsite": "https://rut.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 53,
+      "companyMail": "info@sapmentor.com",
+      "parameters": {
+        "companyName": "SAPMentor",
+        "companyNumber": "+90 530 403 96 10",
+        "companyWebsite": "http://www.sapmentor.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 54,
+      "companyMail": "info@sealmuhendislik.com",
+      "parameters": {
+        "companyName": "SEAL Mühendislik",
+        "companyNumber": "+90 216 766 76 63",
+        "companyWebsite": "https://sealmuhendislik.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 55,
+      "companyMail": "info@sinarge.com.tr",
+      "parameters": {
+        "companyName": "Sinarge",
+        "companyNumber": "",
+        "companyWebsite": "https://www.sinarge.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 56,
+      "companyMail": "info@sistematikotvt.com",
+      "parameters": {
+        "companyName": "Sistematik OTVT Bilgi Teknolojileri",
+        "companyNumber": "",
+        "companyWebsite": "http://www.sistematikotvt.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 57,
+      "companyMail": "info@sivart.com.tr",
+      "parameters": {
+        "companyName": "Sivart Endüstriyel Otomasyon",
+        "companyNumber": "",
+        "companyWebsite": "https://www.sivart.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 58,
+      "companyMail": "info@softay.com.tr",
+      "parameters": {
+        "companyName": "Akıllı Doküman Yönetimi ve Otomasyon",
+        "companyNumber": "",
+        "companyWebsite": "https://softay.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 59,
+      "companyMail": "info@stembio.com.tr",
+      "parameters": {
+        "companyName": "İletişim",
+        "companyNumber": "+90 850 800 67 78",
+        "companyWebsite": "https://stembio.com.tr/tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 60,
+      "companyMail": "info@tanbt.com.tr",
+      "parameters": {
+        "companyName": "Tanbt",
+        "companyNumber": "+90 850 885 13 20",
+        "companyWebsite": "https://tanbt.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 61,
+      "companyMail": "info@technova.com.tr",
+      "parameters": {
+        "companyName": "Technova",
+        "companyNumber": "+90 216 606 06 01",
+        "companyWebsite": "http://www.technova.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 62,
+      "companyMail": "info@terapimeta.com",
+      "parameters": {
+        "companyName": "Terapimeta",
+        "companyNumber": "",
+        "companyWebsite": "http://terapimeta.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 63,
+      "companyMail": "info@tetacam.com",
+      "parameters": {
+        "companyName": "Tetacam",
+        "companyNumber": "",
+        "companyWebsite": "http://www.tetacam.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 64,
+      "companyMail": "info@pakodemy.com",
+      "parameters": {
+        "companyName": "Pakodemy",
+        "companyNumber": "",
+        "companyWebsite": "http://pakodemy.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 65,
+      "companyMail": "info@tossoengineering.com",
+      "parameters": {
+        "companyName": "Tosso Engineering",
+        "companyNumber": "",
+        "companyWebsite": "https://tossoengineering.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 66,
+      "companyMail": "info@turksoft.com.tr",
+      "parameters": {
+        "companyName": "Turksoft Bilişim Sistemleri",
+        "companyNumber": "+90 216 372 11 41",
+        "companyWebsite": "https://www.turksoft.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 67,
+      "companyMail": "info@uni-yaz.com",
+      "parameters": {
+        "companyName": "Universal Yazılım",
+        "companyNumber": "+90 216 456 28 00",
+        "companyWebsite": "http://www.uni-yaz.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 68,
+      "companyMail": "info@venox.com",
+      "parameters": {
+        "companyName": "Yerli Lazer Markalama Makinaları",
+        "companyNumber": "+90 262 642 42 00",
+        "companyWebsite": "http://www.venox.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 69,
+      "companyMail": "info@vericom.com.tr",
+      "parameters": {
+        "companyName": "Vericom",
+        "companyNumber": "+90 262 255 55 40",
+        "companyWebsite": "https://vericom.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 70,
+      "companyMail": "info@vivacevision.com",
+      "parameters": {
+        "companyName": "Embedded Machine Vision Platforms",
+        "companyNumber": "",
+        "companyWebsite": "https://www.vivacevision.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 71,
+      "companyMail": "info@volta.com.tr",
+      "parameters": {
+        "companyName": "Volta Motor",
+        "companyNumber": "+90 850 222 28 65",
+        "companyWebsite": "http://www.volta.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 72,
+      "companyMail": "info@worknitive.com",
+      "parameters": {
+        "companyName": "Worknitive",
+        "companyNumber": "",
+        "companyWebsite": "http://www.worknitive.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 73,
+      "companyMail": "info@yuchisoft.com",
+      "parameters": {
+        "companyName": "Yuchisoft Bilişim",
+        "companyNumber": "+90 262 502 26 05",
+        "companyWebsite": "http://www.yuchisoft.com",
+        "verifiedAt": "2026-10-07"
+      }
+    }
+  ]
+}
