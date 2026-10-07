@@ -78,6 +78,7 @@ export class MainComponent implements OnInit, OnDestroy {
   get paramKeys(): string[] {
     const keys = new Set<string>();
     for (const c of this.request.companyData) Object.keys(c.parameters).forEach((k) => keys.add(k));
+    keys.delete('verifiedAt'); // internal data-freshness stamp, not a template field
     if (!keys.size) return [...DEFAULT_KEYS];
     // keep the well-known columns first, in a stable order
     return [...DEFAULT_KEYS.filter((k) => keys.has(k)), ...[...keys].filter((k) => !DEFAULT_KEYS.includes(k))];
