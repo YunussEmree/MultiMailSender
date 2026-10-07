@@ -65,46 +65,36 @@ mvn spring-boot:run
 ```powershell
 cd frontend\multi-mail-sender
 npm install
-npm start
+npm start   # /api isteklerini localhost:8080'e yönlendirir (proxy.conf.json)
 ```
 
 Ardından tarayıcıda `http://localhost:4200` adresini açın.
 
 ## API Kullanımı
 
-### Toplu Mail Gönderimi
+| Endpoint | Açıklama |
+|---|---|
+| `POST /send-mails-with-attachment/start` | `multipart/form-data` (`request` JSON + opsiyonel `files`). Arka planda gönderim başlatır, `data` alanında job id döner. |
+| `GET /send-mails-with-attachment/stream/{jobId}` | SSE: `started`, `progress`, `finished` olayları. Bağlantı koparsa yeniden bağlanınca geçmiş olaylar tekrar oynatılır. |
+| `POST /jobs/{jobId}/cancel` | Çalışan gönderimi durdurur. |
+| `GET /jobs`, `GET /jobs/{jobId}` | Geçmiş gönderimler ve alıcı bazlı sonuçlar. |
+| `GET /jobs/{jobId}/export.xlsx` | Excel raporu: şirket adı, e-posta, telefon, website, durum, hata detayı, zaman. |
+| `GET /health` | Sağlık kontrolü. |
 
-- Endpoint: `POST /send-mails-with-attachment`
-- Content-Type: `multipart/form-data`
-- Parametreler:
-  - `request` : (JSON) Gönderici bilgileri, konu, gövde ve alıcı listesi
-  - `files` : (opsiyonel) Ek dosyalar
+`request` alanları: `username`, `password`, `fromName` (ops.), `subject`, `bodydraft`, `html` (ops.), `skipAlreadySent` (ops.), `companyData[]`
+(örnek: `backend/MultiMailSender/src/main/resources/exampleRequest.json`). Şablonda kullanılan `{alan}` bir alıcıda boşsa o alıcı **atlanır**.
 
-Örnek `request` JSON (bkz. `backend/MultiMailSender/src/main/resources/exampleRequest.json`):
+Gönderim raporları ve gönderilenler listesi `MAIL_DATA_DIR` (varsayılan `data/`) altında saklanır. Günlük limit `MAIL_DAILY_LIMIT` (varsayılan 450) ile ayarlanır.
 
-```json
-{
-  "username": "example@gmail.com",
-  "password": "examplePassword",
-  "subject": "Konu örneği",
-  "bodydraft": "Merhaba {companyName}, ...",
-  "companyData": [
-    { "id": 0, "companyMail": "company0@gmail.com", "parameters": { "companyName": "company0" } }
-  ]
-}
+## Docker
+
+```bash
+docker compose up --build   # arayüz: http://localhost:4200
 ```
 
-### Sağlık Kontrolü (Health)
+## Veri (`internalData/`)
 
-- Endpoint: `GET /health`
-- Örnek cevap:
-
-```json
-{
-  "message": "Server is running",
-  "data": null
-}
-```
+Şehir bazlı şirket listeleri. Bakım için: `python tools/refresh_data.py` (rapor) veya `--write` (uygula; `--harvest` ile Hacettepe Teknokent'ten yeni Ankara firmaları ekler). Ayrıntı: `internalData/REPORT.md`.
 
 ## Konfigürasyon
 

@@ -10,7 +10,8 @@
       "parameters": {
         "companyName": "Semruk Teknoloji A.Ş.",
         "companyNumber": "+90 346 217 18 83",
-        "companyWebsite": "https://semruk.tech"
+        "companyWebsite": "https://semruk.tech",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
@@ -19,7 +20,8 @@
       "parameters": {
         "companyName": "Malcolm Technology",
         "companyNumber": "+90 552 002 23 63",
-        "companyWebsite": "https://www.malcolm.tech"
+        "companyWebsite": "https://www.malcolm.tech",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
@@ -27,8 +29,9 @@
       "companyMail": "info@rgsyazilim.com",
       "parameters": {
         "companyName": "RGS Yazılım",
-        "companyNumber": "0850 885 44 04",
-        "companyWebsite": "https://www.rgsyazilim.com"
+        "companyNumber": "+90 850 885 44 04",
+        "companyWebsite": "https://www.rgsyazilim.com",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
@@ -36,107 +39,109 @@
       "companyMail": "fineo@fineo.com.tr",
       "parameters": {
         "companyName": "Fineo Dijital Dönüşüm A.Ş.",
-        "companyNumber": "0346 224 60 58",
-        "companyWebsite": "https://www.fineo.com.tr"
+        "companyNumber": "+90 346 224 60 58",
+        "companyWebsite": "https://www.fineo.com.tr",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
       "id": 4,
-      "companyMail": "info@cyberneet.com",
+      "companyMail": "info@xoryazilim.com.tr",
       "parameters": {
-        "companyName": "CyberNeet",
-        "companyNumber": "+90 346 217 16 78",
-        "companyWebsite": "https://cyberneet.com"
+        "companyName": "XOR Yazılım",
+        "companyNumber": "+90 346 223 60 30",
+        "companyWebsite": "https://xoryazilim.com.tr",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
       "id": 5,
-      "companyMail": "info@xoryazilim.com.tr",
-      "parameters": {
-        "companyName": "XOR Yazılım",
-        "companyNumber": "0346 223 60 30",
-        "companyWebsite": "https://xoryazilim.com.tr"
-      }
-    },
-    {
-      "id": 6,
       "companyMail": "info@althraicyazilim.com",
       "parameters": {
         "companyName": "Althraic Yazılım ve Teknoloji",
         "companyNumber": "+90 505 780 78 88",
-        "companyWebsite": "https://althraicyazilim.com"
+        "companyWebsite": "https://althraicyazilim.com",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "iletisim@arvas.com.tr",
+      "parameters": {
+        "companyName": "Arvas Bilgi Teknolojileri",
+        "companyNumber": "+90 850 333 52 73",
+        "companyWebsite": "https://www.arvas.com.tr",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
       "id": 7,
-      "companyMail": "iletisim@arvas.com.tr",
-      "parameters": {
-        "companyName": "Arvas Bilgi Teknolojileri",
-        "companyNumber": "0850 333 52 73",
-        "companyWebsite": "https://www.arvas.com.tr"
-      }
-    },
-    {
-      "id": 8,
       "companyMail": "info@webmaxi.com.tr",
       "parameters": {
         "companyName": "Webmaxi",
         "companyNumber": "+90 546 452 19 89",
-        "companyWebsite": "https://www.webmaxi.com.tr"
+        "companyWebsite": "https://www.webmaxi.com.tr",
+        "verifiedAt": "2026-10-07"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "ofosoft@hotmail.com",
+      "parameters": {
+        "companyName": "OfoSoft Yazılım",
+        "companyNumber": "+90 546 918 89 69",
+        "companyWebsite": "https://www.ofosoft.com.tr",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
       "id": 9,
-      "companyMail": "ofosoft@hotmail.com",
+      "companyMail": "sivas@varolyazilim.com",
       "parameters": {
-        "companyName": "OfoSoft Yazılım",
-        "companyNumber": "0546 918 89 69",
-        "companyWebsite": "https://www.ofosoft.com.tr"
+        "companyName": "Varol Yazılım (Sivas)",
+        "companyNumber": "+90 850 532 80 70",
+        "companyWebsite": "https://varolyazilim.com",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
       "id": 10,
-      "companyMail": "sivas@varolyazilim.com",
+      "companyMail": "info@ozsoft.com.tr",
       "parameters": {
-        "companyName": "Varol Yazılım (Sivas)",
-        "companyNumber": "0850 532 80 70",
-        "companyWebsite": "https://varolyazilim.com"
+        "companyName": "ÖzSoft Bilgisayar",
+        "companyNumber": "+90 850 500 53 00",
+        "companyWebsite": "https://www.ozsoft.com.tr",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
       "id": 11,
-      "companyMail": "info@ozsoft.com.tr",
+      "companyMail": "hakan@sivastasarim.com",
       "parameters": {
-        "companyName": "ÖzSoft Bilgisayar",
-        "companyNumber": "0850 500 53 00",
-        "companyWebsite": "https://www.ozsoft.com.tr"
+        "companyName": "Sivas Tasarım Bilişim",
+        "companyNumber": "+90 850 433 33 58",
+        "companyWebsite": "https://www.sivastasarim.com",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
       "id": 12,
-      "companyMail": "hakan@sivastasarim.com",
+      "companyMail": "info@pozitifofis.com.tr",
       "parameters": {
-        "companyName": "Sivas Tasarım Bilişim",
-        "companyNumber": "0850 433 33 58",
-        "companyWebsite": "https://www.sivastasarim.com"
+        "companyName": "Pozitif Ofis Yazılım",
+        "companyNumber": "+90 850 377 00 58",
+        "companyWebsite": "https://pozitifofis.com.tr",
+        "verifiedAt": "2026-10-07"
       }
     },
     {
       "id": 13,
-      "companyMail": "info@pozitifofis.com.tr",
-      "parameters": {
-        "companyName": "Pozitif Ofis Yazılım",
-        "companyNumber": "0850 377 00 58",
-        "companyWebsite": "https://pozitifofis.com.tr"
-      }
-    },
-    {
-      "id": 14,
       "companyMail": "info@ofisline.com.tr",
       "parameters": {
         "companyName": "Ofis Line",
-        "companyNumber": "0552 298 92 69",
-        "companyWebsite": "https://ofisline.com.tr"
+        "companyNumber": "+90 552 298 92 69",
+        "companyWebsite": "https://ofisline.com.tr",
+        "verifiedAt": "2026-10-07"
       }
     }
   ]
