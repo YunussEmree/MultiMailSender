@@ -1,244 +1,379 @@
-<div class="container py-4">
-  <div class="d-flex justify-content-between align-items-center mb-3">
-    <h2 class="m-0 gradient-text fade-down">Multi Mail Sender</h2>
-    <div class="toolbar d-flex">
-      <!-- Import/Export toolbar -->
-      <button
-        type="button"
-        class="btn btn-outline-secondary btn-animate me-2"
-        title="Import JSON"
-        (click)="importInput.click()"
-      >
-        <i class="bi bi-download"></i> Import
-      </button>
-      <button
-        type="button"
-        class="btn btn-primary btn-animate"
-        title="Export JSON"
-        (click)="exportJson()"
-      >
-        <i class="bi bi-upload"></i> Export
-      </button>
-      <input
-        #importInput
-        type="file"
-        accept="application/json,.json"
-        class="d-none"
-        (change)="onImportFileChange($event)"
-      />
-    </div>
-  </div>
-
-  <div class="mb-3 d-flex align-items-center">
-    <label class="me-2 w-25">Email (Username)</label>
-    <input
-      type="email"
-      class="form-control form-control-custom flex-grow-1"
-      [(ngModel)]="request.username"
-      placeholder="example@gmail.com"
-    />
-    <i
-      class="bi bi-exclamation-circle-fill text-primary ms-2 info-icon"
-      ngbTooltip="Your Gmail address. This is used to send emails."
-      placement="right"
-    ></i>
-  </div>
-
-  <div class="mb-3 d-flex align-items-center">
-    <label class="me-2 w-25">App Password</label>
-    <input
-      type="password"
-      class="form-control form-control-custom flex-grow-1"
-      [(ngModel)]="request.password"
-      placeholder="App Password"
-    />
-    <i
-      class="bi bi-exclamation-circle-fill text-primary ms-2 info-icon"
-      ngbTooltip="Create an App Password in your Google Account. It is different from your normal password."
-      placement="right"
-    ></i>
-  </div>
-
-  <div class="mb-3 d-flex align-items-center">
-    <label class="me-2 w-25">Subject</label>
-    <input
-      type="text"
-      class="form-control form-control-custom flex-grow-1"
-      [(ngModel)]="request.subject"
-      placeholder="Mail Subject"
-    />
-    <i
-      class="bi bi-exclamation-circle-fill text-primary ms-2 info-icon"
-      ngbTooltip="E-mail subject."
-      placement="right"
-    ></i>
-  </div>
-
-  <div class="mb-3 position-relative">
-    <div class="d-flex align-items-start gap-3 flex-wrap">
-      <label class="w-25" style="min-width: 200px">Body Draft</label>
-      <textarea
-        rows="5"
-        class="form-control form-control-custom flex-grow-1"
-        [(ngModel)]="request.bodydraft"
-        placeholder="Dear {companyName}, ..."
-      ></textarea>
-    </div>
-    <i
-      class="bi bi-exclamation-circle-fill text-primary info-icon-textarea"
-      ngbTooltip="Use placeholders like {companyName} and {companyNumber}. They will be replaced with actual values."
-      placement="left"
-    ></i>
-  </div>
-
-  <div class="d-flex justify-content-between align-items-center">
-    <h5 class="mt-2 mb-2">Companies</h5>
-    <div class="d-flex gap-2">
-      <button
-        class="btn btn-outline-danger btn-sm btn-animate"
-        (click)="clearDatas()"
-      >
-        <i class="bi bi-trash"></i> Clear datas
-      </button>
-      <button
-        class="btn btn-outline-primary btn-sm btn-animate"
-        (click)="addCompany()"
-      >
-        <i class="bi bi-plus"></i> Add new company
-      </button>
-    </div>
-  </div>
-
-  <div
-    *ngFor="let c of request.companyData; let i = index; trackBy: trackByIndex"
-    class="card mb-3 animated-card"
-  >
-    <div
-      class="card-header bg-primary text-white d-flex justify-content-between align-items-center"
-    >
-      <div>Company {{ i | addOne }}</div>
-      <button
-        type="button"
-        class="btn-close btn-close-white"
-        aria-label="Close"
-        (click)="removeCompany(i)"
-      ></button>
-    </div>
-    <div class="card-body">
-      <div class="mb-2">
-        <label class="form-label">Company Mail</label>
-        <input
-          type="email"
-          class="form-control form-control-custom"
-          [(ngModel)]="c.companyMail"
-          placeholder="company@example.com"
-        />
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark"><i class="bi bi-envelope-paper-fill"></i></span>
+      <div>
+        <h1>Multi Mail Sender</h1>
+        <p>Kişiselleştirilmiş toplu e-posta gönderimi</p>
       </div>
+    </div>
+    <div class="topbar-actions">
+      <span class="status-pill" [class.up]="serverUp" [class.down]="!serverUp" title="Sunucu durumu">
+        <span class="dot"></span>{{ serverUp ? 'Sunucu çalışıyor' : 'Sunucuya ulaşılamıyor' }}
+      </span>
+      <button type="button" class="btn btn-ghost" (click)="clearAll()" [disabled]="running">
+        <i class="bi bi-arrow-counterclockwise"></i> Sıfırla
+      </button>
+    </div>
+  </div>
+</header>
 
-      <div
-        class="mb-2"
-        *ngFor="
-          let entry of c.parameters | keyvalue;
-          trackBy: trackByParamKey;
-          let pi = index
-        "
-      >
-        <div class="d-flex align-items-center gap-2">
-          <label class="me-2" style="min-width: 120px">{{ entry.key }}</label>
+<main class="page" (input)="onFormChange()" (change)="onFormChange()">
+  @if (notice) {
+    <div class="alert-box" [ngClass]="'alert-' + notice.type" role="status">
+      <span>{{ notice.text }}</span>
+      <button type="button" class="alert-close" aria-label="Kapat" (click)="notice = null">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+  }
+
+  <!-- 1. ACCOUNT -->
+  <section class="panel">
+    <div class="panel-head">
+      <span class="step">1</span>
+      <div>
+        <h2>Gönderici hesabı</h2>
+        <p>Gmail adresin ve Google hesabından oluşturduğun <b>uygulama şifresi</b>. Şifre hiçbir yerde saklanmaz.</p>
+      </div>
+    </div>
+    <div class="grid grid-3">
+      <label class="field">
+        <span>Gmail adresi</span>
+        <input type="email" [(ngModel)]="request.username" placeholder="ornek@gmail.com" autocomplete="off" />
+      </label>
+      <label class="field">
+        <span>Uygulama şifresi</span>
+        <div class="input-addon">
           <input
-            type="text"
-            class="form-control form-control-custom"
-            [(ngModel)]="c.parameters[entry.key]"
-            placeholder="Parameter value"
+            [type]="showPassword ? 'text' : 'password'"
+            [(ngModel)]="request.password"
+            placeholder="xxxx xxxx xxxx xxxx"
+            autocomplete="new-password"
           />
-          <button
-            type="button"
-            class="btn btn-danger btn-sm btn-animate"
-            (click)="removeParameter(c, entry.key)"
-          >
-            Delete
+          <button type="button" class="addon-btn" (click)="showPassword = !showPassword" [attr.aria-label]="'Şifreyi göster/gizle'">
+            <i class="bi" [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'"></i>
           </button>
         </div>
-      </div>
-
-      <button
-        type="button"
-        class="btn btn-secondary btn-sm btn-animate"
-        (click)="addParameter(c)"
-      >
-        <i class="bi bi-plus"></i> New parameter
-      </button>
+      </label>
+      <label class="field">
+        <span>Gönderen adı <em>(isteğe bağlı)</em></span>
+        <input type="text" [(ngModel)]="request.fromName" placeholder="Ad Soyad" />
+      </label>
     </div>
-  </div>
+  </section>
 
-  <div class="mb-3">
-    <label class="form-label">PDF Attachment</label>
-    <input
-      type="file"
-      class="form-control form-control-custom"
-      (change)="onFileSelected($event)"
-      multiple
-    />
-    <div class="form-text">
-      Attachments are not included in JSON export/import. Credentials (email &
-      app password) are also excluded from Export.
-    </div>
-  </div>
-
-  <div class="mb-4">
-    <button class="btn btn-success w-100 btn-animate" (click)="sendMails()">
-      Send Mails
-    </button>
-  </div>
-
-  <div *ngIf="isSuccess === 0 && request.companyData.length && etaMaxSeconds" class="mb-3">
-    <div class="d-flex justify-content-between align-items-center">
+  <!-- 2. MESSAGE -->
+  <section class="panel">
+    <div class="panel-head">
+      <span class="step">2</span>
       <div>
-        <strong>Estimated remaining:</strong>
-        ~{{ etaMinSeconds }} - {{ etaMaxSeconds }} seconds
+        <h2>Mesaj</h2>
+        <p>
+          Konu ve metinde <code>&#123;companyName&#125;</code> gibi alanları kullan; her alıcı için kendi değeriyle
+          değiştirilir.
+        </p>
       </div>
-      <div><strong>Progress:</strong> {{ progress.length }}/{{ request.companyData.length }}</div>
     </div>
-    <div class="progress mt-2" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-      <div
-        class="progress-bar"
-        [style.width]="(progress.length / request.companyData.length) * 100 + '%'"
-      ></div>
-    </div>
-    <ul class="list-group mt-3">
-      <li class="list-group-item" *ngFor="let p of progress">
-        <span class="badge me-2" [ngClass]="p.status === 'sent' ? 'bg-success' : 'bg-danger'">
-          {{ p.status }}
-        </span>
-        {{ p.companyMail || p.email }}
-        <span class="text-muted" *ngIf="p.message">- {{ p.message }}</span>
-      </li>
-    </ul>
-  </div>
 
-  <ngb-alert
-    *ngIf="responseMessage"
-    [type]="isSuccess === 1 ? 'success' : isSuccess === -1 ? 'danger' : 'info'"
-  >
-    {{ responseMessage }}
-  </ngb-alert>
+    <label class="field">
+      <span>Konu</span>
+      <input type="text" [(ngModel)]="request.subject" placeholder="Staj Başvurusu - Ad Soyad" />
+    </label>
 
-  <div class="fixed-bottom d-flex align-items-center p-3 bg-light border-top">
-    <div>
-      <strong>Server Status:</strong>
-      <span
-        [ngClass]="
-          serverStatus === 'Server is running' ? 'text-success' : 'text-danger'
-        "
-      >
-        {{ serverStatus }}
-      </span>
+    <div class="field">
+      <div class="field-row">
+        <span>Mesaj metni</span>
+        <div class="chips">
+          <small>Alan ekle:</small>
+          @for (k of paramKeys; track k) {
+            <button type="button" class="chip" (click)="insertPlaceholder(k, body)">{{ '{' + k + '}' }}</button>
+          }
+        </div>
+      </div>
+      <textarea
+        #body
+        rows="9"
+        [(ngModel)]="request.bodydraft"
+        [placeholder]="bodyPlaceholder"
+      ></textarea>
     </div>
-    <button
-      class="btn mx-3 btn-outline-info btn-animate"
-      (click)="checkServer()"
-    >
-      Check Server Status
-    </button>
-  </div>
-</div>
+
+    <div class="options">
+      <label class="check">
+        <input type="checkbox" [(ngModel)]="request.html" />
+        <span><b>HTML olarak gönder</b> <small>(metinde HTML etiketleri kullanabilirsin)</small></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" [(ngModel)]="request.skipAlreadySent" />
+        <span><b>Daha önce gönderilenleri atla</b> <small>(aynı hesaptan aynı adrese iki kez gitmez)</small></span>
+      </label>
+    </div>
+
+    <div class="field">
+      <span>Ekler</span>
+      <label class="dropzone">
+        <i class="bi bi-paperclip"></i>
+        <span>Dosya seç (CV, PDF vb.) — her mailin ekine eklenir</span>
+        <input type="file" multiple (change)="onFileSelected($event)" hidden />
+      </label>
+      @if (files.length) {
+        <ul class="filelist">
+          @for (f of files; track f) {
+            <li>
+              <i class="bi bi-file-earmark-text"></i>
+              <span>{{ f.name }}</span>
+              <small>{{ (f.size / 1024) | number: '1.0-0' }} KB</small>
+              <button type="button" class="icon-btn" (click)="removeFile(f)" aria-label="Eki kaldır">
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </li>
+          }
+        </ul>
+      }
+    </div>
+
+    @if (previewData; as pv) {
+      <div class="preview">
+        <button type="button" class="preview-toggle" (click)="showPreview = !showPreview">
+          <i class="bi" [ngClass]="showPreview ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
+          Önizleme
+          <small>— {{ previewIndex + 1 }}. alıcı için nasıl görüneceği</small>
+        </button>
+        @if (showPreview) {
+          <div class="preview-body">
+            <div class="preview-nav">
+              <button type="button" class="icon-btn" (click)="previewIndex = previewIndex > 0 ? previewIndex - 1 : 0" aria-label="Önceki">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <span>{{ previewIndex + 1 }} / {{ request.companyData.length }}</span>
+              <button
+                type="button"
+                class="icon-btn"
+                (click)="previewIndex = previewIndex < request.companyData.length - 1 ? previewIndex + 1 : previewIndex"
+                aria-label="Sonraki"
+              >
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+            <div class="mail-meta"><b>Kime:</b> {{ pv.to || '—' }}</div>
+            <div class="mail-meta"><b>Konu:</b> {{ pv.subject || '—' }}</div>
+            @if (request.html) {
+              <div class="mail-body" [innerHTML]="pv.body"></div>
+            } @else {
+              <pre class="mail-body">{{ pv.body }}</pre>
+            }
+          </div>
+        }
+      </div>
+    }
+  </section>
+
+  <!-- 3. RECIPIENTS -->
+  <section class="panel">
+    <div class="panel-head">
+      <span class="step">3</span>
+      <div>
+        <h2>Alıcılar <span class="count">{{ request.companyData.length }}</span></h2>
+        <p>Şirketleri elle ekle ya da JSON / CSV dosyasından içe aktar. Hücreleri doğrudan düzenleyebilirsin.</p>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="search">
+        <i class="bi bi-search"></i>
+        <input type="search" [(ngModel)]="search" placeholder="Ara: şirket, e-posta..." />
+      </div>
+      <div class="toolbar-btns">
+        <button type="button" class="btn btn-soft" (click)="importInput.click()" [disabled]="running">
+          <i class="bi bi-box-arrow-in-down"></i> İçe aktar
+        </button>
+        <input #importInput type="file" accept=".json,.csv,application/json,text/csv" hidden (change)="onImportFileChange($event)" />
+        <button type="button" class="btn btn-soft" (click)="exportJson()" [disabled]="!request.companyData.length">
+          <i class="bi bi-box-arrow-up"></i> JSON dışa aktar
+        </button>
+        <button type="button" class="btn btn-soft" (click)="addColumn()" [disabled]="running">
+          <i class="bi bi-layout-three-columns"></i> Alan ekle
+        </button>
+        <button type="button" class="btn btn-primary-soft" (click)="addCompany()" [disabled]="running">
+          <i class="bi bi-plus-lg"></i> Alıcı ekle
+        </button>
+      </div>
+    </div>
+
+    @if (request.companyData.length) {
+      <div class="cleanup">
+        <button type="button" class="link-btn" (click)="removeDuplicates()" [disabled]="running">Tekrar edenleri sil</button>
+        <button type="button" class="link-btn" (click)="removeInvalid()" [disabled]="running">Geçersiz adresleri sil</button>
+        <button type="button" class="link-btn danger" (click)="clearRecipients()" [disabled]="running">Tümünü sil</button>
+        @if (incompleteCount) {
+          <span class="warn">
+            <i class="bi bi-exclamation-triangle-fill"></i>
+            {{ incompleteCount }} alıcıda mesajda kullanılan alan boş — bunlar atlanır.
+          </span>
+        }
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th class="c-idx">#</th>
+              <th class="c-mail">E-posta</th>
+              @for (k of paramKeys; track k) {
+                <th>{{ k }}</th>
+              }
+              <th class="c-status">Durum</th>
+              <th class="c-act"></th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of visible; track trackCompany($index, item)) {
+              <tr [class.row-sent]="rowFor(item.c)?.status === 'sent'" [class.row-error]="rowFor(item.c)?.status === 'error'">
+                <td class="c-idx">{{ item.i + 1 }}</td>
+                <td class="c-mail">
+                  <input type="email" [(ngModel)]="item.c.companyMail" [class.invalid]="item.c.companyMail && !item.c.companyMail.includes('@')" [disabled]="running" />
+                </td>
+                @for (k of paramKeys; track k) {
+                  <td>
+                    <input
+                      type="text"
+                      [ngModel]="item.c.parameters[k] || ''"
+                      (ngModelChange)="setParam(item.c, k, $event)"
+                      [class.invalid]="usedPlaceholders.includes(k) && !(item.c.parameters[k] || '').trim()"
+                      [disabled]="running"
+                    />
+                  </td>
+                }
+                <td class="c-status">
+                  @let r = rowFor(item.c);
+                  @if (r) {
+                    <span class="badge-s" [ngClass]="'s-' + r.status" [title]="r.message || ''">{{ statusLabel(r.status) }}</span>
+                  } @else if (running) {
+                    <span class="badge-s s-pending">Bekliyor</span>
+                  } @else if (missingFor(item.c).length) {
+                    <span class="badge-s s-skipped" [title]="'Eksik: ' + missingFor(item.c).join(', ')">Eksik alan</span>
+                  } @else {
+                    <span class="muted">—</span>
+                  }
+                </td>
+                <td class="c-act">
+                  <button type="button" class="icon-btn" (click)="removeCompany(item.c)" [disabled]="running" aria-label="Alıcıyı sil">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </td>
+              </tr>
+            }
+            @if (!visible.length) {
+              <tr><td [attr.colspan]="paramKeys.length + 4" class="empty">Aramayla eşleşen alıcı yok.</td></tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    } @else {
+      <div class="empty-state">
+        <i class="bi bi-people"></i>
+        <p>Henüz alıcı yok. <b>İçe aktar</b> ile bir dosya yükle ya da <b>Alıcı ekle</b> ile başla.</p>
+        <small>CSV için ilk satır başlık olmalı: <code>companyMail,companyName,companyNumber</code></small>
+      </div>
+    }
+  </section>
+
+  <!-- 4. SEND -->
+  <section class="panel send-panel">
+    <div class="panel-head">
+      <span class="step">4</span>
+      <div>
+        <h2>Gönderim</h2>
+        <p>Mailler arasında rastgele bekleme uygulanır; Gmail hız sınırına takılmamak için.</p>
+      </div>
+    </div>
+
+    <div class="send-row">
+      @if (!running) {
+        <button type="button" class="btn btn-send" (click)="sendMails()" [disabled]="!canSend">
+          @if (starting) {
+            <span class="spinner"></span> Başlatılıyor...
+          } @else {
+            <i class="bi bi-send-fill"></i> {{ validRecipients }} alıcıya gönder
+          }
+        </button>
+      } @else {
+        <button type="button" class="btn btn-stop" (click)="cancel()"><i class="bi bi-stop-circle-fill"></i> Durdur</button>
+      }
+      @if (!canSend && !running && sendHint) {
+        <span class="hint"><i class="bi bi-info-circle"></i> {{ sendHint }}</span>
+      }
+    </div>
+
+    @if (jobState) {
+      <div class="progress-card">
+        <div class="stats">
+          <div class="stat s-sent"><b>{{ counts.sent }}</b><span>Gönderildi</span></div>
+          <div class="stat s-error"><b>{{ counts.error }}</b><span>Hata</span></div>
+          <div class="stat s-skipped"><b>{{ counts.skipped }}</b><span>Atlandı</span></div>
+          <div class="stat"><b>{{ counts.total - counts.done }}</b><span>Kalan</span></div>
+        </div>
+        <div class="bar" role="progressbar" [attr.aria-valuenow]="percent" aria-valuemin="0" aria-valuemax="100">
+          <div class="bar-fill" [class.done]="!running" [style.width.%]="percent"></div>
+        </div>
+        <div class="bar-meta">
+          <span>{{ jobLabel(jobState) }} · %{{ percent }}</span>
+          @if (running && eta) {
+            <span>Tahmini kalan: {{ eta }}</span>
+          }
+        </div>
+        @if (!running && jobId) {
+          <button type="button" class="btn btn-excel" (click)="downloadReport(jobId)">
+            <i class="bi bi-file-earmark-excel-fill"></i> Excel raporunu indir
+          </button>
+        }
+      </div>
+    }
+  </section>
+
+  <!-- HISTORY -->
+  @if (history.length) {
+    <section class="panel">
+      <div class="panel-head">
+        <span class="step step-muted"><i class="bi bi-clock-history"></i></span>
+        <div>
+          <h2>Geçmiş gönderimler</h2>
+          <p>Her gönderimin raporu (şirket adı, durum, hata detayı) Excel olarak indirilebilir.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table history">
+          <thead>
+            <tr>
+              <th>Tarih</th>
+              <th>Konu</th>
+              <th>Durum</th>
+              <th class="num">Gönderildi</th>
+              <th class="num">Hata</th>
+              <th class="num">Atlandı</th>
+              <th class="c-act"></th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (h of history; track h.id) {
+              <tr>
+                <td>{{ h.createdAt | date: 'dd.MM.yyyy HH:mm' }}</td>
+                <td class="ellipsis" [title]="h.subject">{{ h.subject }}</td>
+                <td><span class="badge-s" [ngClass]="'j-' + h.status">{{ jobLabel(h.status) }}</span></td>
+                <td class="num">{{ h.sent }}</td>
+                <td class="num">{{ h.failed }}</td>
+                <td class="num">{{ h.skipped }}</td>
+                <td class="c-act">
+                  <button type="button" class="btn btn-excel btn-sm" (click)="downloadReport(h.id)">
+                    <i class="bi bi-file-earmark-excel"></i> Excel
+                  </button>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  }
+</main>

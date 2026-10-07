@@ -1,187 +1,287 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AddOnePipe } from '../../pipe/add-one-pipe';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import {
+  CompanyData,
+  JobState,
+  JobSummary,
+  ProgressRow,
+  RequestData,
+  RowStatus,
+} from '../../models/models';
 import { MailSenderService } from '../../service/mail-sender';
+import { csvToCompanies, parseCsv } from '../../utils/csv';
+import { missingParams, placeholdersOf, renderTemplate } from '../../utils/template';
 
-interface CompanyData {
-  id: number;
-  companyMail: string;
-  parameters: Record<string, string>;
-}
+type Notice = { type: 'success' | 'danger' | 'info' | 'warning'; text: string } | null;
 
-interface RequestData {
-  username: string;
-  password: string;
-  subject: string;
-  bodydraft: string;
-  companyData: CompanyData[];
-}
+const DEFAULT_KEYS = ['companyName', 'companyNumber', 'companyWebsite'];
+const DRAFT_KEY = 'mms-draft-v2';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [FormsModule, HttpClientModule, CommonModule, NgbModule, AddOnePipe],
-  providers: [MailSenderService],
+  imports: [FormsModule, CommonModule],
   templateUrl: './main.html',
   styleUrls: ['./main.css'],
 })
-export class MainComponent {
-  request: RequestData = {
-    username: '',
-    password: '',
-    subject: '',
-    bodydraft: '',
-    companyData: [
-      {
-        id: 0,
-        companyMail: '',
-        parameters: { companyName: '', companyNumber: '' },
-      },
-    ],
-  };
+export class MainComponent implements OnInit, OnDestroy {
+  readonly bodyPlaceholder = 'Merhaba {companyName} ekibi,\n\n...';
 
+  request: RequestData = this.emptyRequest();
   files: File[] = [];
-  responseMessage = '';
-  isSuccess = 0; // 0: sending, 1: success, -1: error
-  serverStatus = 'Server Down';
-  progress: { index: number; companyMail?: string; email?: string; status: string; message: string }[] = [];
-  etaMinSeconds = 0;
-  etaMaxSeconds = 0;
+
+  search = '';
+  previewIndex = 0;
+  showPassword = false;
+  showPreview = true;
+
+  serverUp = false;
+  notice: Notice = null;
+
+  jobId: string | null = null;
+  jobState: JobState | null = null;
+  rows: Record<number, ProgressRow> = {};
+  history: JobSummary[] = [];
+  starting = false;
+
+  private nextId = 1;
+  private es: EventSource | null = null;
   private avgSendMs = 0;
-  private avgCooldownMs = 0;
   private samples = 0;
   private cfgMinMs = 0;
   private cfgMaxMs = 0;
-  private currentEventSource: EventSource | null = null;
+  private serverTimer: ReturnType<typeof setInterval> | null = null;
 
-  private nextCompanyId = 1;
+  constructor(private api: MailSenderService) {}
 
-  constructor(private mailService: MailSenderService) { this.checkServer(); }
+  // ------------------------------------------------------------------ lifecycle
 
-  trackByIndex(_i: number, _item: any) {
-    return _i;
+  ngOnInit() {
+    this.restoreDraft();
+    this.checkServer();
+    this.loadHistory();
+    this.serverTimer = setInterval(() => this.checkServer(), 15000);
   }
+
+  ngOnDestroy() {
+    this.es?.close();
+    if (this.serverTimer) clearInterval(this.serverTimer);
+  }
+
+  // ------------------------------------------------------------------ derived state
+
+  get running(): boolean {
+    return this.jobState === 'RUNNING';
+  }
+
+  get paramKeys(): string[] {
+    const keys = new Set<string>();
+    for (const c of this.request.companyData) Object.keys(c.parameters).forEach((k) => keys.add(k));
+    if (!keys.size) return [...DEFAULT_KEYS];
+    // keep the well-known columns first, in a stable order
+    return [...DEFAULT_KEYS.filter((k) => keys.has(k)), ...[...keys].filter((k) => !DEFAULT_KEYS.includes(k))];
+  }
+
+  get visible(): { c: CompanyData; i: number }[] {
+    const q = this.search.trim().toLowerCase();
+    const all = this.request.companyData.map((c, i) => ({ c, i }));
+    if (!q) return all;
+    return all.filter(({ c }) =>
+      (c.companyMail + ' ' + Object.values(c.parameters).join(' ')).toLowerCase().includes(q),
+    );
+  }
+
+  get usedPlaceholders(): string[] {
+    return [...new Set([...placeholdersOf(this.request.subject), ...placeholdersOf(this.request.bodydraft)])];
+  }
+
+  /** Recipients whose data lacks a value for a placeholder the template uses (they will be skipped). */
+  get incompleteCount(): number {
+    return this.request.companyData.filter((c) => this.missingFor(c).length > 0).length;
+  }
+
+  missingFor(c: CompanyData): string[] {
+    return [
+      ...new Set([
+        ...missingParams(this.request.subject, c.parameters),
+        ...missingParams(this.request.bodydraft, c.parameters),
+      ]),
+    ];
+  }
+
+  get validRecipients(): number {
+    return this.request.companyData.filter((c) => /^\S+@\S+\.\S+$/.test(c.companyMail.trim())).length;
+  }
+
+  get canSend(): boolean {
+    const r = this.request;
+    return (
+      !this.running &&
+      !this.starting &&
+      this.serverUp &&
+      /^\S+@\S+\.\S+$/.test(r.username.trim()) &&
+      !!r.password.trim() &&
+      !!r.subject.trim() &&
+      !!r.bodydraft.trim() &&
+      this.validRecipients > 0
+    );
+  }
+
+  get sendHint(): string {
+    const r = this.request;
+    if (!this.serverUp) return 'Sunucuya ulaşılamıyor.';
+    if (!/^\S+@\S+\.\S+$/.test(r.username.trim())) return 'Geçerli bir Gmail adresi girin.';
+    if (!r.password.trim()) return 'Uygulama şifresini girin.';
+    if (!r.subject.trim()) return 'Konu boş olamaz.';
+    if (!r.bodydraft.trim()) return 'Mesaj boş olamaz.';
+    if (!this.validRecipients) return 'En az bir geçerli alıcı ekleyin.';
+    return '';
+  }
+
+  get counts() {
+    const list = Object.values(this.rows);
+    return {
+      sent: list.filter((r) => r.status === 'sent').length,
+      error: list.filter((r) => r.status === 'error').length,
+      skipped: list.filter((r) => r.status === 'skipped').length,
+      done: list.length,
+      total: this.request.companyData.length,
+    };
+  }
+
+  get percent(): number {
+    const { done, total } = this.counts;
+    return total ? Math.round((done / total) * 100) : 0;
+  }
+
+  get eta(): string {
+    if (!this.running) return '';
+    const remaining = Math.max(0, this.counts.total - this.counts.done);
+    const perItem = this.avgSendMs + (this.cfgMinMs + this.cfgMaxMs) / 2;
+    const secs = Math.round((remaining * perItem) / 1000);
+    if (secs < 60) return `~${secs} sn`;
+    return `~${Math.floor(secs / 60)} dk ${secs % 60} sn`;
+  }
+
+  get previewData(): { to: string; subject: string; body: string } | null {
+    const c = this.request.companyData[Math.min(this.previewIndex, this.request.companyData.length - 1)];
+    if (!c) return null;
+    return {
+      to: c.companyMail,
+      subject: renderTemplate(this.request.subject, c.parameters),
+      body: renderTemplate(this.request.bodydraft, c.parameters),
+    };
+  }
+
+  statusOf(i: number): RowStatus | null {
+    return this.rows[i]?.status ?? null;
+  }
+
+  statusLabel(s: RowStatus | null): string {
+    switch (s) {
+      case 'sent':
+        return 'Gönderildi';
+      case 'error':
+        return 'Hata';
+      case 'skipped':
+        return 'Atlandı';
+      case 'pending':
+        return 'Bekliyor';
+      default:
+        return this.running ? 'Bekliyor' : '—';
+    }
+  }
+
+  jobLabel(s: JobState): string {
+    return {
+      RUNNING: 'Devam ediyor',
+      COMPLETED: 'Tamamlandı',
+      CANCELLED: 'İptal edildi',
+      FAILED: 'Başarısız',
+      INTERRUPTED: 'Yarıda kesildi',
+    }[s];
+  }
+
+  // ------------------------------------------------------------------ recipients
 
   addCompany() {
-    this.request.companyData.push({
-      id: this.nextCompanyId++,
-      companyMail: '',
-      parameters: { companyName: '', companyNumber: '' },
+    const parameters: Record<string, string> = {};
+    this.paramKeys.forEach((k) => (parameters[k] = ''));
+    this.request.companyData.push({ id: this.nextId++, companyMail: '', parameters });
+    this.search = '';
+  }
+
+  removeCompany(c: CompanyData) {
+    this.request.companyData = this.request.companyData.filter((x) => x !== c);
+  }
+
+  setParam(c: CompanyData, key: string, value: string) {
+    c.parameters[key] = value;
+  }
+
+  addColumn() {
+    const key = window.prompt('Yeni alan adı (örn. companyWebsite):')?.trim();
+    if (!key) return;
+    if (!/^[A-Za-z0-9_.-]+$/.test(key)) {
+      this.notify('warning', 'Alan adı yalnızca harf, rakam, _, - ve . içerebilir.');
+      return;
+    }
+    if (this.paramKeys.includes(key)) {
+      this.notify('warning', 'Bu alan zaten var.');
+      return;
+    }
+    this.request.companyData.forEach((c) => (c.parameters[key] = ''));
+  }
+
+  removeInvalid() {
+    const before = this.request.companyData.length;
+    this.request.companyData = this.request.companyData.filter((c) => /^\S+@\S+\.\S+$/.test(c.companyMail.trim()));
+    this.notify('info', `${before - this.request.companyData.length} geçersiz adres silindi.`);
+  }
+
+  removeDuplicates() {
+    const seen = new Set<string>();
+    const before = this.request.companyData.length;
+    this.request.companyData = this.request.companyData.filter((c) => {
+      const k = c.companyMail.trim().toLowerCase();
+      if (!k || seen.has(k)) return false;
+      seen.add(k);
+      return true;
     });
+    this.notify('info', `${before - this.request.companyData.length} tekrar eden adres silindi.`);
   }
 
-  removeCompany(i: number) {
-    this.request.companyData.splice(i, 1);
+  clearRecipients() {
+    if (!window.confirm('Tüm alıcılar silinsin mi?')) return;
+    this.request.companyData = [];
+    this.rows = {};
   }
 
-  addParameter(company: CompanyData) {
-    const key = window.prompt('Add new parameter key (e.g. companyName):');
-    if (!key) {
-      return;
-    }
-    if (company.parameters.hasOwnProperty(key)) {
-      window.alert('Parameter already exists.');
-      return;
-    }
-    company.parameters[key] = '';
-  }
-
-  removeParameter(company: CompanyData, key: string) {
-    delete company.parameters[key];
-  }
+  // ------------------------------------------------------------------ import / export
 
   onFileSelected(evt: Event) {
     const input = evt.target as HTMLInputElement;
-    if (input.files) {
-      this.files = Array.from(input.files);
-    }
+    if (input.files) this.files = [...this.files, ...Array.from(input.files)];
+    input.value = '';
   }
 
-  private buildExportObject() {
-    const { subject, bodydraft, companyData } = this.request;
-    return { subject, bodydraft, companyData };
-  }
-
-  trackByParamKey(_i: number, item: { key: string; value: any }) {
-    return item.key;
-  }
-
-  kvNoSort = () => 0;
-
-  exportJson() {
-    const safe = this.buildExportObject();
-    const pretty = JSON.stringify(safe, null, 2);
-    const blob = new Blob([pretty], { type: 'application/json;charset=utf-8' });
-    const ts = new Date().toISOString().replace(/[:T]/g, '-').slice(0, 19);
-    const filename = `multi-mail-sender-${ts}.json`;
-
-    const navAny: any = window.navigator as any;
-    if (navAny && navAny.msSaveOrOpenBlob) {
-      navAny.msSaveOrOpenBlob(blob, filename);
-      return;
-    }
-
-    const a: HTMLAnchorElement = document.createElement('a');
-    const url = (window.URL || (window as any).webkitURL).createObjectURL(blob);
-    a.href = url;
-    a.download = filename;
-    a.rel = 'noopener';
-    a.style.display = 'none';
-    document.body.appendChild(a);
-
-    const supportsDownload = typeof a.download !== 'undefined';
-
-    const revokeAndRemove = () => {
-      (window.URL || (window as any).webkitURL).revokeObjectURL(url);
-      if (a && a.parentNode) a.parentNode.removeChild(a);
-    };
-
-    if (supportsDownload) {
-      a.click();
-      setTimeout(revokeAndRemove, 1200);
-      return;
-    }
-
-    let win: Window | null = null;
-    try {
-      win = window.open(url, '_blank');
-    } catch {}
-    if (win) {
-      setTimeout(revokeAndRemove, 3000);
-      return;
-    }
-
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      const w = window.open('about:blank');
-      if (w && w.document) {
-        const safe = String(reader.result || '').replace(
-          /[&<>]/g,
-          (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[ch]!)
-        );
-        w.document.write(`<pre>${safe}</pre>`);
-      } else {
-        alert('Popup blocked. Please allow popups for this page.');
-      }
-    };
-    reader.readAsText(blob);
+  removeFile(f: File) {
+    this.files = this.files.filter((x) => x !== f);
   }
 
   onImportFileChange(evt: Event) {
     const input = evt.target as HTMLInputElement;
-    const file = (input.files && input.files[0]) || null;
+    const file = input.files?.[0];
     if (!file) return;
     const reader = new FileReader();
     reader.onload = () => {
       try {
-        const json = JSON.parse(String(reader.result || ''));
-        this.importJsonObject(json);
-      } catch (err) {
-        console.error(err);
-        window.alert('Failed to import JSON. Check file format.');
+        const text = String(reader.result || '');
+        if (file.name.toLowerCase().endsWith('.csv')) this.importCsv(text);
+        else this.importJson(JSON.parse(text));
+      } catch (err: any) {
+        this.notify('danger', 'İçe aktarma başarısız: ' + (err?.message || 'dosya biçimi hatalı'));
       } finally {
         input.value = '';
       }
@@ -189,164 +289,257 @@ export class MainComponent {
     reader.readAsText(file);
   }
 
-  importJsonObject(obj: any) {
-    if (!obj || typeof obj !== 'object') throw new Error('Invalid JSON.');
-    if (
-      !(
-        'subject' in obj &&
-        'bodydraft' in obj &&
-        Array.isArray(obj.companyData)
-      )
-    ) {
-      throw new Error(
-        'JSON must contain subject, bodydraft, and companyData[].'
-      );
-    }
-
-    if ('username' in obj) this.request.username = obj.username || '';
-    if ('password' in obj) this.request.password = obj.password || '';
-
-    this.request.subject = obj.subject || '';
-    this.request.bodydraft = obj.bodydraft || '';
-
-    const used: Record<number, true> = {};
-    let maxId = -1;
-    this.request.companyData = [];
-    for (const c of obj.companyData as any[]) {
-      let idNum = parseInt(String(c.id), 10);
-      if (!isFinite(idNum)) idNum = maxId + 1;
-      if (used[idNum]) idNum = maxId + 1;
-      used[idNum] = true;
-      if (idNum > maxId) maxId = idNum;
-
-      this.request.companyData.push({
-        id: idNum,
-        companyMail: c.companyMail || '',
-        parameters:
-          c.parameters && typeof c.parameters === 'object' ? c.parameters : {},
-      });
-    }
-    this.nextCompanyId = maxId + 1;
+  private importCsv(text: string) {
+    const list = csvToCompanies(parseCsv(text));
+    this.setCompanies(list);
+    this.notify('success', `${list.length} alıcı CSV'den yüklendi.`);
   }
 
-  clearDatas() {
-    const ok = window.confirm('Tüm verileri temizlemek istediğinize emin misiniz?');
-    if (!ok) {
-      return;
+  importJson(obj: any) {
+    if (!obj || typeof obj !== 'object' || !Array.isArray(obj.companyData)) {
+      throw new Error('JSON içinde companyData[] bulunmalı.');
     }
-    const keepUsername = this.request.username;
-    const keepPassword = this.request.password;
-    this.request.subject = '';
-    this.request.bodydraft = '';
-    this.request.companyData = [
-      { id: 0, companyMail: '', parameters: { companyName: '', companyNumber: '' } },
-    ];
-    this.nextCompanyId = 1;
-    this.files = [];
-    this.progress = [];
-    this.responseMessage = '';
-    this.isSuccess = 0;
-    this.etaMinSeconds = 0;
-    this.etaMaxSeconds = 0;
-    this.avgSendMs = 0;
-    this.avgCooldownMs = 0;
-    this.samples = 0;
-    this.cfgMinMs = 0;
-    this.cfgMaxMs = 0;
-    if (this.currentEventSource) {
-      this.currentEventSource.close();
-      this.currentEventSource = null;
-    }
-    this.request.username = keepUsername;
-    this.request.password = keepPassword;
+    if (typeof obj.subject === 'string') this.request.subject = obj.subject;
+    if (typeof obj.bodydraft === 'string') this.request.bodydraft = obj.bodydraft;
+    if (typeof obj.fromName === 'string') this.request.fromName = obj.fromName;
+    if (typeof obj.html === 'boolean') this.request.html = obj.html;
+    // credentials inside shared files are only used to prefill empty fields
+    if (!this.request.username && typeof obj.username === 'string') this.request.username = obj.username;
+    if (!this.request.password && typeof obj.password === 'string') this.request.password = obj.password;
+    this.setCompanies(obj.companyData);
+    this.notify('success', `${obj.companyData.length} alıcı yüklendi.`);
   }
+
+  private setCompanies(list: any[]) {
+    this.nextId = 0;
+    this.rows = {};
+    this.request.companyData = list.map((c) => ({
+      id: this.nextId++,
+      companyMail: String(c.companyMail ?? '').trim(),
+      parameters: Object.fromEntries(
+        Object.entries(c.parameters && typeof c.parameters === 'object' ? c.parameters : {}).map(([k, v]) => [
+          k,
+          String(v ?? ''),
+        ]),
+      ),
+    }));
+  }
+
+  exportJson() {
+    const { subject, bodydraft, fromName, html, companyData } = this.request;
+    const blob = new Blob([JSON.stringify({ subject, bodydraft, fromName, html, companyData }, null, 2)], {
+      type: 'application/json;charset=utf-8',
+    });
+    const stamp = new Date().toISOString().replace(/[:T]/g, '-').slice(0, 19);
+    this.download(blob, `multi-mail-sender-${stamp}.json`);
+  }
+
+  downloadReport(jobId: string) {
+    const a = document.createElement('a');
+    a.href = this.api.exportUrl(jobId);
+    a.download = '';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  private download(blob: Blob, filename: string) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  // ------------------------------------------------------------------ sending
 
   sendMails() {
-    if (this.currentEventSource) {
-      this.currentEventSource.close();
-      this.currentEventSource = null;
-    }
-    this.responseMessage = 'Sending mails...';
-    this.isSuccess = 0;
-    this.progress = [];
-    // ETA will be set on 'started' event using backend-configured cooldowns
-    const count = this.request.companyData.length;
-    this.etaMinSeconds = 0;
-    this.etaMaxSeconds = 0;
+    if (!this.canSend) return;
+    this.es?.close();
+    this.rows = {};
+    this.samples = 0;
+    this.avgSendMs = 0;
+    this.notice = null;
+    this.starting = true;
+    this.saveDraft();
 
-    this.mailService.startMailJob(this.request, this.files).subscribe({
+    const payload: RequestData = {
+      ...this.request,
+      companyData: this.request.companyData
+        .filter((c) => c.companyMail.trim())
+        .map((c, i) => ({ ...c, id: i, companyMail: c.companyMail.trim() })),
+    };
+    // rows are keyed by the index inside the sent list, so remember the mapping
+    this.sentOrder = this.request.companyData.filter((c) => c.companyMail.trim());
+
+    this.api.startMailJob(payload, this.files).subscribe({
       next: (res) => {
-        const jobId = String(res.data);
-        const es = this.mailService.openJobEventSource(jobId);
-        this.currentEventSource = es;
-
-        es.addEventListener('started', (evt: MessageEvent) => {
-          this.responseMessage = 'Job started...';
-          try {
-            const cfg = JSON.parse(evt.data || '{}');
-            const minMs = Number(cfg.minMs) || 0;
-            const maxMs = Number(cfg.maxMs) || 0;
-            const total = this.request.companyData.length;
-            this.cfgMinMs = minMs;
-            this.cfgMaxMs = maxMs;
-            this.etaMinSeconds = Math.round((total * minMs) / 1000);
-            this.etaMaxSeconds = Math.round((total * maxMs) / 1000);
-          } catch {}
-        });
-
-        es.addEventListener('progress', (evt: MessageEvent) => {
-          try {
-            const data = JSON.parse(evt.data);
-            this.progress = [
-              ...this.progress,
-              {
-                index: data.index,
-                companyMail: data.companyMail || data.email,
-                email: data.email,
-                status: data.status,
-                message: data.message,
-              },
-            ];
-            // update running averages for dynamic ETA
-            const sMs = Number(data.sendMs ?? data.durationMs) || 0;
-            const cMs = Number(data.cooldownMs ?? data.plannedCooldownMs) || 0;
-            this.samples += 1;
-            this.avgSendMs = this.avgSendMs + (sMs - this.avgSendMs) / this.samples;
-            this.avgCooldownMs = this.avgCooldownMs + (cMs - this.avgCooldownMs) / this.samples;
-            const remaining = Math.max(0, this.request.companyData.length - this.progress.length);
-            const minPerItem = this.avgSendMs + (this.cfgMinMs || 0);
-            const maxPerItem = this.avgSendMs + (this.cfgMaxMs || 0);
-            this.etaMinSeconds = Math.round((remaining * minPerItem) / 1000);
-            this.etaMaxSeconds = Math.round((remaining * maxPerItem) / 1000);
-          } catch {}
-        });
-
-        es.addEventListener('finished', () => {
-          this.responseMessage = 'Mails sent successfully';
-          this.isSuccess = 1;
-          es.close();
-          this.currentEventSource = null;
-        });
-
-        es.addEventListener('error', (evt: MessageEvent) => {
-          this.responseMessage = (evt && (evt as any).data) || 'An error occurred while sending emails.';
-          this.isSuccess = -1;
-          es.close();
-          this.currentEventSource = null;
-        });
+        this.starting = false;
+        this.jobId = String(res.data);
+        this.jobState = 'RUNNING';
+        this.follow(this.jobId);
       },
       error: (err) => {
-        this.responseMessage =
-          (err?.error && err.error.message) || 'Failed to start job.';
-        this.isSuccess = -1;
+        this.starting = false;
+        this.notify('danger', err?.error?.message ? this.describe(err.error) : 'Gönderim başlatılamadı.');
       },
+    });
+  }
+
+  private sentOrder: CompanyData[] = [];
+
+  private describe(body: { message?: string; data?: any }): string {
+    return body.data && typeof body.data === 'string' ? `${body.message}: ${body.data}` : body.message || 'Hata';
+  }
+
+  private follow(jobId: string) {
+    const es = this.api.openJobEventSource(jobId);
+    this.es = es;
+
+    es.addEventListener('started', (e) => {
+      try {
+        const cfg = JSON.parse((e as MessageEvent).data);
+        this.cfgMinMs = Number(cfg.minMs) || 0;
+        this.cfgMaxMs = Number(cfg.maxMs) || 0;
+      } catch {}
+    });
+
+    es.addEventListener('progress', (e) => {
+      try {
+        const d = JSON.parse((e as MessageEvent).data);
+        this.rows = { ...this.rows, [d.index]: d as ProgressRow };
+        if (d.sendMs) {
+          this.samples += 1;
+          this.avgSendMs += (Number(d.sendMs) - this.avgSendMs) / this.samples;
+        }
+      } catch {}
+    });
+
+    es.addEventListener('finished', (e) => {
+      es.close();
+      this.es = null;
+      let d: any = {};
+      try {
+        d = JSON.parse((e as MessageEvent).data);
+      } catch {}
+      this.jobState = (d.status as JobState) || 'COMPLETED';
+      const summary = `${d.sent ?? 0} gönderildi, ${d.failed ?? 0} hata, ${d.skipped ?? 0} atlandı.`;
+      if (this.jobState === 'COMPLETED') this.notify('success', 'Gönderim tamamlandı: ' + summary);
+      else if (this.jobState === 'CANCELLED') this.notify('warning', 'Gönderim iptal edildi: ' + summary);
+      else this.notify('danger', (d.error || 'Gönderim başarısız.') + ' ' + summary);
+      this.loadHistory();
+    });
+
+    // fires on connection problems; EventSource reconnects and the backend replays past events
+    es.onerror = () => {
+      if (es.readyState === EventSource.CLOSED && this.running) {
+        this.notify('warning', 'Sunucu bağlantısı koptu. Rapor "Geçmiş" bölümünden indirilebilir.');
+        this.jobState = null;
+        this.loadHistory();
+      }
+    };
+  }
+
+  cancel() {
+    if (!this.jobId) return;
+    this.api.cancelJob(this.jobId).subscribe({
+      next: () => this.notify('info', 'İptal isteği gönderildi, mevcut mail bittikten sonra durur.'),
+      error: () => this.notify('danger', 'İptal edilemedi.'),
+    });
+  }
+
+  /** Row status for the recipients table (rows are indexed by position in the sent list). */
+  rowFor(c: CompanyData): ProgressRow | undefined {
+    const idx = this.sentOrder.indexOf(c);
+    return idx >= 0 ? this.rows[idx] : undefined;
+  }
+
+  // ------------------------------------------------------------------ misc
+
+  clearAll() {
+    if (!window.confirm('Konu, mesaj ve tüm alıcılar temizlensin mi? (Hesap bilgileri kalır)')) return;
+    this.request = { ...this.emptyRequest(), username: this.request.username, password: this.request.password };
+    this.files = [];
+    this.rows = {};
+    this.jobId = null;
+    this.jobState = null;
+    this.notice = null;
+    this.es?.close();
+    this.es = null;
+  }
+
+  insertPlaceholder(key: string, area: HTMLTextAreaElement) {
+    const token = `{${key}}`;
+    const start = area.selectionStart ?? this.request.bodydraft.length;
+    const end = area.selectionEnd ?? start;
+    this.request.bodydraft = this.request.bodydraft.slice(0, start) + token + this.request.bodydraft.slice(end);
+    setTimeout(() => {
+      area.focus();
+      area.setSelectionRange(start + token.length, start + token.length);
     });
   }
 
   checkServer() {
-    this.mailService.checkServer().subscribe({
-      next: (res) => (this.serverStatus = (res as any).message),
-      error: () => (this.serverStatus = 'Server Down'),
+    this.api.checkServer().subscribe({
+      next: () => (this.serverUp = true),
+      error: () => (this.serverUp = false),
     });
   }
+
+  loadHistory() {
+    this.api.listJobs().subscribe({
+      next: (jobs) => (this.history = jobs.slice(0, 10)),
+      error: () => {},
+    });
+  }
+
+  notify(type: 'success' | 'danger' | 'info' | 'warning', text: string) {
+    this.notice = { type, text };
+  }
+
+  saveDraft() {
+    try {
+      const { subject, bodydraft, fromName, html, skipAlreadySent, username, companyData } = this.request;
+      localStorage.setItem(
+        DRAFT_KEY,
+        JSON.stringify({ subject, bodydraft, fromName, html, skipAlreadySent, username, companyData }),
+      );
+    } catch {}
+  }
+
+  private restoreDraft() {
+    try {
+      const raw = localStorage.getItem(DRAFT_KEY);
+      if (!raw) return;
+      const d = JSON.parse(raw);
+      this.request = { ...this.emptyRequest(), ...d, password: '' };
+      this.nextId = Math.max(-1, ...(d.companyData || []).map((c: CompanyData) => c.id)) + 1;
+    } catch {}
+  }
+
+  private draftTimer: ReturnType<typeof setTimeout> | null = null;
+
+  /** Debounced autosave of the form (password is never stored). */
+  onFormChange() {
+    if (this.draftTimer) clearTimeout(this.draftTimer);
+    this.draftTimer = setTimeout(() => this.saveDraft(), 600);
+  }
+
+  private emptyRequest(): RequestData {
+    return {
+      username: '',
+      password: '',
+      fromName: '',
+      subject: '',
+      bodydraft: '',
+      html: false,
+      skipAlreadySent: true,
+      companyData: [],
+    };
+  }
+
+  trackCompany = (_: number, item: { c: CompanyData }) => item.c;
 }

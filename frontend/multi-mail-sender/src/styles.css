@@ -1,11 +1,68 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
-body {
-  background:
-    linear-gradient(135deg, rgba(16, 110, 219, 0.2), rgba(80,227,194,0.2));
-  background-size: auto, cover;
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #e3e8f0;
+  --text: #1b2433;
+  --muted: #6b7a90;
+  --primary: #4f46e5;
+  --primary-600: #4338ca;
+  --primary-50: #eef2ff;
+  --green: #16a34a;
+  --green-50: #e8f7ee;
+  --red: #dc2626;
+  --red-50: #fdecec;
+  --amber: #b45309;
+  --amber-50: #fff6e0;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 16px rgba(16, 24, 40, 0.05);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1320;
+    --surface: #161d2e;
+    --surface-2: #1b2438;
+    --border: #28324a;
+    --text: #e6ebf5;
+    --muted: #93a1ba;
+    --primary: #818cf8;
+    --primary-600: #6366f1;
+    --primary-50: #1e2347;
+    --green: #4ade80;
+    --green-50: #12301f;
+    --red: #f87171;
+    --red-50: #3a1717;
+    --amber: #fbbf24;
+    --amber-50: #3a2d10;
+    --shadow: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  background: var(--primary-50);
+  color: var(--primary);
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
