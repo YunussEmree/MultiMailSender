@@ -147,7 +147,7 @@ Listeler `tools/refresh_data.py` ile bakım görür:
 python tools/refresh_data.py                 # sadece rapor (dosyaları değiştirmez)
 python tools/refresh_data.py --write         # temizle: tekrarları ve ölü domain'leri sil, biçimi düzelt
 python tools/refresh_data.py --write --harvest                 # Ankara: Hacettepe, OSTİM, Bilkent Cyberpark
-python tools/refresh_data.py --write --parks sivas,istanbul,antalya,kocaeli   # diğer teknokentler
+python tools/refresh_data.py --write --parks sivas,istanbul,antalya,kocaeli,izmir,manisa   # diğer teknokentler
 ```
 
 Araç; e-posta adresinin MX/DNS kaydını doğrular, tekrarları siler, telefonları `+90 312 000 00 00` biçimine getirir ve firmaların kendi sitelerinden `info@` / `hr@` benzeri genel adresleri bulur (kişi adlı adresleri almaz). Son çalıştırmanın ayrıntısı `internalData/REPORT.md` dosyasındadır.

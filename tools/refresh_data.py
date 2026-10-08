@@ -420,9 +420,40 @@ def harvest_antalya():
     return out
 
 
+def harvest_izmir():
+    """Teknopark Izmir lists name, website, e-mail and phone for every firm on one page."""
+    h = _utf("https://www.teknoparkizmir.com.tr/tr/firma-listesi/", 60)
+    out = []
+    for block in h.split('class="col-md-12 firmaListe holder"')[1:]:
+        head = re.match(r'[^>]*data-filter="([^"]*)"[^>]*data-name="([^"]*)"', block)
+        if not head:
+            continue
+        sector, name = unescape(head.group(1)), unescape(head.group(2)).strip()
+        text = unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", block)))
+        mails = emails_in(text)
+        site = re.search(r"((?:https?://)?(?:www\.)?[\w-]+(?:\.[\w-]+)+(?:/\S*)?)\s+[\w.+-]+@", text)
+        site = site.group(1) if site and "@" not in site.group(1) else ""
+        phone = re.search(r"(0?\s?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2})", text)
+        out.append({"name": name, "website": site, "mails": mails, "phone": phone.group(1) if phone else "", "category": sector})
+    return [r for r in out if is_it(r["name"], r["category"]) or re.search(r"yaz[ıi]l[ıi]m|bili[şs]im", r["category"], re.I)]
+
+
+def harvest_manisa():
+    h = _utf("https://manisateknokent.com.tr/firmalar", 60)
+    seen, out = set(), []
+    for name, cat in re.findall(r'<div title="([^"]+)"[^>]*>[^<]*</div><div title="([^"]+)"', h):
+        name = unescape(name).strip()
+        if name.lower() not in seen:
+            seen.add(name.lower())
+            out.append({"name": name, "website": "", "mails": [], "phone": "", "category": unescape(cat)})
+    return out
+
+
 PARKS = {
     "sivasITCompanies.json": [("Cumhuriyet Teknokent", harvest_sivas)],
     "istanbulITCompanies.json": [("Yildiz Teknopark", harvest_yildiz), ("ITU Ari Teknokent", harvest_ari)],
+    "izmirITCompanies.json": [("Teknopark Izmir", harvest_izmir)],
+    "manisaITCompanies.json": [("Manisa Teknokent", harvest_manisa)],
     "antalyaITCompanies.json": [("Antalya Teknokent", harvest_antalya)],
     "kocaeliITCompanies.json": [("Marmara Teknokent", harvest_marmara)],
 }
