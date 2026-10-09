@@ -1,0 +1,128 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@adbascientific.com",
+      "parameters": {
+        "companyName": "Adba Scientific",
+        "companyNumber": "",
+        "companyWebsite": "https://www.adbascientific.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@argesim.com.tr",
+      "parameters": {
+        "companyName": "ArGesim",
+        "companyNumber": "",
+        "companyWebsite": "https://www.argesim.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@bizmo.com.tr",
+      "parameters": {
+        "companyName": "Bizmo",
+        "companyNumber": "+90 532 716 46 00",
+        "companyWebsite": "https://www.bizmo.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "bilgi@cerbeta.com",
+      "parameters": {
+        "companyName": "CeRBETA Yazılım Bilişim, Danışmanlık",
+        "companyNumber": "",
+        "companyWebsite": "https://www.cerbeta.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@dmbautomation.com",
+      "parameters": {
+        "companyName": "DMB Automation",
+        "companyNumber": "",
+        "companyWebsite": "https://www.dmbautomation.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "iletisim@eceyazilim.com",
+      "parameters": {
+        "companyName": "Eceyazilim",
+        "companyNumber": "+90 364 333 01 33",
+        "companyWebsite": "https://www.eceyazilim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@biyoist.com",
+      "parameters": {
+        "companyName": "Biyoist",
+        "companyNumber": "",
+        "companyWebsite": "https://www.biyoist.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@gizpark.com",
+      "parameters": {
+        "companyName": "Gizpark Yazılım ve Bilgi Teknolojileri​",
+        "companyNumber": "",
+        "companyWebsite": "http://www.gizpark.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@intesasoft.com",
+      "parameters": {
+        "companyName": "Intesasoft",
+        "companyNumber": "+90 850 304 25 19",
+        "companyWebsite": "http://www.intesasoft.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "bilgi@lebisoft.com",
+      "parameters": {
+        "companyName": "Lebisoft Eticaret",
+        "companyNumber": "",
+        "companyWebsite": "https://www.lebisoft.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@mcsteknoloji.com",
+      "parameters": {
+        "companyName": "Mcsteknoloji",
+        "companyNumber": "",
+        "companyWebsite": "http://mcsteknoloji.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@yagmaksan.com",
+      "parameters": {
+        "companyName": "Yagmaksan",
+        "companyNumber": "",
+        "companyWebsite": "https://www.yagmaksan.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

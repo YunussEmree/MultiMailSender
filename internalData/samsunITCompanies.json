@@ -1,0 +1,288 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@veriweb.com.tr",
+      "parameters": {
+        "companyName": "Veriweb: Dijital Dönüşüm ve Yazılım Şirketi",
+        "companyNumber": "+90 850 255 77 55",
+        "companyWebsite": "https://veriweb.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@adapha.com",
+      "parameters": {
+        "companyName": "ADAPHA Yapay Zeka Ar-Ge ve Yazılım A.Ş.",
+        "companyNumber": "+90 542 846 12 32",
+        "companyWebsite": "https://adapha.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "contact@binbiriz.com",
+      "parameters": {
+        "companyName": "Binbiriz Araştırma Geliştirme Bilişim ve Ticaret Ltd. Şti.",
+        "companyNumber": "+90 216 414 10 01",
+        "companyWebsite": "https://binbiriz.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "hr@bordo.io",
+      "parameters": {
+        "companyName": "Bordo Bilişim Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://bordo.io",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "hello@bulut.net",
+      "parameters": {
+        "companyName": "Bulut Ar-ge Danışmanlık Bilişim Yazılım Reklam Organizasyon Sanayi Ve Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://bulut.net",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "iletisim@cybernova.com.tr",
+      "parameters": {
+        "companyName": "Cybernova Siber Güvenlik Ve Yazılım Teknolojileri Akademisi Tic. Ltd. Şti.",
+        "companyNumber": "+90 850 840 36 89",
+        "companyWebsite": "https://cybernova.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@etkabiyoteknoloji.com.tr",
+      "parameters": {
+        "companyName": "ETKA Biyoteknoloji ve Danışmanlık Ltd. Şti.",
+        "companyNumber": "+90 362 439 05 67",
+        "companyWebsite": "https://etkabiyoteknoloji.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@www.exploria.com.tr",
+      "parameters": {
+        "companyName": "Exploria İleri Teknolojiler Ve Bilimsel Materyaller Tasarım San. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://exploria.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@istmer.com",
+      "parameters": {
+        "companyName": "İstmer Veri Analizi Ar-ge Yazılım Ve Danışmanlık Şirketi",
+        "companyNumber": "+90 530 248 35 78",
+        "companyWebsite": "https://istmer.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "bilgi@lorenzo.com.tr",
+      "parameters": {
+        "companyName": "Lorenzo Yazılım Bilişim Hizmetleri Ve Danışmanlık Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://lorenzo.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@muterbilisim.com",
+      "parameters": {
+        "companyName": "Muter Bilişim Anonim Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://muterbilisim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@okulakademi.com",
+      "parameters": {
+        "companyName": "Okul Akademi Bilgi Teknolojileri Eğitim ve Yayıncılık Tic. San. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://okulakademi.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "info@prodev.com",
+      "parameters": {
+        "companyName": "Prodev Bilgi Sistemleri",
+        "companyNumber": "",
+        "companyWebsite": "https://prodev.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@sdatam.com",
+      "parameters": {
+        "companyName": "Sdatam Bilişim Tekn.ve Güvenliği Ltd. Şti",
+        "companyNumber": "+90 362 240 21 21",
+        "companyWebsite": "https://sdatam.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "info@sener.tech",
+      "parameters": {
+        "companyName": "Sener Engıneerıng Yazılım Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://sener.tech",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@solveit.com.tr",
+      "parameters": {
+        "companyName": "SolveIT Bilgi Teknolojileri Hizmetleri Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://solveit.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 16,
+      "companyMail": "bilgi@temelmat.com",
+      "parameters": {
+        "companyName": "Temelmat Eğitim Bilişim Arge Yazılım Ve Yayıncılık Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://temelmat.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 17,
+      "companyMail": "hello@vayes.com.tr",
+      "parameters": {
+        "companyName": "Vayes Web Yazılım Ticaret ve Bilişim Hizmetleri",
+        "companyNumber": "+90 212 855 94 04",
+        "companyWebsite": "https://vayes.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 18,
+      "companyMail": "info@weasist.com",
+      "parameters": {
+        "companyName": "WeAsist Online Fotoğrafçı Asistan Yazılımı",
+        "companyNumber": "",
+        "companyWebsite": "https://weasist.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 19,
+      "companyMail": "iletisim@yesilmavi.com",
+      "parameters": {
+        "companyName": "Yeşil Mavi Yazılım",
+        "companyNumber": "",
+        "companyWebsite": "https://yesilmavi.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 20,
+      "companyMail": "info@artipartners.com",
+      "parameters": {
+        "companyName": "Artı Partners Yazılım ve Danışmanlık Ticaret A.Ş.",
+        "companyNumber": "+90 533 765 09 18",
+        "companyWebsite": "https://artipartners.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 21,
+      "companyMail": "contact@bold.com",
+      "parameters": {
+        "companyName": "Bold Mobilite Teknoloji Sanayi ve Ticaret Limited Şirketi",
+        "companyNumber": "+17877053101",
+        "companyWebsite": "https://bold.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 22,
+      "companyMail": "info@bytespark.com",
+      "parameters": {
+        "companyName": "Byte Spark Yazılım Robotik Ve Havacılık A.ş.",
+        "companyNumber": "+91 7600296022",
+        "companyWebsite": "https://bytespark.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 23,
+      "companyMail": "info@cihangir.com.tr",
+      "parameters": {
+        "companyName": "Cihangir İnel INVOSAN YAZILIM TEKNOLOJİLERİ ANONİM ŞİRKETİ",
+        "companyNumber": "",
+        "companyWebsite": "https://cihangir.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 24,
+      "companyMail": "info@conforcus.com",
+      "parameters": {
+        "companyName": "Conforcus Bilişim Danışmanlık A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://conforcus.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 25,
+      "companyMail": "info@helimore.com",
+      "parameters": {
+        "companyName": "Helimore Havacılık Teknolojileri İmalat Sanayi Ticaret Anonim Şirketi",
+        "companyNumber": "+90 850 304 02 40",
+        "companyWebsite": "https://helimore.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 26,
+      "companyMail": "info@northbiotechnology.com",
+      "parameters": {
+        "companyName": "North Bıotechnology",
+        "companyNumber": "+90 554 551 51 31",
+        "companyWebsite": "https://northbiotechnology.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 27,
+      "companyMail": "info@smtech.com.tr",
+      "parameters": {
+        "companyName": "Smtech Arge Ve Danısmanlık Anonim Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://smtech.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

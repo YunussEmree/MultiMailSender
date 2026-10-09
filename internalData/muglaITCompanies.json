@@ -1,0 +1,48 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@arniva.com",
+      "parameters": {
+        "companyName": "Arniva Yazılım",
+        "companyNumber": "",
+        "companyWebsite": "https://arniva.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@irotech.com.tr",
+      "parameters": {
+        "companyName": "İrotech",
+        "companyNumber": "+90 507 509 48 48",
+        "companyWebsite": "https://irotech.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@logicute.com",
+      "parameters": {
+        "companyName": "Logicute Yazılım",
+        "companyNumber": "",
+        "companyWebsite": "https://logicute.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "hello@mersolution.com",
+      "parameters": {
+        "companyName": "Mersolution Technology",
+        "companyNumber": "+90 542 149 48 59",
+        "companyWebsite": "https://mersolution.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@endustriyel.com",
+      "parameters": {
+        "companyName": "Endüstriyel Yazılım Teknolojileri",
+        "companyNumber": "",
+        "companyWebsite": "https://endustriyel.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@arsutech.com.tr",
+      "parameters": {
+        "companyName": "ArsuTech Yazılım ve Bilgi Teknolojileri Sanayi ve Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://arsutech.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@digishifter.com",
+      "parameters": {
+        "companyName": "Digishifter Yazılım Hizmetleri Ticaret Limited Şirketi",
+        "companyNumber": "+90 539 570 20 20",
+        "companyWebsite": "https://digishifter.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@gemforce.com",
+      "parameters": {
+        "companyName": "Gemforce Teknoloji",
+        "companyNumber": "",
+        "companyWebsite": "https://gemforce.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@ithinka.com",
+      "parameters": {
+        "companyName": "Ithinka Bilişim Yazılım Danışmanlık Hizmetleri A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://ithinka.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@medorsbilisim.com",
+      "parameters": {
+        "companyName": "Medors Bilişim Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://medorsbilisim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@proje724.com",
+      "parameters": {
+        "companyName": "Proje 724 Bilişim Teknolojileri Aş",
+        "companyNumber": "+90 850 480 47 24",
+        "companyWebsite": "https://proje724.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

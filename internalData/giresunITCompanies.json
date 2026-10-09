@@ -1,0 +1,88 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@siteyvm.com",
+      "parameters": {
+        "companyName": "Sitey Vm Teknoloji Sanayi Ve Ticaret Limited Şirketi",
+        "companyNumber": "+90 530 857 81 39",
+        "companyWebsite": "https://siteyvm.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@rzdronesolutions.com",
+      "parameters": {
+        "companyName": "Rzdrone Solutions Teknoloji Sanayi Ve Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://rzdronesolutions.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@asyatrafo.com",
+      "parameters": {
+        "companyName": "Asya Trafo Otomasyon Elektrik Makineleri Sanayi Ve Ticareti Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://asyatrafo.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "contact@innofert.com",
+      "parameters": {
+        "companyName": "Innofert Yazılım Mühendislik Ve İthalat İhracat Sanayi Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://innofert.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@datagiz.com",
+      "parameters": {
+        "companyName": "Datagiz Veri Teknolojileri Ticaret Limited Şirketi",
+        "companyNumber": "+90 850 811 81 36",
+        "companyWebsite": "https://datagiz.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@invekor.com.tr",
+      "parameters": {
+        "companyName": "İnvekor Bilgi Teknolojileri Ve Danışmanlık Hizmetleri Limited Şirketi",
+        "companyNumber": "+90 212 400 06 90",
+        "companyWebsite": "https://invekor.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@minimalim.com.tr",
+      "parameters": {
+        "companyName": "Minimalim Yazılım Hizmetleri",
+        "companyNumber": "+90 538 844 81 19",
+        "companyWebsite": "https://minimalim.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@neuroseedu.com",
+      "parameters": {
+        "companyName": "Neuroseedu Eğitim Teknoloji Ve Arge Limited Sirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://neuroseedu.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

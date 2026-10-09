@@ -1,0 +1,28 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@ekosistem.com.tr",
+      "parameters": {
+        "companyName": "Ekosistem",
+        "companyNumber": "",
+        "companyWebsite": "https://ekosistem.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@divetech.com",
+      "parameters": {
+        "companyName": "DiveTech",
+        "companyNumber": "1(345) 925-1252",
+        "companyWebsite": "https://divetech.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

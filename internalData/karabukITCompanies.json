@@ -1,0 +1,168 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@sntventure.com.tr",
+      "parameters": {
+        "companyName": "Snt Venture Yazılım Ve Teknoloji A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://www.sntventure.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "bilgi@aktip.com.tr",
+      "parameters": {
+        "companyName": "AKTIP Bartın Teknoloji Geliştirme ve Danışmanlık A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://aktip.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@btarge.com",
+      "parameters": {
+        "companyName": "BTARGE Teknoloji A.Ş.",
+        "companyNumber": "+90 216 470 08 88",
+        "companyWebsite": "https://btarge.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "contact@enoca.com",
+      "parameters": {
+        "companyName": "ENOCA Bilgi Teknoloji ve Danışmanlık Limited Şirketi",
+        "companyNumber": "+90 850 221 73 54",
+        "companyWebsite": "https://enoca.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@hubox.com",
+      "parameters": {
+        "companyName": "HUBOX DİJİTAL Hizmetler ve Eğitim Ticaret Ltd. Şti.",
+        "companyNumber": "+525585965748",
+        "companyWebsite": "https://hubox.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@icterra.com",
+      "parameters": {
+        "companyName": "ICTERRA Bilgi ve İletişim Teknolojileri Sanayi ve Ticaret A.Ş.",
+        "companyNumber": "+90 312 292 50 00",
+        "companyWebsite": "https://icterra.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@infomed.com.tr",
+      "parameters": {
+        "companyName": "İnfomed Yazılım Bilgisayar Medikal İnş. San. ve Tic. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://infomed.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@kavi.com.tr",
+      "parameters": {
+        "companyName": "KAVİ REDÜKTÖR ve Güç Aktarma Sistemleri Sanayi Ticaret A. Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://kavi.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@payesteknoloji.com",
+      "parameters": {
+        "companyName": "PAYES Teknoloji Bilişim A.Ş.",
+        "companyNumber": "+90 850 308 79 79",
+        "companyWebsite": "https://payesteknoloji.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "info@alfatech.com.tr",
+      "parameters": {
+        "companyName": "ALFATECH Elektronik Sanayi ve Ticaret Ltd. Şti.",
+        "companyNumber": "+90 850 888 50 28",
+        "companyWebsite": "https://alfatech.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@bytethon.com",
+      "parameters": {
+        "companyName": "BYTETHON Bilişim ve Teknoloji Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://bytethon.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@gelecek.com",
+      "parameters": {
+        "companyName": "GELECEK Mobil Yazılım Ticaret A.Ş.",
+        "companyNumber": "+90 212 322 80 00",
+        "companyWebsite": "https://gelecek.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "info@novahun.com",
+      "parameters": {
+        "companyName": "NOVAHUN Teknoloji ve Danışmanlık",
+        "companyNumber": "+90 312 000 00 00",
+        "companyWebsite": "https://novahun.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@poltemakademi.com",
+      "parameters": {
+        "companyName": "POLTEM AKADEMİ Araştırma Teknoloji Sanayi ve Ticaret Ltd. Şti.",
+        "companyNumber": "+90 505 770 30 81",
+        "companyWebsite": "https://poltemakademi.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "info@technatolia.com",
+      "parameters": {
+        "companyName": "TECHNATOLIA Siber Güvenlik ve Yazılım A.Ş.",
+        "companyNumber": "+90 850 532 46 89",
+        "companyWebsite": "https://technatolia.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@woxfy.com",
+      "parameters": {
+        "companyName": "WOXFY Teknoloji A.Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://woxfy.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

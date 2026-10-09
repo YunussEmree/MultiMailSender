@@ -1,0 +1,408 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@scimind.org",
+      "parameters": {
+        "companyName": "Scımınd Teknoloji Yazılım Eğitim Ve Danışmanlık Anonim Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://scimind.org",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@harezmi.com.tr",
+      "parameters": {
+        "companyName": "Harezmı Arge Inovasyon Ve Bılgı Teknolojılerı Lımıted Sırketı",
+        "companyNumber": "",
+        "companyWebsite": "https://harezmi.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "hello@abis.com",
+      "parameters": {
+        "companyName": "Abis Yazılım Teknolojileri Ltd.şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://abis.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@dunyatek.com",
+      "parameters": {
+        "companyName": "Dünyatek Bilişim Danışmanlık Sanayi Ve Ticaret Ltd.şti.",
+        "companyNumber": "+90 342 361 01 18",
+        "companyWebsite": "https://dunyatek.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@erisim.com.tr",
+      "parameters": {
+        "companyName": "Erişim Otomasyon Yazılım Danışmanlık San. Ve Tic. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://erisim.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@bizyaz.com",
+      "parameters": {
+        "companyName": "Bizyaz Bilişim Ve Teknoloji Ltd.şti",
+        "companyNumber": "",
+        "companyWebsite": "https://bizyaz.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@regortech.com",
+      "parameters": {
+        "companyName": "Regor Teknoloji Ve Mühendislik Aş",
+        "companyNumber": "",
+        "companyWebsite": "https://regortech.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@artf4.com",
+      "parameters": {
+        "companyName": "Artf4 Teknoloji Tasarım Mühendislik Ve Danışmanlık Ltd.şti.",
+        "companyNumber": "+90 850 346 84 60",
+        "companyWebsite": "https://artf4.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "hello@feelcrafters.com",
+      "parameters": {
+        "companyName": "Feelcrafters Oyun Yazılım Ltd.şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://feelcrafters.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "info@newety.com",
+      "parameters": {
+        "companyName": "Newety Teknolojı Ve Yazılım Lımıted Sırketı",
+        "companyNumber": "",
+        "companyWebsite": "https://newety.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@deepolea.com",
+      "parameters": {
+        "companyName": "Deepolea Yazılım Ve Teknolojı Lımıted Sırketı",
+        "companyNumber": "",
+        "companyWebsite": "https://deepolea.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@monibilisim.com",
+      "parameters": {
+        "companyName": "Moni Bilişim Çözümleri A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://monibilisim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "info@smslabs.com",
+      "parameters": {
+        "companyName": "Smslabs  Dijital Dönüşüm Yazılım Ve Danışmanlık Ltd.şti.",
+        "companyNumber": "+90 508 347 52 88",
+        "companyWebsite": "https://smslabs.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "hello@618media.com",
+      "parameters": {
+        "companyName": "618medıa Dıjıtal Hızmetler Lımıted Sırketı",
+        "companyNumber": "",
+        "companyWebsite": "https://618media.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "contact@sanshine.com.tr",
+      "parameters": {
+        "companyName": "Sanshıne Digital Çözümler A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://sanshine.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@adim.com.tr",
+      "parameters": {
+        "companyName": "Adım Yazılım Bılısım Destek Hızmetlerı San.tıc.ltd.stı",
+        "companyNumber": "+90 216 634 36 38",
+        "companyWebsite": "https://adim.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 16,
+      "companyMail": "info@veganet.com.tr",
+      "parameters": {
+        "companyName": "Veganet Teknolojileri Ve Hizmetleri Ltd.şti.",
+        "companyNumber": "+90 850 885 26 27",
+        "companyWebsite": "https://veganet.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 17,
+      "companyMail": "info@truncgil.com",
+      "parameters": {
+        "companyName": "Trunçgıl Teknoloji Sanayi Ve Tıcaret Limited Şirketi",
+        "companyNumber": "+90 506 129 51 15",
+        "companyWebsite": "https://truncgil.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 18,
+      "companyMail": "info@cloudnesil.com",
+      "parameters": {
+        "companyName": "Cloudnesil Yazılım Sanayi Ve Ticaret Limited Şirket",
+        "companyNumber": "",
+        "companyWebsite": "https://cloudnesil.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 19,
+      "companyMail": "info@belsoft.com.tr",
+      "parameters": {
+        "companyName": "Belsoft Bilişim Sistemleri San.tic. Ltd. Şti.",
+        "companyNumber": "+90 342 360 85 00",
+        "companyWebsite": "https://belsoft.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 20,
+      "companyMail": "hello@mehmet.io",
+      "parameters": {
+        "companyName": "Mehmet Halil Doru/DRGEO TEKNOLOJİ",
+        "companyNumber": "",
+        "companyWebsite": "https://mehmet.io",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 21,
+      "companyMail": "info@karbonveri.com",
+      "parameters": {
+        "companyName": "Karbon Verı Teknolojı Tıcaret Anonım Sırketı",
+        "companyNumber": "",
+        "companyWebsite": "https://karbonveri.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 22,
+      "companyMail": "info@smartneckie.com",
+      "parameters": {
+        "companyName": "Smartneckıe Elektronık Yazılım Hayvan Medıkal Ve Organızasyon Sanayı Tıcaret Lımıted Sırketı",
+        "companyNumber": "+90 540 767 86 25",
+        "companyWebsite": "https://smartneckie.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 23,
+      "companyMail": "info@robobax.com",
+      "parameters": {
+        "companyName": "Robobax Teknoloji A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://robobax.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 24,
+      "companyMail": "info@cerilas.com",
+      "parameters": {
+        "companyName": "Cerilas Yüksek Teknoloji Sanayi Ve Ticaret Anonim Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://cerilas.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 25,
+      "companyMail": "info@pikselanalitik.com",
+      "parameters": {
+        "companyName": "Pıksel Analıtık Bılısım Teknolojılerı Lımıted Sırketı",
+        "companyNumber": "+90 530 142 75 27",
+        "companyWebsite": "https://pikselanalitik.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 26,
+      "companyMail": "info@kodlio.com.tr",
+      "parameters": {
+        "companyName": "Kodlio Yazılım Sanayi Ve Ticaret Anonim Şirketi",
+        "companyNumber": "+90 342 505 99 50",
+        "companyWebsite": "https://kodlio.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 27,
+      "companyMail": "info@bilmos.com.tr",
+      "parameters": {
+        "companyName": "Bılmos Bılısım Bılgısayar Yazılım Otomasyon Sıst.tıc.ltd.stı",
+        "companyNumber": "+90 216 123 45 67",
+        "companyWebsite": "https://bilmos.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 28,
+      "companyMail": "info@tasimax.com",
+      "parameters": {
+        "companyName": "Taşımax Teknoloji Hiz.san.tic.ltd.şti",
+        "companyNumber": "",
+        "companyWebsite": "https://tasimax.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 29,
+      "companyMail": "info@noisoft.com.tr",
+      "parameters": {
+        "companyName": "Noisoft Yazılım Ltd. Şti.",
+        "companyNumber": "+90 554 142 50 22",
+        "companyWebsite": "https://noisoft.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 30,
+      "companyMail": "bilgi@database.com.tr",
+      "parameters": {
+        "companyName": "Database Yazılım Eğtm.danş. Ltd.şti.",
+        "companyNumber": "+90 312 425 02 04",
+        "companyWebsite": "https://database.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 31,
+      "companyMail": "info@alacamaker.com",
+      "parameters": {
+        "companyName": "Alacamaker Yazılım Ar-ge San. Ve Tic. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://alacamaker.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 32,
+      "companyMail": "info@anahtarteknoloji.com.tr",
+      "parameters": {
+        "companyName": "Anahtar Teknoloji Tasarım Danışmanlık  San.ve  Tic. Ltd. Şti.",
+        "companyNumber": "+90 342 317 25 31",
+        "companyWebsite": "https://anahtarteknoloji.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 33,
+      "companyMail": "info@anatolia.com",
+      "parameters": {
+        "companyName": "Anatolia Yazılım Otomasyon Bilişim Teknolojileri San. Ve Tic. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://anatolia.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 34,
+      "companyMail": "iletisim@akrep.com",
+      "parameters": {
+        "companyName": "Akrep Bilişim ve Bilgi Teknolojileri A. Ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://akrep.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 35,
+      "companyMail": "bilgi@ervateknoloji.com",
+      "parameters": {
+        "companyName": "Erva Teknoloji Mühendislik Arge Tasarım Danışmanlık Sanayi Ve Ticaret Ltd. Şti",
+        "companyNumber": "",
+        "companyWebsite": "https://ervateknoloji.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 36,
+      "companyMail": "bilgi@projesoft.com",
+      "parameters": {
+        "companyName": "Projesoft Yazılım A.ş.",
+        "companyNumber": "+90 212 706 02 36",
+        "companyWebsite": "https://projesoft.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 37,
+      "companyMail": "info@limitlio.com",
+      "parameters": {
+        "companyName": "Limitlio Finansal Teknoloji A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://limitlio.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 38,
+      "companyMail": "info@vidco.com.tr",
+      "parameters": {
+        "companyName": "Vidco  Yazılım Araştırma Geliştirme Tic.a.ş.",
+        "companyNumber": "+90 216 345 67 45",
+        "companyWebsite": "https://vidco.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 39,
+      "companyMail": "info@ninova.com",
+      "parameters": {
+        "companyName": "Ninova Nöroteknoloji Araştırma Geliştirme Sanayi Ve Ticaret Limited Şirketi",
+        "companyNumber": "+90 212 347 58 58",
+        "companyWebsite": "https://ninova.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

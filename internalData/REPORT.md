@@ -1,21 +1,30 @@
-# Data refresh report (2026-10-08)
+# Data refresh report (2026-10-09)
 
-## izmirITCompanies.json
+## batmanITCompanies.json
 
-16 existing entries -> 102 kept, 4 removed.
+0 existing entries -> 0 kept, 0 removed.
 
-| Address | Company | Reason |
-|---|---|---|
-| info@adesso.com.tr | Adesso Turkey Bilgi Teknolojileri Ltd. Şti. | duplicate in file |
-| info@bg.com.tr | Bilgi Grubu Yazılım Araştırma Eğitim ve Danışmanlık Ltd. Şti. | duplicate in file |
-| info@odine.com | OdineLabs Yazılım ve Bilişim Teknolojileri Sanayi ve Ticaret A.Ş. | duplicate in file |
-| info@pulsefin.tech | Pulse Finansal Teknolojiler ve Danışmanlık A.Ş. | duplicate in file |
+## denizliITCompanies.json
 
-## manisaITCompanies.json
+0 existing entries -> 2 kept, 0 removed.
 
-16 existing entries -> 36 kept, 1 removed.
+## diyarbakirITCompanies.json
+
+0 existing entries -> 9 kept, 1 removed.
 
 | Address | Company | Reason |
 |---|---|---|
-| info@inovenus.com | Inovenus Yazılım Teknoloji Limited Şirketi | duplicate in file |
+| info@minartek.com.tr | Minartek Mimarlık, Teknoloji, Arge, Danışmanlık, Turizm, Sanayi Ve Ticaret Ltd.şti. | duplicate in file |
+
+## kutahyaITCompanies.json
+
+0 existing entries -> 1 kept, 0 removed.
+
+## tekirdagITCompanies.json
+
+0 existing entries -> 20 kept, 0 removed.
+
+## yozgatITCompanies.json
+
+0 existing entries -> 0 kept, 0 removed.
 

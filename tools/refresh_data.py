@@ -262,7 +262,7 @@ def enrich_from_site(site):
 
 def clean_title(t, domain):
     t = re.split(r"\s[|–—-]\s", t)[0].strip()
-    generic = re.search(r"ana ?sayfa|home|welcome|hoş ?geldiniz|index|^untitled", t, re.I)
+    generic = re.search(r"ana ?sayfa|iletişim|contact|home|welcome|hoş ?geldiniz|index|^untitled", t, re.I)
     return t if 3 <= len(t) <= 40 and not generic else domain.split(".")[0].capitalize()
 
 
@@ -341,6 +341,10 @@ def site_candidates(name):
 def guess_site(name):
     """Finds the company's own website by trying plausible domains; accepts one whose page mentions the brand."""
     cands, brand = site_candidates(name)
+    generic_folded = {fold(w) for w in GENERIC_WORDS} | {"sanayi", "lisans", "dijital", "yazilim", "bilisim", "teknoloji", "tegnoloji", "bilgi",
+                                                        "sistem", "elektronik", "mühendislik", "muhendislik", "danismanlik", "ticaret", "ar", "ge"}
+    if len(brand) < 4 or brand in generic_folded:
+        return ""
     for dom in cands:
         if domain_status(dom) != "ok":
             continue
@@ -449,6 +453,78 @@ def harvest_manisa():
     return out
 
 
+# ---------------------------------------------------------------- generic technopark crawler
+SOCIAL_RE = re.compile(r"facebook|instagram|linkedin|twitter|x\.com|youtube|google|gstatic|cloudflare|wa\.me|whatsapp|apple\.com|"
+                       r"bootstrap|jquery|fontawesome|w3\.org|schema\.org|gov\.tr|edu\.tr|tubitak|sanayi\.gov|argeportal|"
+                       r"portal\.|webmail|mailto:|tel:|javascript:|wordpress|elementor|wp\.org|yandex|bing\.com|"
+                       r"vimeo|issuu|flickr|pinterest|tiktok|telegram|t\.me|medium\.com|github", re.I)
+LISTING_RE = re.compile(r"firma|compan|rehber|tenant|katilimci|katılımcı|yerleşik|yerlesik|member|ekosistem", re.I)
+COMPANY_WORDS = re.compile(r"a\.\s?ş|ltd|şti|anonim|limited|yazılım|bilişim|teknoloji|software|tech|sistem|\bar-?ge\b", re.I)
+
+
+def _abs(base, href):
+    from urllib.parse import urljoin
+    return urljoin(base, href.strip())
+
+
+def harvest_generic(base):
+    """Best-effort crawl of a technopark site: follows 'firmalar'-like pages (and pagination) and collects
+    outbound company links and company-looking names."""
+    from urllib.parse import urlparse
+    host = registered_domain(base)
+    home = http_get(base, 20)
+    if not home:
+        return []
+    links = [_abs(base, l) for l in re.findall(r'href=["\']([^"\'#]+)["\']', home)]
+    pages = [base]
+    for l in links:
+        if registered_domain(l) == host and LISTING_RE.search(urlparse(l).path + "?" + urlparse(l).query) and l not in pages:
+            pages.append(l)
+    pages = pages[:8]
+    queue, seen, out, names = list(pages), set(), {}, {}
+    while queue and len(seen) < 40:
+        url = queue.pop(0)
+        if url in seen:
+            continue
+        seen.add(url)
+        h = http_get(url, 20)
+        if not h:
+            continue
+        for m in re.finditer(r'<a\b[^>]*href=["\'](https?://[^"\']+)["\'][^>]*>(.*?)</a>', h, re.S | re.I):
+            href, inner = m.group(1).split("#")[0], m.group(2)
+            if registered_domain(href) == host or SOCIAL_RE.search(href):
+                continue
+            nm = re.search(r'(?:alt|title)=["\']([^"\']{3,90})["\']', m.group(0)) or None
+            label = unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", inner))).strip()
+            name = (label if 3 <= len(label) <= 90 else (unescape(nm.group(1)) if nm else ""))
+            rd = registered_domain(href)
+            if rd not in out:
+                out[rd] = {"name": name, "website": re.match(r"https?://[^/]+", href).group(0), "mails": [], "phone": "", "category": ""}
+        for nm in re.findall(r'(?:alt|title)=["\']([^"\']{6,100})["\']', h):
+            nm = unescape(nm).strip()
+            if COMPANY_WORDS.search(nm) and not re.search(r"teknokent|teknopark|logo|slider|banner", nm, re.I):
+                names.setdefault(nm.lower(), nm)
+        # pagination
+        for l in re.findall(r'href=["\']([^"\']*(?:page=\d+|/page/\d+|sayfa=\d+|/sayfa/\d+|p=\d+)[^"\']*)["\']', h):
+            full = _abs(url, unescape(l))
+            if registered_domain(full) == host and full not in seen and len(queue) < 40:
+                queue.append(full)
+    # keep only entries that look like tenant companies: legal-form / IT words in the name, or a bare domain used as the label
+    legal = re.compile(r"\ba\.\s?ş|\ba\s?ş\b|\bltd|\bşti|\bsti\b|anonim|limited|san\.?\s?(?:ve|&)\s?tic", re.I)
+    domain_label = re.compile(r"^(?:https?://)?(?:www\.)?[\w-]+(?:\.[\w-]+)+/?$", re.I)
+    junk = re.compile(r"daha fazla|detay|web sitesi|başvur|kariyer|haber|duyuru|portal|ofis|ticaret odas|belediye|üniversite|birliği|bakanl|akademi|transfer|girişim", re.I)
+    result = []
+    for r in out.values():
+        n = r["name"].strip()
+        if domain_label.match(n) or (legal.search(n) and not junk.search(n)):
+            result.append(r)
+    have = {fold(r["name"]) for r in result if r["name"]}
+    for nm in names.values():
+        if fold(nm) not in have:
+            result.append({"name": nm, "website": "", "mails": [], "phone": "", "category": ""})
+    return result
+
+
 PARKS = {
     "sivasITCompanies.json": [("Cumhuriyet Teknokent", harvest_sivas)],
     "istanbulITCompanies.json": [("Yildiz Teknopark", harvest_yildiz), ("ITU Ari Teknokent", harvest_ari)],
@@ -469,6 +545,8 @@ def candidates_to_entries(raw):
             site = guess_site(name)
         if site:
             m2, p2, t2 = enrich_from_site(site)
+            if re.match(r"^(?:https?://)?(?:www\.)?[\w-]+(?:\.[\w-]+)+/?$", name or "", re.I):
+                name = ""  # a bare domain is not a company name; use the site title instead
             mail = best_role_mail(r["mails"] + ([m2] if m2 else []), site) if r["mails"] or m2 else ""
             phone = phone or p2
             name = name or clean_title(t2, registered_domain(site))
@@ -496,6 +574,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--harvest", action="store_true", help="Ankara sources (Hacettepe, OSTIM, Cyberpark)")
+    ap.add_argument("--generic", help="comma separated il=url pairs of technopark sites to crawl generically, e.g. konya=https://www.konyateknokent.com.tr")
     ap.add_argument("--parks", help="comma separated city file prefixes to harvest, e.g. sivas,istanbul,kocaeli")
     args = ap.parse_args()
 
@@ -525,6 +604,24 @@ def main():
             got = candidates_to_entries(raw)
             print(f"{label}: {len(raw)} listed, {len(got)} with a usable mailbox", flush=True)
             extra_by_file[fname] += got
+
+    for pair in (args.generic or "").split(","):
+        if "=" not in pair:
+            continue
+        il, url = pair.split("=", 1)
+        fname = f"{il}ITCompanies.json"
+        path = os.path.join(ROOT, fname)
+        if not os.path.exists(path):
+            with open(os.path.join(ROOT, "sivasITCompanies.json"), encoding="utf-8") as f:
+                tpl = json.load(f)
+            tpl["companyData"] = []
+            with open(path, "w", encoding="utf-8", newline="\n") as f:
+                json.dump(tpl, f, ensure_ascii=False, indent=2)
+        raw = harvest_generic(url)
+        got = candidates_to_entries(raw)
+        print(f"{il}: {len(raw)} listed, {len(got)} with a usable mailbox", flush=True)
+        extra_by_file.setdefault(fname, []).extend(got)
+        args.parks = (args.parks + "," if args.parks else "") + il
 
     report = [f"# Data refresh report ({TODAY})\n"]
     for path in sorted(glob.glob(os.path.join(ROOT, "*ITCompanies.json"))):

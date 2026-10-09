@@ -1,0 +1,308 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@ademeregitim.com",
+      "parameters": {
+        "companyName": "Ademer Eğitim Kurumları",
+        "companyNumber": "+90 312 231 11 84",
+        "companyWebsite": "http://ademeregitim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@aesenergy.com.tr",
+      "parameters": {
+        "companyName": "AES Akıllı Enerji Sistemleri",
+        "companyNumber": "",
+        "companyWebsite": "http://aesenergy.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "contact@angoranetworks.com",
+      "parameters": {
+        "companyName": "Angoranetworks",
+        "companyNumber": "+90 312 241 77 47",
+        "companyWebsite": "http://angoranetworks.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@cosmedcon.com",
+      "parameters": {
+        "companyName": "Cosmedcon",
+        "companyNumber": "",
+        "companyWebsite": "http://www.cosmedcon.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@dataeva.com",
+      "parameters": {
+        "companyName": "Dataeva",
+        "companyNumber": "+90 212 939 75 24",
+        "companyWebsite": "http://dataeva.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@deda.com.tr",
+      "parameters": {
+        "companyName": "Deda",
+        "companyNumber": "",
+        "companyWebsite": "http://deda.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@dekatechs.com",
+      "parameters": {
+        "companyName": "Dekatechs",
+        "companyNumber": "+90 216 606 69 57",
+        "companyWebsite": "http://dekatechs.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@ebftechnology.com",
+      "parameters": {
+        "companyName": "Ebftechnology",
+        "companyNumber": "",
+        "companyWebsite": "http://ebftechnology.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@ege-fe.com",
+      "parameters": {
+        "companyName": "Egefe Sağlık Bilişim A.Ş.",
+        "companyNumber": "+90 312 482 54 51",
+        "companyWebsite": "http://ege-fe.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "bilgi@ekoruma.com.tr",
+      "parameters": {
+        "companyName": "Ekoruma",
+        "companyNumber": "+90 212 909 52 78",
+        "companyWebsite": "http://www.ekoruma.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@emniyetsanayi.com.tr",
+      "parameters": {
+        "companyName": "Emniyetsanayi",
+        "companyNumber": "",
+        "companyWebsite": "http://emniyetsanayi.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@enerpower.com.tr",
+      "parameters": {
+        "companyName": "Renewable Energy",
+        "companyNumber": "+90 544 950 51 35",
+        "companyWebsite": "http://enerpower.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "info@getech.com.tr",
+      "parameters": {
+        "companyName": "Getech",
+        "companyNumber": "",
+        "companyWebsite": "http://getech.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@globsis.com",
+      "parameters": {
+        "companyName": "Globsis",
+        "companyNumber": "",
+        "companyWebsite": "http://globsis.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "hello@horato.com",
+      "parameters": {
+        "companyName": "Horato ®",
+        "companyNumber": "+90 312 999 80 99",
+        "companyWebsite": "http://horato.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@impress.com.tr",
+      "parameters": {
+        "companyName": "Impress Bilişim",
+        "companyNumber": "",
+        "companyWebsite": "http://impress.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 16,
+      "companyMail": "info@inotelelk.com",
+      "parameters": {
+        "companyName": "İnotel",
+        "companyNumber": "+90 312 750 09 18",
+        "companyWebsite": "http://inotelelk.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 17,
+      "companyMail": "bilgi@kemas.com.tr",
+      "parameters": {
+        "companyName": "KEMAS Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "http://kemas.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 18,
+      "companyMail": "bilgi@labornia.com",
+      "parameters": {
+        "companyName": "Labornia",
+        "companyNumber": "",
+        "companyWebsite": "http://labornia.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 19,
+      "companyMail": "info@mindwork-it.com",
+      "parameters": {
+        "companyName": "Mindwork Teknoloji",
+        "companyNumber": "+90 216 266 05 49",
+        "companyWebsite": "http://mindwork-it.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 20,
+      "companyMail": "info@nuevo.com.tr",
+      "parameters": {
+        "companyName": "Nuevo Softwarehouse",
+        "companyNumber": "",
+        "companyWebsite": "http://nuevo.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 21,
+      "companyMail": "info@osbh.com.tr",
+      "parameters": {
+        "companyName": "Osbh",
+        "companyNumber": "+90 312 482 54 51",
+        "companyWebsite": "http://osbh.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 22,
+      "companyMail": "info@poarge.com",
+      "parameters": {
+        "companyName": "Poarge",
+        "companyNumber": "",
+        "companyWebsite": "http://poarge.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 23,
+      "companyMail": "info@provega.com.tr",
+      "parameters": {
+        "companyName": "Provega",
+        "companyNumber": "",
+        "companyWebsite": "http://provega.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 24,
+      "companyMail": "info@sinetenerji.com",
+      "parameters": {
+        "companyName": "Sinet Enerji Sayaç Okuma Faturalandırma",
+        "companyNumber": "+90 505 556 29 70",
+        "companyWebsite": "http://sinetenerji.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 25,
+      "companyMail": "info@tacer.com.tr",
+      "parameters": {
+        "companyName": "Tacer",
+        "companyNumber": "",
+        "companyWebsite": "http://tacer.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 26,
+      "companyMail": "info@teops.com.tr",
+      "parameters": {
+        "companyName": "Teops",
+        "companyNumber": "+90 312 514 18 22",
+        "companyWebsite": "http://teops.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 27,
+      "companyMail": "info@uponte.com",
+      "parameters": {
+        "companyName": "Uponte",
+        "companyNumber": "+90 850 259 92 92",
+        "companyWebsite": "http://uponte.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 28,
+      "companyMail": "info@cagg.com.tr",
+      "parameters": {
+        "companyName": "cagg yazılım",
+        "companyNumber": "",
+        "companyWebsite": "https://cagg.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 29,
+      "companyMail": "info@getech.com",
+      "parameters": {
+        "companyName": "getech",
+        "companyNumber": "+441133222200",
+        "companyWebsite": "https://getech.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

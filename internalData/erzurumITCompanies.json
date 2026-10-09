@@ -1,0 +1,328 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "bilgi@projehocam.com",
+      "parameters": {
+        "companyName": "Proje Hocam",
+        "companyNumber": "",
+        "companyWebsite": "https://www.projehocam.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@mosyazilim.com",
+      "parameters": {
+        "companyName": "MOS Yazılım",
+        "companyNumber": "",
+        "companyWebsite": "http://www.mosyazilim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@masteranaliz.com.tr",
+      "parameters": {
+        "companyName": "MasterAnaliz",
+        "companyNumber": "",
+        "companyWebsite": "https://masteranaliz.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@arayuz.com.tr",
+      "parameters": {
+        "companyName": "Arayüz",
+        "companyNumber": "",
+        "companyWebsite": "https://arayuz.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@eagleyerobotics.com",
+      "parameters": {
+        "companyName": "EAGLEYE Robotics",
+        "companyNumber": "+90 850 441 25 34",
+        "companyWebsite": "https://www.eagleyerobotics.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "bilgi@lyna.com.tr",
+      "parameters": {
+        "companyName": "Lyna Teknoloji",
+        "companyNumber": "+90 850 305 88 21",
+        "companyWebsite": "https://lyna.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@maalicelik.com",
+      "parameters": {
+        "companyName": "Maalicelik",
+        "companyNumber": "+90 534 615 01 63",
+        "companyWebsite": "http://www.maalicelik.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@tfhbilisim.com",
+      "parameters": {
+        "companyName": "Tfhbilisim",
+        "companyNumber": "",
+        "companyWebsite": "https://tfhbilisim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@vitasanctus.com",
+      "parameters": {
+        "companyName": "Vitasanctus",
+        "companyNumber": "+90 216 235 04 52",
+        "companyWebsite": "http://vitasanctus.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "info@invipal.com",
+      "parameters": {
+        "companyName": "İnvipal Bilişim Teknolojileri",
+        "companyNumber": "",
+        "companyWebsite": "https://www.invipal.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@simsek.gen.tr",
+      "parameters": {
+        "companyName": "Şimşek Bilgisayar & Yazılım",
+        "companyNumber": "+90 850 305 76 65",
+        "companyWebsite": "https://simsek.gen.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@alfa.com.tr",
+      "parameters": {
+        "companyName": "Alfa Telekomünikasyon İnşaat Taahhüt Bilişim Yazılım Arge Sanayi Ve Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://alfa.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "info@ascom.com",
+      "parameters": {
+        "companyName": "Ascom Bilişim Bilg. İnş. Tah. Gıda Yem İşl. Tur. Tic. Ve San. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://ascom.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@aybeglaboratuvar.com.tr",
+      "parameters": {
+        "companyName": "Aybeg Laboratuvar Medikal Sağlık Turizmi Makina Yazılım Ticaret Sanayi Limited Şirket",
+        "companyNumber": "",
+        "companyWebsite": "https://aybeglaboratuvar.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "iletisim@argekip.com",
+      "parameters": {
+        "companyName": "Argekip Bilişim Teknolojileri Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://argekip.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@add4bio.com",
+      "parameters": {
+        "companyName": "Add4bıo Medikal İleri Teknolojiler Sanayi Ve Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://add4bio.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 16,
+      "companyMail": "info@conforcus.com",
+      "parameters": {
+        "companyName": "Conforcus Bilişim Danışmanlık Anonim Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://conforcus.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 17,
+      "companyMail": "info@coniasoft.com",
+      "parameters": {
+        "companyName": "Conıasoft Yazılım Teknolojileri Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://coniasoft.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 18,
+      "companyMail": "info@dinosoft.com.tr",
+      "parameters": {
+        "companyName": "Dinosoft Yazılım Bilişim Teknolojileri Sanayi Ticaret Limited Şirketi",
+        "companyNumber": "+90 850 441 25 34",
+        "companyWebsite": "https://dinosoft.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 19,
+      "companyMail": "bilgi@elsa.com.tr",
+      "parameters": {
+        "companyName": "Elsa Yazılım Sağlık San. Ve Tic. Ltd. Şti.",
+        "companyNumber": "+90 312 434 27 94",
+        "companyWebsite": "https://elsa.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 20,
+      "companyMail": "contact@enoca.com",
+      "parameters": {
+        "companyName": "Enoca Bilgi Teknolojileri Ve Danışmanlık Ltd.şti.",
+        "companyNumber": "+90 850 221 73 54",
+        "companyWebsite": "https://enoca.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 21,
+      "companyMail": "info@eres.com.tr",
+      "parameters": {
+        "companyName": "Eres Yazılım Bilişim Ve Teknoloji Pazarlama Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://eres.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 22,
+      "companyMail": "info@goarge.com",
+      "parameters": {
+        "companyName": "GoArge Yazılım ve Bilişim Bilgisayar Reklam Organizasyon Turizm San. Tic. Ltd.Şti",
+        "companyNumber": "",
+        "companyWebsite": "https://goarge.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 23,
+      "companyMail": "info@geoit.com.tr",
+      "parameters": {
+        "companyName": "Geoıt Yazılım Danışmanlık San. Ve Tic.ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://geoit.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 24,
+      "companyMail": "info@horizonzeta.com",
+      "parameters": {
+        "companyName": "Horizon Zeta Araştırma Geliştirme Teknoloji Bilişim Danışmanlık Ve Sağlık Ticaret A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://horizonzeta.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 25,
+      "companyMail": "info@isetia.com",
+      "parameters": {
+        "companyName": "Isetıa Teknoloji A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://isetia.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 26,
+      "companyMail": "info@kartezya.com",
+      "parameters": {
+        "companyName": "Kartezya Bilişim Danışmanlık Teknoloji Hiz. Ltd. Şti.",
+        "companyNumber": "",
+        "companyWebsite": "https://kartezya.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 27,
+      "companyMail": "info@komesli.com.tr",
+      "parameters": {
+        "companyName": "Komesli Ar-ge Çev. Teknoloji Müh. Bil. Ve Med. San. Tic. A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://komesli.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 28,
+      "companyMail": "info@pegasoft.com.tr",
+      "parameters": {
+        "companyName": "Pegasoft Yazılım Telekomünikasyon San. Tic. Ltd. Şti.",
+        "companyNumber": "+90 850 303 08 88",
+        "companyWebsite": "https://pegasoft.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 29,
+      "companyMail": "info@ranaliz.com",
+      "parameters": {
+        "companyName": "Ranaliz Yazılım Ve Elektronik Sanayi Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://ranaliz.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 30,
+      "companyMail": "info@sofis.com.tr",
+      "parameters": {
+        "companyName": "Sofis Yazılım Danışmanlık Ve Bilişim Sanayi Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://sofis.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 31,
+      "companyMail": "contact@zealhorizons.com",
+      "parameters": {
+        "companyName": "Zealhorızons Yazılım Sanayi Ticaret Anonim Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://zealhorizons.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

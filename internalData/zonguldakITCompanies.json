@@ -1,0 +1,28 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@morsakademi.com",
+      "parameters": {
+        "companyName": "Mors Akademi Yazılım",
+        "companyNumber": "",
+        "companyWebsite": "https://morsakademi.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "office@szutest.com",
+      "parameters": {
+        "companyName": "SZUTEST Teknoloji",
+        "companyNumber": "+90 216 469 46 66",
+        "companyWebsite": "https://szutest.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

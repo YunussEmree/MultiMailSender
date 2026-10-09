@@ -139,7 +139,9 @@ Gönderim raporları ve gönderilenler listesi `mms-data` volume'unda saklanır.
 
 ## Hazır şirket listeleri (`internalData/`)
 
-Şehir bazlı IT şirketi listeleri (Ankara, İstanbul, İzmir, Antalya, Manisa, Sivas, Kocaeli …). Arayüzde **İçe aktar** ile yüklenir. Her kayıtta e-posta, şirket adı, telefon, website ve **doğrulanma tarihi** (`verifiedAt`) bulunur.
+Şehir bazlı IT şirketi listeleri (`<il>ITCompanies.json`), şu an **27 ilde ~1150 firma**: Ankara 246, İstanbul 250, Kocaeli 145, İzmir 102, Antalya 85, Sivas 42, Gaziantep 40, Manisa 36, Erzurum 32, Kırıkkale 30, Samsun 28, Trabzon 26, Tekirdağ 20, Karabük 16, Çorum 12, Diyarbakır 9, Giresun 8, Yalova 7, Van 6, Muğla 4, Karaman 3, Çanakkale 2, Denizli 2, Bursa 1, Kütahya 1, Mersin 1, Zonguldak 2.
+
+> **Diğer iller henüz yok.** Teknokent sitesi firma listesini vermeyen ya da bota kapalı olan illerde (Konya, Kayseri, Adana, Hatay, Eskişehir vb.) veri toplanamadı. Küçük sayılı iller (1–5 kayıt) sitenin sunduğu kadarını yansıtır. Arayüzde **İçe aktar** ile yüklenir. Her kayıtta e-posta, şirket adı, telefon, website ve **doğrulanma tarihi** (`verifiedAt`) bulunur.
 
 Listeler `tools/refresh_data.py` ile bakım görür:
 
@@ -148,6 +150,7 @@ python tools/refresh_data.py                 # sadece rapor (dosyaları değişt
 python tools/refresh_data.py --write         # temizle: tekrarları ve ölü domain'leri sil, biçimi düzelt
 python tools/refresh_data.py --write --harvest                 # Ankara: Hacettepe, OSTİM, Bilkent Cyberpark
 python tools/refresh_data.py --write --parks sivas,istanbul,antalya,kocaeli,izmir,manisa   # diğer teknokentler
+python tools/refresh_data.py --write --generic "erzurum=http://www.atateknokent.com.tr"   # herhangi bir teknokent sitesini genel tarayıcıyla tara
 ```
 
 Araç; e-posta adresinin MX/DNS kaydını doğrular, tekrarları siler, telefonları `+90 312 000 00 00` biçimine getirir ve firmaların kendi sitelerinden `info@` / `hr@` benzeri genel adresleri bulur (kişi adlı adresleri almaz). Son çalıştırmanın ayrıntısı `internalData/REPORT.md` dosyasındadır.

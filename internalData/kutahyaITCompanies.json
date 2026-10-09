@@ -1,0 +1,18 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "iletisim@ihbarweb.org.tr",
+      "parameters": {
+        "companyName": "İhbar Web",
+        "companyNumber": "",
+        "companyWebsite": "http://www.ihbarweb.org.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

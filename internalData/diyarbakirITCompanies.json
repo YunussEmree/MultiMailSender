@@ -1,0 +1,98 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@hidrobiomed.com",
+      "parameters": {
+        "companyName": "Hidrobiomed",
+        "companyNumber": "+90 542 302 78 48",
+        "companyWebsite": "http://www.hidrobiomed.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@tigristest.com",
+      "parameters": {
+        "companyName": "Tigris Test Yazılım Danışmanlık San. Ve Tic.ltd.şti",
+        "companyNumber": "+90 544 899 10 37",
+        "companyWebsite": "https://tigristest.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@minartek.com.tr",
+      "parameters": {
+        "companyName": "Minartek Mimarlık Teknoloji Arge Danışmanlık Turz. San. Ltd.tic. Şti.",
+        "companyNumber": "+90 537 435 04 16",
+        "companyWebsite": "https://minartek.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@ilirya.com.tr",
+      "parameters": {
+        "companyName": "İlirya Bilişim Medikal Ve Dental Özel Sağlık Hizmetleri Turizim Org.inş.imalat Sanayi Tic.ltd.şti.",
+        "companyNumber": "+90 532 773 17 73",
+        "companyWebsite": "https://ilirya.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "bilgi@initack.com.tr",
+      "parameters": {
+        "companyName": "İNİTACK bilişim teknoloji özel eğitim İth. İhr. san. ve Tic. Ltd. Şti.",
+        "companyNumber": "+90 542 464 82 25",
+        "companyWebsite": "https://initack.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@tostbang.com",
+      "parameters": {
+        "companyName": "Tostbang Teknoloji A.Ş",
+        "companyNumber": "",
+        "companyWebsite": "https://tostbang.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@webzay.com",
+      "parameters": {
+        "companyName": "Webzay Yazılım Teknolojileri Danışmanlık İthalat İhracat Sanayi Ve Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://webzay.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@jazarix.com.tr",
+      "parameters": {
+        "companyName": "Jazarix Yazılım Mühendislik Sanayi Ve Ticaret Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://jazarix.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@cancerna.com.tr",
+      "parameters": {
+        "companyName": "Cancerna bioteknoloji arge danışmanlık medikal ilaç ve özel sağlık kimya ith.ihr.san.ve tic.ltd.şti",
+        "companyNumber": "+90 541 821 22 39",
+        "companyWebsite": "https://cancerna.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "contact@aisoft.dev",
+      "parameters": {
+        "companyName": "Aısoft Yazılım Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://aisoft.dev",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "hello@edume.com",
+      "parameters": {
+        "companyName": "Edume Arge Hizmetleri Ve Teknoloji Sistemleri Ltd.şti.",
+        "companyNumber": "+90 208 164 40 37",
+        "companyWebsite": "https://edume.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@genovan.com",
+      "parameters": {
+        "companyName": "Genovan Genetik Biyoteknoloji İthalat İhracat Sanayi ve Ticaret Limited Şirketi",
+        "companyNumber": "+90 545 299 12 02",
+        "companyWebsite": "https://genovan.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@keepnetlabs.com",
+      "parameters": {
+        "companyName": "Keepnet Labs Siber Güvenlik A.ş.",
+        "companyNumber": "",
+        "companyWebsite": "https://keepnetlabs.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@ontario.org",
+      "parameters": {
+        "companyName": "Ontario Bilişim Ve Danışmanlık Ltd.şti",
+        "companyNumber": "",
+        "companyWebsite": "https://ontario.org",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@teknikzeka.net",
+      "parameters": {
+        "companyName": "Teknik Zeka Arge Faaliyetleri Ve Teknoloji Sistemeleri Limited Şirketi",
+        "companyNumber": "+90 546 185 85 88",
+        "companyWebsite": "https://teknikzeka.net",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

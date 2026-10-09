@@ -1,0 +1,208 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@3tbilisim.com",
+      "parameters": {
+        "companyName": "3T Bilişim Teknolojileri",
+        "companyNumber": "",
+        "companyWebsite": "http://www.3TBilisim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@akdata.com",
+      "parameters": {
+        "companyName": "Akdatasoft Yazılım",
+        "companyNumber": "+90 282 653 13 89",
+        "companyWebsite": "https://akdata.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "info@aktifyazilim.com.tr",
+      "parameters": {
+        "companyName": "Aktifyazilim",
+        "companyNumber": "",
+        "companyWebsite": "http://www.aktifyazilim.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@clinic-groups.com",
+      "parameters": {
+        "companyName": "Clinic Groups Company",
+        "companyNumber": "+90 282 673 44 24",
+        "companyWebsite": "http://www.clinic-groups.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "bilgi@egemenyazilim.com",
+      "parameters": {
+        "companyName": "Egemen Yazılım",
+        "companyNumber": "+90 212 421 16 04",
+        "companyWebsite": "https://www.egemenyazilim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@entoteam.com",
+      "parameters": {
+        "companyName": "Entoteam",
+        "companyNumber": "+90 282 250 20 86",
+        "companyWebsite": "http://www.entoteam.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "info@environics.com.tr",
+      "parameters": {
+        "companyName": "Environics Şirketler Grubu",
+        "companyNumber": "",
+        "companyWebsite": "http://www.environics.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@flexkon.com",
+      "parameters": {
+        "companyName": "Flexkon",
+        "companyNumber": "+90 216 527 51 80",
+        "companyWebsite": "http://www.flexkon.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@ilgisoft.com",
+      "parameters": {
+        "companyName": "İlgisoft Bilişim",
+        "companyNumber": "",
+        "companyWebsite": "http://ilgisoft.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "info@nanochem.com.tr",
+      "parameters": {
+        "companyName": "Nanochem",
+        "companyNumber": "",
+        "companyWebsite": "http://www.nanochem.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@platinmarket.com",
+      "parameters": {
+        "companyName": "Platinmarket",
+        "companyNumber": "",
+        "companyWebsite": "https://www.platinmarket.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@powerotomasyon.com.tr",
+      "parameters": {
+        "companyName": "Power Otomasyon ve Makine",
+        "companyNumber": "+90 282 674 44 33",
+        "companyWebsite": "https://www.powerotomasyon.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "info@promote.com.tr",
+      "parameters": {
+        "companyName": "Promote",
+        "companyNumber": "+90 282 650 00 52",
+        "companyWebsite": "http://www.promote.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@subiq.com.tr",
+      "parameters": {
+        "companyName": "Sub Iq",
+        "companyNumber": "+90 212 444 85 39",
+        "companyWebsite": "http://subiq.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "info@tamveri.com",
+      "parameters": {
+        "companyName": "Tamveri Yazılım ve Otomasyon",
+        "companyNumber": "+90 542 699 05 46",
+        "companyWebsite": "http://www.tamveri.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@tds-d.com",
+      "parameters": {
+        "companyName": "Tractor Desing Studio",
+        "companyNumber": "",
+        "companyWebsite": "http://tds-d.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 16,
+      "companyMail": "info@teksar.com.tr",
+      "parameters": {
+        "companyName": "Teksar",
+        "companyNumber": "",
+        "companyWebsite": "https://teksar.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 17,
+      "companyMail": "info@tempateknik.com",
+      "parameters": {
+        "companyName": "Tempateknik",
+        "companyNumber": "+90 282 673 68 60",
+        "companyWebsite": "http://www.tempateknik.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 18,
+      "companyMail": "info@turkishfarmcompany.com",
+      "parameters": {
+        "companyName": "Turkish Farm Company Hayvancılık",
+        "companyNumber": "+90 530 874 26 45",
+        "companyWebsite": "https://turkishfarmcompany.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 19,
+      "companyMail": "info@virgosol.com",
+      "parameters": {
+        "companyName": "Virgosol",
+        "companyNumber": "",
+        "companyWebsite": "http://www.virgosol.com",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}

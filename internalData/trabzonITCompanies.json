@@ -1,0 +1,268 @@
+{
+  "username": "",
+  "password": "",
+  "subject": "Internship Application - Yunus Emre Şenyiğit",
+  "bodydraft": "Dear Hiring Manager,\n\nI am writing to express my interest in the internship position at your {companyName} company. I called you but you didn't answer on this number: {companyNumber}\n\nBest regards,\nYunus Emre Şenyiğit",
+  "companyData": [
+    {
+      "id": 0,
+      "companyMail": "info@innovance.com.tr",
+      "parameters": {
+        "companyName": "Innovance Bilgi Teknolojileri",
+        "companyNumber": "+90 549 579 14 43",
+        "companyWebsite": "https://innovance.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 1,
+      "companyMail": "info@educoder.com.tr",
+      "parameters": {
+        "companyName": "Educoder Yazılım",
+        "companyNumber": "+90 535 387 04 44",
+        "companyWebsite": "https://educoder.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 2,
+      "companyMail": "bilgi@siyah.com.tr",
+      "parameters": {
+        "companyName": "Siyah Bilişim / Unıcrow",
+        "companyNumber": "",
+        "companyWebsite": "https://siyah.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 3,
+      "companyMail": "info@mavialp.com",
+      "parameters": {
+        "companyName": "Mavi Alp Bilgi Teknolojileri",
+        "companyNumber": "",
+        "companyWebsite": "https://mavialp.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 4,
+      "companyMail": "info@siberuzay.com",
+      "parameters": {
+        "companyName": "Siberuzay Teknolojileri",
+        "companyNumber": "",
+        "companyWebsite": "https://siberuzay.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 5,
+      "companyMail": "info@gislandbilisim.com",
+      "parameters": {
+        "companyName": "Gısland Bilişim",
+        "companyNumber": "",
+        "companyWebsite": "https://gislandbilisim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 6,
+      "companyMail": "bilgi@benimteknolojim.com",
+      "parameters": {
+        "companyName": "Benim Teknolojim",
+        "companyNumber": "+90 850 840 18 95",
+        "companyWebsite": "https://benimteknolojim.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 7,
+      "companyMail": "info@fezariteknoloji.com.tr",
+      "parameters": {
+        "companyName": "Fezari Teknoloji",
+        "companyNumber": "+90 531 680 33 50",
+        "companyWebsite": "https://fezariteknoloji.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 8,
+      "companyMail": "info@maveria.co",
+      "parameters": {
+        "companyName": "Maveria Bılgı Teknolojılerı",
+        "companyNumber": "",
+        "companyWebsite": "https://maveria.co",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 9,
+      "companyMail": "info@perapole.com",
+      "parameters": {
+        "companyName": "Perapole Bilişim Ve Yazılım Teknolojileri",
+        "companyNumber": "",
+        "companyWebsite": "https://perapole.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 10,
+      "companyMail": "info@borvel.com",
+      "parameters": {
+        "companyName": "Borvel Bilgi Teknolojileri",
+        "companyNumber": "",
+        "companyWebsite": "https://borvel.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 11,
+      "companyMail": "info@codeviv.com",
+      "parameters": {
+        "companyName": "Codeviv Bilgi Güvenliği Yazılım Hizmetleri",
+        "companyNumber": "+90 544 602 82 14",
+        "companyWebsite": "https://codeviv.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 12,
+      "companyMail": "info@vidarti.com",
+      "parameters": {
+        "companyName": "Vidarti Yazılım",
+        "companyNumber": "",
+        "companyWebsite": "https://vidarti.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 13,
+      "companyMail": "info@hugotek.com.tr",
+      "parameters": {
+        "companyName": "Hugotek Bilişim Çözümleri",
+        "companyNumber": "",
+        "companyWebsite": "https://hugotek.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 14,
+      "companyMail": "info@rafora.com.tr",
+      "parameters": {
+        "companyName": "Rafora Bilişim",
+        "companyNumber": "+90 543 907 86 47",
+        "companyWebsite": "https://rafora.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 15,
+      "companyMail": "info@omtera.com",
+      "parameters": {
+        "companyName": "Omtera Bilişim Teknolojileri",
+        "companyNumber": "+447379075505",
+        "companyWebsite": "https://omtera.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 16,
+      "companyMail": "info@gigapin.com.tr",
+      "parameters": {
+        "companyName": "Gigapin Teknoloji",
+        "companyNumber": "",
+        "companyWebsite": "https://gigapin.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 17,
+      "companyMail": "info@greensoft.com.tr",
+      "parameters": {
+        "companyName": "Greensoft Teknoloji",
+        "companyNumber": "",
+        "companyWebsite": "https://greensoft.com.tr",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 18,
+      "companyMail": "info@gencerp.com",
+      "parameters": {
+        "companyName": "Gencerp Yazılım",
+        "companyNumber": "+90 530 468 97 34",
+        "companyWebsite": "https://gencerp.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 19,
+      "companyMail": "info@mapisso.com",
+      "parameters": {
+        "companyName": "Mapısso Yazılım",
+        "companyNumber": "",
+        "companyWebsite": "https://mapisso.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 20,
+      "companyMail": "info@zoady.net",
+      "parameters": {
+        "companyName": "Zoady Teknoloji",
+        "companyNumber": "",
+        "companyWebsite": "https://zoady.net",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 21,
+      "companyMail": "info@imkateknoloji.com",
+      "parameters": {
+        "companyName": "İmka Teknoloji",
+        "companyNumber": "",
+        "companyWebsite": "https://imkateknoloji.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 22,
+      "companyMail": "info@casemice.com",
+      "parameters": {
+        "companyName": "Casemıce Yazılım Ve Bilişim Hizmetleri Limited Şirketi",
+        "companyNumber": "",
+        "companyWebsite": "https://casemice.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 23,
+      "companyMail": "info@payegeo.com",
+      "parameters": {
+        "companyName": "Payegeo Yazılım",
+        "companyNumber": "",
+        "companyWebsite": "https://payegeo.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 24,
+      "companyMail": "info@codevist.com",
+      "parameters": {
+        "companyName": "Codevist Teknoloji",
+        "companyNumber": "",
+        "companyWebsite": "https://codevist.com",
+        "verifiedAt": "2026-10-09"
+      }
+    },
+    {
+      "id": 25,
+      "companyMail": "info@trabzon.org",
+      "parameters": {
+        "companyName": "Trabzon Teknoloji Derneği",
+        "companyNumber": "",
+        "companyWebsite": "https://trabzon.org",
+        "verifiedAt": "2026-10-09"
+      }
+    }
+  ]
+}
